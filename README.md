@@ -1,3 +1,7 @@
+<p align="center">
+    <img src="assets/figures/logo.png" width="150"> 
+</p>
+
 # Beyond End-to-End VLMs: Leveraging Intermediate Text Representations for Superior Flowchart Understanding
 
 [![](https://img.shields.io/badge/cs.CV-arXiv%3A2412.16420-B31B1B.svg)](https://arxiv.org/abs/2412.16420)
