@@ -4,6 +4,9 @@
 
 ![](./assets/figures/textflow.png)
 
+## News
+- [2024/12] 🔥
+
 ## TL;DR
 TEXTFLOW, a framework that converts flowchart images into text to improve explainability and control in flowchart understanding tasks.
 
