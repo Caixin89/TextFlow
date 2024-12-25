@@ -5,7 +5,7 @@
 ![](./assets/figures/textflow.png)
 
 ## News
-- [2024/12] 🔥
+- [2024/12] 🔥Excited to announce that our TextFlow paper is now available on [arXiv](https://arxiv.org/abs/2412.16420)!
 
 ## TL;DR
 TEXTFLOW, a framework that converts flowchart images into text to improve explainability and control in flowchart understanding tasks.
