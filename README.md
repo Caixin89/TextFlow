@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="assets/figures/logo.png" width="150"> 
+    <img src="assets/figures/logo.png" width="160"> 
 </p>
 
 # Beyond End-to-End VLMs: Leveraging Intermediate Text Representations for Superior Flowchart Understanding
