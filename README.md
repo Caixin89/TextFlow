@@ -22,13 +22,10 @@ We propose TextFlow, addressing aforementioned issues with two stages: (i) Visio
 ## Citation
 If you find this project is helpful to your research, please consider to cite our paper:
 ```
-@misc{ye2024endtoendvlmsleveragingintermediate,
-      title={Beyond End-to-End VLMs: Leveraging Intermediate Text Representations for Superior Flowchart Understanding}, 
-      author={Junyi Ye and Ankan Dash and Wenpeng Yin and Guiling Wang},
-      year={2024},
-      eprint={2412.16420},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2412.16420}, 
+@article{ye2024beyond,
+  title={Beyond End-to-End VLMs: Leveraging Intermediate Text Representations for Superior Flowchart Understanding},
+  author={Ye, Junyi and Dash, Ankan and Yin, Wenpeng and Wang, Guiling},
+  journal={arXiv preprint arXiv:2412.16420},
+  year={2024}
 }
 ```
