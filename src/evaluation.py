@@ -26,7 +26,7 @@ def main():
     parser.add_argument(
         "--data_path",
         type=str,
-        default="../output/flowvqa/textflow/mermaid_reasoner_Llama-3.1-8B_textualizer_Qwen2-VL-7B.json",
+        default="output/flowvqa/textflow/mermaid_reasoner_Llama-3.1-8B_textualizer_Qwen2-VL-7B.json",
         help="Data path of the experiment result to evaluate.",
     )
     args = parser.parse_args()
