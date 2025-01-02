@@ -9,6 +9,7 @@
 ![](./assets/figures/textflow.png)
 
 ## News
+- [2025/01]  The data and code for TextFlow have been released.
 - [2024/12] 🔥Excited to announce that our TextFlow paper is now available on [arXiv](https://arxiv.org/abs/2412.16420)!
 
 ## TL;DR
@@ -30,6 +31,7 @@ cd TextFlow
 pip install -r requirements.txt
 ```
 Set up your OpenAI or Anthropic API keys in the `config.json` file.
+
 ---
 
 ### 2. Run the Baseline (End-to-End Visual Question Answering)
@@ -40,7 +42,7 @@ python src/vqa.py --dataset flowvqa --model_name gpt-4o
 
 Evaluate the experimental results:
 ```bash
-python src/evaluation.py --model_name gpt-4o --data_path ../output/flowvqa/vqa/gpt-4o.json
+python src/evaluation.py --model_name gpt-4o --data_path output/flowvqa/vqa/gpt-4o.json
 ```
 
 ---
@@ -67,15 +69,14 @@ python src/reasoner.py --dataset flowvqa --reasoner gpt-4o --textualizer gpt-4o 
 Evaluate the results of the TextFlow pipeline:
 1. Without tool use:
    ```bash
-   python evaluation.py --model_name gpt-4o --data_path ../output/flowvqa/textflow/mermaid_reasoner_gpt-4o_textualizer_gpt-4o.json
+   python evaluation.py --model_name gpt-4o --data_path output/flowvqa/textflow/mermaid_reasoner_gpt-4o_textualizer_gpt-4o.json
    ```
 2. With tool use:
    ```bash
-   python evaluation.py --model_name gpt-4o --data_path ../output/flowvqa/textflow/mermaid_reasoner_tool_use_gpt-4o_textualizer_gpt-4o.json
+   python evaluation.py --model_name gpt-4o --data_path output/flowvqa/textflow/mermaid_reasoner_tool_use_gpt-4o_textualizer_gpt-4o.json
    ```
 
 ---
-
 
 ## Citation
 If you find this project is helpful to your research, please consider to cite our paper:
