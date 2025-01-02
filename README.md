@@ -19,6 +19,64 @@ Flowcharts are typically presented as images, driving the trend of using vision-
 
 We propose TextFlow, addressing aforementioned issues with two stages: (i) Vision Textualizer—which generates textual representations from flowchart images; and (ii) Textual Reasoner—which performs question-answering based on the text representations. TextFlow offers three key advantages: (i) users can select the type of text representations (e.g., Graphviz, Mermaid, PlantUML), or further convert them into executable graph object to call tools, enhancing performance and controllability; (ii) it improves explainability by helping to attribute errors more clearly to visual or textual processing components; and (iii) it promotes the modularization of the solution, such as allowing advanced LLMs to be used in the reasoner stage when VLMs underperform in end-to-end fashion. Experiments on the FlowVQA and FlowLearn benchmarks demonstrate TextFlow's state-of-the-art performance as well as its robustness. All code will be publicly released.
 
+## Quick Start
+
+Follow these steps to get started with **TextFlow**:
+
+### 1. Install Dependencies and Set UP API Keys
+Run the following command to install all required dependencies:
+```bash
+cd TextFlow
+pip install -r requirements.txt
+```
+Set up your OpenAI or Anthropic API keys in the `config.json` file.
+---
+
+### 2. Run the Baseline (End-to-End Visual Question Answering)
+Perform baseline VQA on the `flowvqa` dataset:
+```bash
+python src/vqa.py --dataset flowvqa --model_name gpt-4o
+```
+
+Evaluate the experimental results:
+```bash
+python src/evaluation.py --model_name gpt-4o --data_path ../output/flowvqa/vqa/gpt-4o.json
+```
+
+---
+
+### 3. Run the TextFlow Pipeline
+#### Step 1: Vision Textualizer
+Convert flowchart images into text representations (Mermaid, Graphviz, or PlantUML). Example for generating a **Mermaid** text representation:
+```bash
+python src/textualizer.py --dataset flowvqa --textualizer gpt-4o --output_type mermaid
+```
+
+#### Step 2: Textual Reasoner
+Perform question answering based on the text representation:
+```bash
+python src/reasoner.py --dataset flowvqa --reasoner gpt-4o --textualizer gpt-4o --input_type mermaid
+```
+
+#### Optional: Enable Tool Use
+For enhanced capabilities, enable tool usage (currently supported for Mermaid text representation with `gpt-4o`):
+```bash
+python src/reasoner.py --dataset flowvqa --reasoner gpt-4o --textualizer gpt-4o --input_type mermaid --tool_use
+```
+
+Evaluate the results of the TextFlow pipeline:
+1. Without tool use:
+   ```bash
+   python evaluation.py --model_name gpt-4o --data_path ../output/flowvqa/textflow/mermaid_reasoner_gpt-4o_textualizer_gpt-4o.json
+   ```
+2. With tool use:
+   ```bash
+   python evaluation.py --model_name gpt-4o --data_path ../output/flowvqa/textflow/mermaid_reasoner_tool_use_gpt-4o_textualizer_gpt-4o.json
+   ```
+
+---
+
+
 ## Citation
 If you find this project is helpful to your research, please consider to cite our paper:
 ```
