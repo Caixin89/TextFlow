@@ -8,7 +8,7 @@ from tqdm import tqdm
 
 from config import config
 from logger import setup_logger
-from models import generate_evaluation_response, load_model_and_tokenizer
+from models import ModelWrapper
 from prompts import load_evaluation_prompt
 from utils import majority_vote
 
@@ -50,18 +50,16 @@ def main():
         logger.info(f"{arg}: {value}")
     logger.info(f"Logs saved to {os.path.abspath(log_file)}")
 
-    model, _ = load_model_and_tokenizer(model_name)
+    model = ModelWrapper(model_name)
 
     with open(data_path, "r") as file:
         data = json.load(file)
 
-    for key, sample in data.items():
+    for key, sample in tqdm(data.items()):
         prompt = load_evaluation_prompt(
             sample["question"], sample["response"], sample["answer"]
         )
-        decision1, decision2, decision3 = generate_evaluation_response(
-            model_name, model, prompt
-        )
+        decision1, decision2, decision3 = model.generate_evaluation_response(prompt)
         final_decision = majority_vote(decision1, decision2, decision3)
         result = {
             "decision1": decision1,

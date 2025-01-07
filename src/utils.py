@@ -35,6 +35,15 @@ def encode_image_anthropic(image_path):
     return base64.b64encode(img_bytes).decode("utf-8")
 
 
+def encode_image(image_path, model_name=None):
+    if model_name == "claude-3-5-sonnet":
+        return encode_image_anthropic(image_path)
+    elif model_name in ["gpt-4o", "gpt-4o-mini"]:
+        return encode_image_openai(image_path)
+    else:
+        return Image.open(image_path)
+
+
 def extract_mermaid_code(string):
     mermaid_pattern = r"```mermaid\s+([\s\S]*?)```"
 
@@ -87,30 +96,3 @@ def extract_representation(string):
 
 def majority_vote(*decisions):
     return max(set(decisions), key=decisions.count)
-
-
-def shuffle_mermaid(mermaid_str):
-    """Shuffle the lines of a Mermaid diagram string except for the first line."""
-    lines = mermaid_str.strip().split("\n")
-    if len(lines) <= 1:
-        return mermaid_str  # If only one line, return as is
-
-    first_line = lines[0]
-    rest_lines = lines[1:]
-    random.seed(config["experiment"]["seed"])
-    random.shuffle(rest_lines)  # Shuffle the remaining lines
-
-    return "\n".join([first_line] + rest_lines)
-
-
-def reverse_mermaid(mermaid_str):
-    """Reverse the lines of a Mermaid diagram string except for the first line."""
-    lines = mermaid_str.strip().split("\n")
-    if len(lines) <= 1:
-        return mermaid_str  # If only one line, return as is
-
-    first_line = lines[0]
-    rest_lines = lines[1:]
-    rest_lines.reverse()  # Reverse the remaining lines
-
-    return "\n".join([first_line] + rest_lines)

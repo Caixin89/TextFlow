@@ -119,6 +119,7 @@ terminado==0.18.1
 tinycss2==1.4.0
 tokenize_rt==6.1.0
 tokenizers==0.20.3
+--extra-index-url https://download.pytorch.org/whl/cu124
 torch==2.5.1+cu124
 torchaudio==2.5.1+cu124
 torchvision==0.20.1+cu124

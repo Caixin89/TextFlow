@@ -4,14 +4,12 @@ import logging
 import os
 from datetime import datetime
 
-from PIL import Image
 from tqdm import tqdm
 
 from config import config
 from logger import setup_logger
-from models import generate_response, load_model_and_tokenizer
+from models import ModelWrapper
 from prompts import load_vqa_prompt
-from utils import encode_image_anthropic, encode_image_openai
 
 
 def main():
@@ -43,7 +41,7 @@ def main():
         logger.info(f"{arg}: {value}")
     logger.info(f"Logs saved to {os.path.abspath(log_file)}")
 
-    model, processor = load_model_and_tokenizer(model_name)
+    model = ModelWrapper(model_name)
 
     data_path = os.path.join(config["file_paths"][dataset], "test.json")
     with open(data_path, "r") as file:
@@ -55,21 +53,15 @@ def main():
     image_extension = "jpeg" if dataset == "flowlearn" else "png"
     for key in tqdm(keys):
         sample = data[key]
-        image_file = os.path.join(
+        image_path = os.path.join(
             config["file_paths"][dataset], "images", f"{key}.{image_extension}"
         )
-        if model_name == "claude-3-5-sonnet":
-            image = encode_image_anthropic(image_file)
-        elif model_name in ["gpt-4o", "gpt-4o-mini"]:
-            image = encode_image_openai(image_file)
-        else:
-            image = Image.open(image_file)
         question_ids = list(sample["qa"].keys())
         for question_id in question_ids:
             question = sample["qa"][question_id]["Q"]
             answer = sample["qa"][question_id]["A1"]
             prompt = load_vqa_prompt(question)
-            response = generate_response(model_name, model, processor, prompt, image)
+            response = model.generate_response(prompt, image_path=image_path)
             results[sample_id] = {
                 "key": key,
                 "question_id": question_id,

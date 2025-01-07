@@ -4,15 +4,13 @@ import logging
 import os
 from datetime import datetime
 
-from PIL import Image
 from tqdm import tqdm
 
 from config import config
 from logger import setup_logger
-from models import generate_response, load_model_and_tokenizer
+from models import ModelWrapper
 from prompts import load_textualizer_prompt
-from utils import (encode_image_anthropic, encode_image_openai,
-                   extract_representation)
+from utils import extract_representation
 
 
 def main():
@@ -56,7 +54,7 @@ def main():
         logger.info(f"{arg}: {value}")
     logger.info(f"Logs saved to {os.path.abspath(log_file)}")
 
-    model, processor = load_model_and_tokenizer(textualizer)
+    model = ModelWrapper(textualizer)
 
     data_path = os.path.join(config["file_paths"][dataset], "test.json")
     with open(data_path, "r") as file:
@@ -66,17 +64,11 @@ def main():
     results = {}
     image_extension = "jpeg" if dataset == "flowlearn" else "png"
     for key in tqdm(keys):
-        image_file = os.path.join(
+        image_path = os.path.join(
             config["file_paths"][dataset], "images", f"{key}.{image_extension}"
         )
-        if textualizer == "claude-3-5-sonnet":
-            image = encode_image_anthropic(image_file)
-        elif textualizer in ["gpt-4o", "gpt-4o-mini"]:
-            image = encode_image_openai(image_file)
-        else:
-            image = Image.open(image_file)
         prompt = load_textualizer_prompt(output_type)
-        response = generate_response(textualizer, model, processor, prompt, image)
+        response = model.generate_response(prompt, image_path=image_path)
         # Extract text representation (mermaid, graphviz, or plantuml) from response
         representation = extract_representation(response)
         results[key] = representation

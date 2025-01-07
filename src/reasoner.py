@@ -8,8 +8,7 @@ from tqdm import tqdm
 
 from config import config
 from logger import setup_logger
-from models import (generate_response, generate_response_tool_use,
-                    load_model_and_tokenizer, test_env)
+from models import ModelWrapper
 from prompts import load_reasoner_prompt
 
 
@@ -72,7 +71,7 @@ def main():
         logger.info(f"{arg}: {value}")
     logger.info(f"Logs saved to {os.path.abspath(log_file)}")
 
-    model, tokenizer = load_model_and_tokenizer(reasoner)
+    model = ModelWrapper(reasoner)
 
     data_path = os.path.join(config["file_paths"][dataset], "test.json")
     with open(data_path, "r") as file:
@@ -97,12 +96,14 @@ def main():
             question = sample["qa"][question_id]["Q"]
             answer = sample["qa"][question_id]["A1"]
             prompt = load_reasoner_prompt(question, representation)
+
             if tool_use:
-                response = generate_response_tool_use(
-                    reasoner, model, prompt, representation
+                response = model.generate_response(
+                    prompt, representation=representation
                 )
             else:
-                response = generate_response(reasoner, model, tokenizer, prompt)
+                response = model.generate_response(prompt)
+
             results[sample_id] = {
                 "key": key,
                 "question_id": question_id,
