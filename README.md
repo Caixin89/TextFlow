@@ -9,8 +9,9 @@
 ![](./assets/figures/textflow.png)
 
 ## News
+- [2025/01] 🔥 **Our TextFlow paper is accepted by [NAACL 2025](https://2025.naacl.org/)**.
 - [2025/01]  The data and code for TextFlow have been released.
-- [2024/12] 🔥Excited to announce that our TextFlow paper is now available on [arXiv](https://arxiv.org/abs/2412.16420)!
+- [2024/12]  Excited to announce that our TextFlow paper is now available on [arXiv](https://arxiv.org/abs/2412.16420)!
 
 ## TL;DR
 TEXTFLOW, a framework that converts flowchart images into text to improve explainability and control in flowchart understanding tasks.
