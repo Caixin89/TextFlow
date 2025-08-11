@@ -2,4 +2,4 @@
 
 
 source .env
-python src/textualizer.py --dataset $DATASET --textualizer $TEXTUALIZER_GPT_MODEL --output_type $FLOWCHART_CODE_FORMAT
+python src/textualizer.py --dataset $DATASET --textualizer $TEXTUALIZER_MODEL --output_type $FLOWCHART_CODE_FORMAT

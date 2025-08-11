@@ -12,4 +12,4 @@ for arg in "$@"; do
   fi
 done
 
-python src/reasoner.py --dataset $DATASET --reasoner $REASONER_GPT_MODEL --textualizer $TEXTUALIZER_GPT_MODEL --input_type $FLOWCHART_CODE_FORMAT $tool_use_args
+python src/reasoner.py --dataset $DATASET --reasoner $REASONER_MODEL --textualizer $TEXTUALIZER_MODEL --input_type $FLOWCHART_CODE_FORMAT $tool_use_args

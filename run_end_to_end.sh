@@ -2,4 +2,4 @@
 
 
 source .env
-python src/vqa.py --dataset $DATASET --model_name $END_TO_END_GPT_MODEL
+python src/vqa.py --dataset $DATASET --model_name $END_TO_END_MODEL
