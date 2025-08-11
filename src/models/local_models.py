@@ -59,7 +59,7 @@ def load_local_model(model_name):
             model = Qwen2VLForConditionalGeneration.from_pretrained(
                 model_id,
                 torch_dtype=torch.bfloat16,
-                attn_implementation="flash_attention_2",
+                attn_implementation="eager",
                 device_map="auto",
             )
             processor = AutoProcessor.from_pretrained(model_id)
