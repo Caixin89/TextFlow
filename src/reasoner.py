@@ -10,6 +10,7 @@ from config import config
 from logger import setup_logger
 from models import ModelWrapper
 from prompts import load_reasoner_prompt
+from utils import strip_provider_from_get_model_name
 
 
 def main():
@@ -46,7 +47,9 @@ def main():
     args = parser.parse_args()
     dataset = args.dataset
     reasoner = args.reasoner
+    reasoner_without_provider = strip_provider_from_get_model_name(reasoner)
     textualizer = args.textualizer
+    textualizer_without_provider = strip_provider_from_get_model_name(textualizer)
     input_type = args.input_type
     tool_use = args.tool_use
 
@@ -56,13 +59,13 @@ def main():
         log_file = os.path.join(
             config["logging"]["log_dir"],
             dataset,
-            f"{input_type}_reasoner_tool_use_{reasoner}_textulizer_{textualizer}_{timestamp}.log",
+            f"{input_type}_reasoner_tool_use_{reasoner_without_provider}_textulizer_{textualizer_without_provider}_{timestamp}.log",
         )
     else:
         log_file = os.path.join(
             config["logging"]["log_dir"],
             dataset,
-            f"{input_type}_reasoner_{reasoner}_textulizer_{textualizer}_{timestamp}.log",
+            f"{input_type}_reasoner_{reasoner_without_provider}_textulizer_{textualizer_without_provider}_{timestamp}.log",
         )
     logger = setup_logger(log_file)
     logger = logging.getLogger(__name__)
@@ -82,7 +85,7 @@ def main():
     represenation_dir = os.path.join(
         config["file_paths"]["output"], dataset, input_type
     )
-    represenation_file = os.path.join(represenation_dir, f"{textualizer}.json")
+    represenation_file = os.path.join(represenation_dir, f"{textualizer_without_provider}.json")
     with open(represenation_file, "r") as file:
         representations = json.load(file)
 
@@ -117,12 +120,12 @@ def main():
     if tool_use:
         output_file = os.path.join(
             output_dir,
-            f"{input_type}_reasoner_tool_use_{reasoner}_textualizer_{textualizer}.json",
+            f"{input_type}_reasoner_tool_use_{reasoner_without_provider}_textualizer_{textualizer_without_provider}.json",
         )
     else:
         output_file = os.path.join(
             output_dir,
-            f"{input_type}_reasoner_{reasoner}_textualizer_{textualizer}.json",
+            f"{input_type}_reasoner_{reasoner_without_provider}_textualizer_{textualizer_without_provider}.json",
         )
     os.makedirs(output_dir, exist_ok=True)
     with open(output_file, "w") as file:

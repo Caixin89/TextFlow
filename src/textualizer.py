@@ -10,7 +10,7 @@ from config import config
 from logger import setup_logger
 from models import ModelWrapper
 from prompts import load_textualizer_prompt
-from utils import extract_representation
+from utils import extract_representation, strip_provider_from_get_model_name
 
 
 def main():
@@ -38,6 +38,7 @@ def main():
     args = parser.parse_args()
     dataset = args.dataset
     textualizer = args.textualizer
+    textualizer_without_provider = strip_provider_from_get_model_name(textualizer)
     output_type = args.output_type
 
     # Setup logger
@@ -45,7 +46,7 @@ def main():
     log_file = os.path.join(
         config["logging"]["log_dir"],
         dataset,
-        f"{output_type}_textulizer_{textualizer}_{timestamp}.log",
+        f"{output_type}_textulizer_{textualizer_without_provider}_{timestamp}.log",
     )
     logger = setup_logger(log_file)
     logger = logging.getLogger(__name__)
@@ -54,7 +55,7 @@ def main():
         logger.info(f"{arg}: {value}")
     logger.info(f"Logs saved to {os.path.abspath(log_file)}")
 
-    model = ModelWrapper(textualizer)
+    model = ModelWrapper(textualizer_without_provider)
 
     data_path = os.path.join(config["file_paths"][dataset], "test.json")
     with open(data_path, "r") as file:
@@ -74,7 +75,7 @@ def main():
         results[key] = representation
 
     output_dir = os.path.join(config["file_paths"]["output"], dataset, output_type)
-    output_file = os.path.join(output_dir, f"{textualizer}.json")
+    output_file = os.path.join(output_dir, f"{textualizer_without_provider}.json")
     os.makedirs(output_dir, exist_ok=True)
     with open(output_file, "w") as file:
         json.dump(results, file, indent=4)

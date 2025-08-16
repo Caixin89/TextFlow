@@ -1,12 +1,14 @@
 from config import config
 from models.api_models import (generate_api_evaluation_response,
                                generate_api_response,
-                               generate_api_response_tool_use, load_api_model)
+                               generate_api_response_tool_use, 
+                               load_api_model,
+                               is_openrouter_model)
 from models.local_models import (generate_local_response,
                                  generate_local_response_tool_use,
                                  load_local_model)
 from models.prompt_utils import load_messages
-from utils import encode_image
+from utils import encode_image, strip_provider_from_get_model_name
 
 CONFIG = config["model_config"]
 
@@ -14,7 +16,7 @@ CONFIG = config["model_config"]
 class ModelWrapper:
     def __init__(self, model_name):
         self.model_name = model_name
-        self.is_api_model = model_name in [
+        self.is_api_model = is_openrouter_model(model_name) or model_name in [
             "claude-3-5-sonnet",
             "gpt-4o",
             "gpt-4o-mini",
@@ -28,7 +30,7 @@ class ModelWrapper:
     def generate_response(self, prompt, image_path=None, representation=None):
         image = encode_image(image_path, self.model_name) if image_path else None
         tool_use = representation is not None
-        messages = load_messages(self.model_name, prompt, image)
+        messages = load_messages(strip_provider_from_get_model_name(self.model_name), prompt, image)
 
         if self.is_api_model:
             if tool_use:
@@ -54,5 +56,5 @@ class ModelWrapper:
                 )
 
     def generate_evaluation_response(self, prompt):
-        messages = load_messages(self.model_name, prompt)
+        messages = load_messages(strip_provider_from_get_model_name(self.model_name), prompt)
         return generate_api_evaluation_response(self.model_name, self.model, messages)

@@ -7,10 +7,16 @@ from openai import OpenAI
 from config import config
 from models.mermaid_parser import Mermaid2Flowchart
 from models.prompt_utils import load_tools, load_tools_code
+from utils import strip_provider_from_get_model_name
 
 max_new_tokens = config["model_config"]["max_new_tokens"]
 temperature = config["model_config"]["temperature"]
 
+def is_openrouter_model(model_name):
+    return model_name.startswith("openrouter/")
+
+def get_model_id(model_name):
+    return config["model_version"].get(strip_provider_from_get_model_name(model_name))
 
 def load_api_model(model_name):
     logger = logging.getLogger(__name__)
@@ -20,6 +26,8 @@ def load_api_model(model_name):
         client = Anthropic(api_key=api_keys["ANTHROPIC_API_KEY"])
     elif model_name in ["gpt-4o", "gpt-4o-mini"]:
         client = OpenAI(api_key=api_keys["OPENAI_API_KEY"])
+    elif is_openrouter_model(model_name):
+        client = OpenAI(base_url="https://openrouter.ai/api/v1", api_key=api_keys["OPENROUTER_API_KEY"])
     else:
         logger.error(f"API model {model_name} is not supported.")
         raise ValueError(f"API model {model_name} is not supported.")
@@ -30,7 +38,7 @@ def load_api_model(model_name):
 
 def generate_api_response(model_name, client, messages, image=None):
     logger = logging.getLogger(__name__)
-    model_id = config["model_version"].get(model_name)
+    model_id = get_model_id(model_name)
 
     if model_name == "claude-3-5-sonnet":
         message = client.messages.create(
@@ -41,7 +49,7 @@ def generate_api_response(model_name, client, messages, image=None):
             messages=messages,
         )
         response = message.content[0].text
-    elif model_name in ["gpt-4o", "gpt-4o-mini"]:
+    elif is_openrouter_model(model_name) or model_name in ["gpt-4o", "gpt-4o-mini"]:
         completion = client.chat.completions.create(
             model=model_id,
             max_tokens=max_new_tokens,
@@ -55,14 +63,13 @@ def generate_api_response(model_name, client, messages, image=None):
 
     return response
 
-
 def generate_api_response_tool_use(model_name, client, messages, representation):
     logger = logging.getLogger(__name__)
-    model_id = config["model_version"].get(model_name)
+    model_id = get_model_id(model_name)
 
     # Tool use is only implemented for gpt-4o and gpt-4o-mini.
     # But it can be esaily extend to any LLMs that support tool use.
-    if model_name in ["gpt-4o", "gpt-4o-mini"]:
+    if strip_provider_from_get_model_name(model_name) in ["gpt-4o", "gpt-4o-mini"]:
         tools = load_tools()
         completion = client.chat.completions.create(
             model=model_id,
@@ -226,7 +233,7 @@ def generate_api_response_tool_use(model_name, client, messages, representation)
 
 def generate_api_evaluation_response(model_name, client, messages):
     logger = logging.getLogger(__name__)
-    model_id = config["model_version"].get(model_name)
+    model_id = get_model_id(model_name)
 
     # GPT-4o is used as evaluator
     completion = client.chat.completions.create(

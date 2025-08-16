@@ -96,3 +96,7 @@ def extract_representation(string):
 
 def majority_vote(*decisions):
     return max(set(decisions), key=decisions.count)
+
+
+def strip_provider_from_get_model_name(model_name):
+    return model_name.split("/")[-1]
