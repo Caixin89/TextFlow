@@ -18,10 +18,16 @@ def main():
         description="Run the Question Answering Evaluation program."
     )
     parser.add_argument(
-        "--model_name",
-        type=str,
-        default="gpt-4o",
-        help="The LLM used as the evaluator.",
+        "--model_names",
+        nargs="*",
+        default=["openai/gpt-5.1-chat", "deepseek/deepseek-r1-distill-llama-70b", "mistralai/mistral-large"],
+        help="The LLMs used as the evaluator.",
+    )
+    parser.add_argument(
+        "--seed",
+        type=int,
+        default=888,
+        help="Random seed",
     )
     parser.add_argument(
         "--data_path",
@@ -30,7 +36,8 @@ def main():
         help="Data path of the experiment result to evaluate.",
     )
     args = parser.parse_args()
-    model_name = args.model_name
+    model_names = args.model_names
+    seed = args.seed
     data_path = args.data_path
     dataset = data_path.split("/")[2]
     exp_dir = os.path.dirname(data_path)
@@ -50,7 +57,7 @@ def main():
         logger.info(f"{arg}: {value}")
     logger.info(f"Logs saved to {os.path.abspath(log_file)}")
 
-    model = ModelWrapper(model_name)
+    models = [ModelWrapper(m) for m in model_names]
 
     with open(data_path, "r") as file:
         data = json.load(file)
@@ -59,14 +66,9 @@ def main():
         prompt = load_evaluation_prompt(
             sample["question"], sample["response"], sample["answer"]
         )
-        decision1, decision2, decision3 = model.generate_evaluation_response(prompt)
-        final_decision = majority_vote(decision1, decision2, decision3)
-        result = {
-            "decision1": decision1,
-            "decision2": decision2,
-            "decision3": decision3,
-            "final_decision": final_decision,
-        }
+        decisions = [m.generate_evaluation_response(prompt, seed) for m in models]
+        final_decision = majority_vote(decisions)
+        result = {f"decision{i}":d for i,d in enumerate(decisions, start=1)} | {"final_decision": final_decision}
         # Append the evaluation result to
         data[key] = {**data[key], **result}
 

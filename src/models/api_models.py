@@ -231,7 +231,7 @@ def generate_api_response_tool_use(model_name, client, messages, representation)
     return response
 
 
-def generate_api_evaluation_response(model_name, client, messages):
+def generate_api_evaluation_response(model_name, client, messages, seed):
     logger = logging.getLogger(__name__)
     model_id = get_model_id(model_name)
 
@@ -239,9 +239,13 @@ def generate_api_evaluation_response(model_name, client, messages):
     completion = client.chat.completions.create(
         model=model_id,
         max_tokens=max_new_tokens,
-        temperature=0.2,
-        n=3,  # Generate 3 responses
+        temperature=0,
         messages=messages,
+        seed=seed,
+        provider={
+            "order": ["openai", "mistral", "novita"],
+            "allow_fallbacks": False
+        }
     )
     # Extract all three responses
     responses = [choice.message.content for choice in completion.choices]

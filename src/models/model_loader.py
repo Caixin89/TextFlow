@@ -55,6 +55,6 @@ class ModelWrapper:
                     self.model_name, self.model, self.tokenizer, messages, image
                 )
 
-    def generate_evaluation_response(self, prompt):
+    def generate_evaluation_response(self, prompt, seed):
         messages = load_messages(strip_provider_from_get_model_name(self.model_name), prompt)
-        return generate_api_evaluation_response(self.model_name, self.model, messages)
+        return generate_api_evaluation_response(self.model_name, self.model, messages, seed)

@@ -94,7 +94,7 @@ def extract_representation(string):
         return string
 
 
-def majority_vote(*decisions):
+def majority_vote(decisions):
     return max(set(decisions), key=decisions.count)
 
 
