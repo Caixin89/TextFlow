@@ -20,7 +20,7 @@ def main():
     parser.add_argument(
         "--model_names",
         nargs="*",
-        default=["openai/gpt-5.1-chat", "deepseek/deepseek-r1-distill-llama-70b", "mistralai/mistral-large"],
+        default=["openrouter/openai/gpt-5.1-chat", "openrouter/anthropic/claude-sonnet-4.5", "openrouter/mistralai/mistral-large-2411"],
         help="The LLMs used as the evaluator.",
     )
     parser.add_argument(
@@ -62,13 +62,18 @@ def main():
     with open(data_path, "r") as file:
         data = json.load(file)
 
-    for key, sample in tqdm(data.items()):
+    for (i, (key, sample)) in tqdm(enumerate(data.items())):
+        if i == 10:
+            break # for quick testing
+
         prompt = load_evaluation_prompt(
             sample["question"], sample["response"], sample["answer"]
         )
-        decisions = [m.generate_evaluation_response(prompt, seed) for m in models]
-        final_decision = majority_vote(decisions)
-        result = {f"decision{i}":d for i,d in enumerate(decisions, start=1)} | {"final_decision": final_decision}
+        judgements = [m.generate_evaluation_response(prompt, seed) for m in models]
+        final_decision = majority_vote([j["verdict"] for j in judgements])
+        result = {"final_decision": final_decision}
+        for j in judgements:
+            result[f"decision{len(result)+1}"] = { "verdict": j["verdict"], "explanation": j["explanation"] }
         # Append the evaluation result to
         data[key] = {**data[key], **result}
 

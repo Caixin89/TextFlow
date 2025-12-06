@@ -79,14 +79,41 @@ def load_reasoner_prompt(question, represenation):
 
 
 def load_evaluation_prompt(question, response, label):
-    prompt = f"""Task: Verify if the provided answer is correct based on the given ground truth.
-    
-You are given a question, an answer and the ground truth. Your task is to determine whether the provided answer matches the ground truth. Output "Correct" if the answer matches groud truth, otherwise output "Incorrect".
+    prompt = f'''You are acting as a strict evaluation judge for a Flowchart VQA task.
 
-Question: {question}
+You are given:
+1. A QUESTION about the behavior or outcome implied by a flowchart.
+2. A GROUND TRUTH ANSWER written by a human.
+3. A MODEL ANSWER produced by a system under evaluation.
 
-Answer: {response}
+Your task is to determine whether the MODEL ANSWER is SEMANTICALLY EQUIVALENT to the GROUND TRUTH ANSWER with respect to the QUESTION.
 
-Ground Truth: {label}"""
+Evaluation Rules:
+- Judge only based on the QUESTION and the two ANSWERS. You do NOT reconstruct or imagine the flowchart.
+- Paraphrasing is allowed. If the MODEL ANSWER expresses the same meaning, count it as Correct.
+- If there is any meaningful difference in condition, branching, requirement, or outcome, mark it as Incorrect.
+- Ignore minor stylistic or wording differences that do not change meaning.
+- If the model answer omits an essential condition present in the ground truth, it is Incorrect.
+- If the model answer adds an unsupported condition or extra incorrect logic, it is Incorrect.
+- When uncertain, choose the stricter option (prefer “Incorrect”).
+- Follow the output format exactly.
+
+You must respond with a single JSON object and nothing else:
+
+{
+  "verdict": "Correct" | "Incorrect",
+  "explanation": "1–3 sentences explaining your decision."
+}
+
+Now judge the following:
+
+QUESTION:
+{question}
+
+GROUND TRUTH ANSWER:
+{label}
+
+MODEL ANSWER:
+{response}'''
 
     return prompt

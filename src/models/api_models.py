@@ -242,11 +242,14 @@ def generate_api_evaluation_response(model_name, client, messages, seed):
         temperature=0,
         messages=messages,
         seed=seed,
-        provider={
-            "order": ["openai", "mistral", "novita"],
-            "allow_fallbacks": False
-        }
+        extra_body={
+            "provider":{
+                "only": ["openai", "mistral", "anthropic"],
+                "require_parameters": True
+            }
+        },
+        response_format={"type": "json_object"}
     )
-    # Extract all three responses
-    responses = [choice.message.content for choice in completion.choices]
-    return responses
+    # Extract response content as JSON
+    response_in_json = json.loads(completion.choices[0].message.content)
+    return response_in_json

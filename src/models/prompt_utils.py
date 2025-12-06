@@ -4,6 +4,11 @@ def load_messages(model_name, prompt, image=None):
         templates = {
             # Close sour LLMs
             "claude-3-5-sonnet": [
+                {"role": "system", "content": "You are a helpful assistant."},
+                {"role": "user", "content": prompt},
+            ],
+            "claude-sonnet-4.5": [
+                {"role": "system", "content": "You are a helpful assistant."},
                 {"role": "user", "content": prompt},
             ],
             "gpt-4o": [
@@ -14,60 +19,72 @@ def load_messages(model_name, prompt, image=None):
                 {"role": "system", "content": "You are a helpful assistant."},
                 {"role": "user", "content": prompt},
             ],
+            "gpt-5.1-chat": [
+                {"role": "system", "content": "You are a helpful assistant."},
+                {"role": "user", "content": prompt},
+            ],
             # Open source LLMs
             "Llama-3.1-8B": [
                 {
                     "role": "system",
-                    "content": "Cutting Knowledge Date: December 2023\nToday Date: 23 July 2024\n\nYou are a helpful assistant",
+                    "content": "You are a helpful assistant",
                 },
                 {"role": "user", "content": prompt},
             ],
             "Llama-3.1-70B": [
                 {
                     "role": "system",
-                    "content": "Cutting Knowledge Date: December 2023\nToday Date: 23 July 2024\n\nYou are a helpful assistant",
+                    "content": "You are a helpful assistant",
+                },
+                {"role": "user", "content": prompt},
+            ],
+            "mistral-large-2411": [
+                {
+                    "role": "system", 
+                    "content": "You are a helpful assistant."
                 },
                 {"role": "user", "content": prompt},
             ],
             "Mixtral-8x22B": [{"role": "user", "content": prompt}],
             "Phi-3.5-mini": [
-                {"role": "system", "content": "You are a helpful AI assistant."},
+                {"role": "system", "content": "You are a helpful assistant."},
                 {"role": "user", "content": prompt},
             ],
             "Phi-3.5-MoE": [
-                {"role": "system", "content": "You are a helpful AI assistant."},
+                {"role": "system", "content": "You are a helpful assistant."},
                 {"role": "user", "content": prompt},
             ],
             "Qwen2.5-7B": [
                 {
                     "role": "system",
-                    "content": "You are Qwen, created by Alibaba Cloud. You are a helpful assistant.",
+                    "content": "You are a helpful assistant.",
                 },
                 {"role": "user", "content": prompt},
             ],
             "Qwen2.5-14B": [
                 {
                     "role": "system",
-                    "content": "You are Qwen, created by Alibaba Cloud. You are a helpful assistant.",
+                    "content": "You are a helpful assistant.",
                 },
                 {"role": "user", "content": prompt},
             ],
             "Qwen2.5-32B": [
                 {
                     "role": "system",
-                    "content": "You are Qwen, created by Alibaba Cloud. You are a helpful assistant.",
+                    "content": "You are a helpful assistant.",
                 },
                 {"role": "user", "content": prompt},
             ],
             "Qwen2.5-72B": [
                 {
                     "role": "system",
-                    "content": "You are Qwen, created by Alibaba Cloud. You are a helpful assistant.",
+                    "content": "You are a helpful assistant.",
                 },
                 {"role": "user", "content": prompt},
             ],
             # Open source VLMs
             "Llama-3.2-11B": [
+                {"role": "system", "content": "You are a helpful assistant."},
                 {
                     "role": "user",
                     "content": [
@@ -76,6 +93,7 @@ def load_messages(model_name, prompt, image=None):
                 },
             ],
             "Llama-3.2-90B": [
+                {"role": "system", "content": "You are a helpful assistant."},
                 {
                     "role": "user",
                     "content": [
@@ -84,6 +102,7 @@ def load_messages(model_name, prompt, image=None):
                 },
             ],
             "llava-v1.6-110b": [
+                {"role": "system", "content": "You are a helpful assistant."},
                 {
                     "role": "user",
                     "content": [
@@ -92,6 +111,7 @@ def load_messages(model_name, prompt, image=None):
                 },
             ],
             "Qwen2-VL-7B": [
+                {"role": "system", "content": "You are a helpful assistant."},
                 {
                     "role": "user",
                     "content": [
@@ -100,6 +120,7 @@ def load_messages(model_name, prompt, image=None):
                 },
             ],
             "Qwen2-VL-72B": [
+                {"role": "system", "content": "You are a helpful assistant."},
                 {
                     "role": "user",
                     "content": [
@@ -113,6 +134,7 @@ def load_messages(model_name, prompt, image=None):
         templates = {
             # Close source VLMs
             "claude-3-5-sonnet": [
+                {"role": "system", "content": "You are a helpful assistant."},
                 {
                     "role": "user",
                     "content": [
@@ -160,8 +182,25 @@ def load_messages(model_name, prompt, image=None):
                     ],
                 },
             ],
+            "gpt-5.1-chat": [
+                {"role": "system", "content": "You are a helpful assistant."},
+                {
+                    "role": "user",
+                    "content": [
+                        {"type": "text", "text": prompt},
+                        {
+                            "type": "image_url",
+                            "image_url": {
+                                "url": f"data:image/jpeg;base64,{image}",
+                                "detail": "high",
+                            },
+                        },
+                    ],
+                },
+            ],
             # Open source VLMs
             "Llama-3.2-11B": [
+                {"role": "system", "content": "You are a helpful assistant."},
                 {
                     "role": "user",
                     "content": [
@@ -171,6 +210,7 @@ def load_messages(model_name, prompt, image=None):
                 },
             ],
             "Llama-3.2-90B": [
+                {"role": "system", "content": "You are a helpful assistant."},
                 {
                     "role": "user",
                     "content": [
@@ -180,6 +220,7 @@ def load_messages(model_name, prompt, image=None):
                 },
             ],
             "llava-v1.6-110b": [
+                {"role": "system", "content": "You are a helpful assistant."},
                 {
                     "role": "user",
                     "content": [
@@ -189,6 +230,7 @@ def load_messages(model_name, prompt, image=None):
                 },
             ],
             "Qwen2-VL-7B": [
+                {"role": "system", "content": "You are a helpful assistant."},
                 {
                     "role": "user",
                     "content": [
@@ -198,6 +240,7 @@ def load_messages(model_name, prompt, image=None):
                 },
             ],
             "Qwen2-VL-72B": [
+                {"role": "system", "content": "You are a helpful assistant."},
                 {
                     "role": "user",
                     "content": [
