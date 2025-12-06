@@ -45,7 +45,10 @@ def load_messages(model_name, prompt, image=None):
                 },
                 {"role": "user", "content": prompt},
             ],
-            "Mixtral-8x22B": [{"role": "user", "content": prompt}],
+            "Mixtral-8x22B": [
+                {"role": "system", "content": "You are a helpful assistant."},
+                {"role": "user", "content": prompt}
+            ],
             "Phi-3.5-mini": [
                 {"role": "system", "content": "You are a helpful assistant."},
                 {"role": "user", "content": prompt},
