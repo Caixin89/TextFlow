@@ -1,0 +1,36 @@
+FROM python:3.11-slim
+
+ENV DEBIAN_FRONTEND=noninteractive \
+    PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1
+
+WORKDIR /app
+
+# Small set of apt packages
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    ca-certificates \
+    git \
+    curl \
+    wget \
+    build-essential \
+    libgl1 \
+    libglib2.0-0 \
+    libsm6 \
+    libxext6 \
+    libxrender1 \
+    ffmpeg \
+    && rm -rf /var/lib/apt/lists/*
+
+# Upgrade pip and install PyTorch CPU wheels from PyTorch CPU index.
+# NOTE: remove torch/torchvision from requirements.cpu.txt so they are not reinstalled here.
+RUN pip install --no-cache-dir --upgrade pip setuptools wheel
+RUN pip install --no-cache-dir --prefer-binary --extra-index-url https://download.pytorch.org/whl/cpu \
+    torch torchvision
+
+# Copy and install the rest of the CPU-only requirements
+COPY requirements.cpu.txt .
+RUN pip install --no-cache-dir -r requirements.cpu.txt
+
+# Copy source
+COPY src/ ./src
+COPY . .

@@ -1,106 +1,106 @@
-<p align="center">
-    <img src="assets/figures/logo.png" width="160"> 
-</p>
+# FlowchartVQA_Research — Run guide (root project)
 
-# Beyond End-to-End VLMs: Leveraging Intermediate Text Representations for Superior Flowchart Understanding
+This README documents how to build and run the root project. It describes the Docker Compose services, how to run the evaluation / pipeline scripts, and convenient Makefile targets.
 
-[[Paper](https://aclanthology.org/2025.naacl-long.180.pdf)] [[DeepWiki](https://deepwiki.com/JunyiYe/TextFlow)]
+Prerequisites
+- Docker (with Compose V2: use `docker compose`, not the legacy `docker-compose`).
+- For GPU builds: host with NVIDIA drivers + nvidia-container-toolkit.
+- On macOS (no GPU), use the CPU service (`flowchart_vqa_cpu`).
 
-![](./assets/figures/textflow.png)
+Repository layout (relevant)
+- Dockerfile         — GPU (devel) image
+- Dockerfile.cpu     — CPU-only image (for mac)
+- docker-compose.yml
+- .env               — env vars consumed by scripts (not committed)
+- Makefile           — convenient targets that call docker compose
+- requirements*.txt
+- src/               — python code (vqa, reasoner, textualizer, evaluation)
+- data/, logs/, output/ — host folders to mount (create if missing)
 
-## News
-- [2025/01] 🔥 **Our TextFlow paper is accepted by [NAACL 2025](https://2025.naacl.org/)**.
-- [2025/01]  The data and code for TextFlow have been released.
-- [2024/12]  Excited to announce that our TextFlow paper is now available on [arXiv](https://arxiv.org/abs/2412.16420)!
+Required .env variables (examples)
+- JUDGE_MODEL
+- DATASET
+- FLOWCHART_CODE_FORMAT
+- REASONER_MODEL
+- TEXTUALIZER_MODEL
+- END_TO_END_MODEL
 
-## TL;DR
-TEXTFLOW, a framework that converts flowchart images into text to improve explainability and control in flowchart understanding tasks.
+(Place your values in `.env` at repo root. The Makefile and compose services read this file.)
 
-## Abstract
-Flowcharts are typically presented as images, driving the trend of using vision-language models (VLMs) for end-to-end flowchart understanding. However, two key challenges arise: **(i) Limited controllability**—users have minimal influence over the downstream task, as they can only modify input images, while the training of VLMs is often out of reach for most researchers. **(ii) Lack of explainability**—it is difficult to trace VLM errors to specific causes, such as failures in visual encoding or reasoning. 
-
-We propose TextFlow, addressing aforementioned issues with two stages: **(i) Vision Textualizer**—which generates textual representations from flowchart images; and **(ii) Textual Reasoner**—which performs question-answering based on the text representations. TextFlow offers three key advantages: **(i) users can select the type of text representations** (e.g., Graphviz, Mermaid, PlantUML), or further convert them into **executable graph object to call tools**, enhancing performance and controllability; **(ii) it improves explainability by helping to attribute errors more clearly to visual or textual processing components**; and **(iii) it promotes the modularization of the solution**, such as allowing advanced LLMs to be used in the reasoner stage when VLMs underperform in end-to-end fashion. Experiments on the FlowVQA and FlowLearn benchmarks demonstrate TextFlow's state-of-the-art performance as well as its robustness. All code will be publicly released.
-
-## Installation
-
-Follow these steps to get started with **TextFlow**:
-
-### 1. Install Dependencies and Set UP API Keys
-Run the following command to install all required dependencies:
+Prepare host folders
 ```bash
-cd TextFlow
-pip install -r requirements.txt
+mkdir -p data logs output
+# move your datasets under data/, e.g. data/genflowchart if needed
 ```
-Set up your OpenAI or Anthropic API keys in the `config.json` file.
 
-
-## Quick Start
-
-### 1. Run the Baseline (End-to-End Visual Question Answering)
-Perform baseline VQA on the `flowvqa` dataset:
+Build images (recommended via Compose)
+- Enable BuildKit and Compose CLI for faster builds (optional but recommended):
 ```bash
-python src/vqa.py --dataset flowvqa --model_name gpt-4o
+export DOCKER_BUILDKIT=1
+export COMPOSE_DOCKER_CLI_BUILD=1
 ```
 
-Evaluate the experimental results:
+- Build both images:
 ```bash
-python src/evaluation.py --model_name gpt-4o --data_path output/flowvqa/vqa/gpt-4o.json
+docker compose build
 ```
-
----
-
-### 2. Run the TextFlow Pipeline
-#### Step 1: Vision Textualizer
-Convert flowchart images into text representations (Mermaid, Graphviz, or PlantUML). Example for generating the **Mermaid** text representations:
+- Or build just one service:
 ```bash
-python src/textualizer.py --dataset flowvqa --textualizer gpt-4o --output_type mermaid
+docker compose build flowchart_vqa        # GPU image (Linux + CUDA hosts)
+docker compose build flowchart_vqa_cpu    # CPU image (macOS / no GPU)
 ```
 
-#### Step 2: Textual Reasoner
-Perform question answering based on the text representations:
+Run services
+- Start nothing by default (we use `docker compose run` for one-shot commands). To run interactive containers use:
 ```bash
-python src/reasoner.py --dataset flowvqa --reasoner gpt-4o --textualizer gpt-4o --input_type mermaid
+# start a shell in CPU container:
+docker compose run --rm flowchart_vqa_cpu bash
+# start a shell in GPU container:
+docker compose run --rm --gpus all flowchart_vqa bash
 ```
 
-#### Optional: Enable Tool Use
-For enhanced capabilities, enable tool usage (currently supported for Mermaid text representation with `gpt-4o`):
+Use the Makefile (recommended)
+The Makefile provides short targets that call the appropriate Python scripts inside the container using environment variables from `.env`.
+
+- Defaults to CPU service `flowchart_vqa_cpu`. Override with `SERVICE=flowchart_vqa` to run on GPU.
+- Examples:
 ```bash
-python src/reasoner.py --dataset flowvqa --reasoner gpt-4o --textualizer gpt-4o --input_type mermaid --tool_use
+# run the reasoner (CPU)
+make run_reasoner
+
+# run the reasoner with tool use enabled
+make run_reasoner_tool_use
+
+# run textualizer
+make run_textualizer
+
+# run end-to-end VQA (calls src/vqa.py)
+make run_end_to_end
+
+# run evaluation: textflow / evaluation of textualization
+make eval_textflow
+make eval_textflow_tool_use
+
+# run judge evaluation for end-to-end
+make eval_end_to_end
+
+# run on GPU service instead:
+make SERVICE=flowchart_vqa run_reasoner
 ```
 
-Evaluate the results of the TextFlow pipeline:
-1. Without tool use:
-   ```bash
-   python evaluation.py --model_name gpt-4o --data_path output/flowvqa/textflow/mermaid_reasoner_gpt-4o_textualizer_gpt-4o.json
-   ```
-2. With tool use:
-   ```bash
-   python evaluation.py --model_name gpt-4o --data_path output/flowvqa/textflow/mermaid_reasoner_tool_use_gpt-4o_textualizer_gpt-4o.json
-   ```
+Direct docker-compose run
+If you prefer not to use Makefile, you can run the Python commands directly. Example (uses `.env` values injected by compose):
 
----
+```bash
+# textflow evaluation (tool_use example)
+docker compose run --rm flowchart_vqa_cpu bash -lc \
+  'python src/evaluation.py --model_name "$JUDGE_MODEL" --data_path "output/${DATASET}/textflow/${FLOWCHART_CODE_FORMAT}_reasoner_tool_use_${REASONER_MODEL##*/}_textualizer_${TEXTUALIZER_MODEL##*/}.json"'
 
-## Citation
-If you find this project is helpful to your research, please consider to cite our paper:
+# end-to-end evaluation
+docker compose run --rm flowchart_vqa_cpu bash -lc \
+  'python src/evaluation.py --model_name "$JUDGE_MODEL" --data_path "output/${DATASET}/vqa/${END_TO_END_MODEL##*/}.json"'
 ```
-@inproceedings{ye-etal-2025-beyond,
-    title = "Beyond End-to-End {VLM}s: Leveraging Intermediate Text Representations for Superior Flowchart Understanding",
-    author = "Ye, Junyi  and
-      Dash, Ankan  and
-      Yin, Wenpeng  and
-      Wang, Guiling",
-    editor = "Chiruzzo, Luis  and
-      Ritter, Alan  and
-      Wang, Lu",
-    booktitle = "Proceedings of the 2025 Conference of the Nations of the Americas Chapter of the Association for Computational Linguistics: Human Language Technologies (Volume 1: Long Papers)",
-    month = apr,
-    year = "2025",
-    address = "Albuquerque, New Mexico",
-    publisher = "Association for Computational Linguistics",
-    url = "https://aclanthology.org/2025.naacl-long.180/",
-    doi = "10.18653/v1/2025.naacl-long.180",
-    pages = "3534--3548",
-    ISBN = "979-8-89176-189-6",
-    abstract = "Flowcharts are typically presented as images, driving the trend of using vision-language models (VLMs) for end-to-end flowchart understanding. However, two key challenges arise: (i) Limited controllability{---}users have minimal influence over the downstream task, as they can only modify input images, while the training of VLMs is often out of reach for most researchers. (ii) Lack of explainability{---}it is difficult to trace VLM errors to specific causes, such as failures in visual encoding or reasoning. We propose TextFlow, addressing aforementioned issues with two stages: (i) Vision Textualizer{---}which generates textual representations from flowchart images; and (ii) Textual Reasoner{---}which performs question-answering based on the text representations. TextFlow offers three key advantages: (i) users can select the type of text representations (e.g., Graphviz, Mermaid, PlantUML), or further convert them into executable graph object to call tools, enhancing performance and controllability; (ii) it improves explainability by helping to attribute errors more clearly to visual or textual processing components; and (iii) it promotes the modularization of the solution, such as allowing advanced LLMs to be used in the reasoner stage when VLMs underperform in end-to-end fashion. Experiments on the FlowVQA and FlowLearn benchmarks demonstrate TextFlow{'}s state-of-the-art performance as well as its robustness. All code and data are publicly available."
-}
-```
+
+Notes about flash-attn and CPU
+- The CPU image excludes GPU-only packages (e.g., `flash_attn`). The CPU service sets `ENABLE_FLASH_ATTENTION=0` so code will avoid using flash-attention.
+- Use `flowchart_vqa` (GPU) for best performance on Linux hosts with GPUs; use `flowchart_vqa_cpu` on macOS.

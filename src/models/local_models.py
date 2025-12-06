@@ -1,4 +1,5 @@
 import logging
+import os
 
 import torch
 from qwen_vl_utils import process_vision_info
@@ -56,11 +57,15 @@ def load_local_model(model_name):
             )
             processor = AutoProcessor.from_pretrained(model_id)
         elif model_name in ["Qwen2-VL-7B", "Qwen2-VL-72B"]:
+            # enable flash attention only when CUDA is available and explicitly enabled
+            attn_kwargs = {}
+            if os.environ.get("ENABLE_FLASH_ATTENTION", "1") == "1" and torch.cuda.is_available():
+                attn_kwargs["attn_implementation"] = "flash_attention_2"
             model = Qwen2VLForConditionalGeneration.from_pretrained(
                 model_id,
                 torch_dtype=torch.bfloat16,
-                attn_implementation="eager",
                 device_map="auto",
+                **attn_kwargs,
             )
             processor = AutoProcessor.from_pretrained(model_id)
         else:

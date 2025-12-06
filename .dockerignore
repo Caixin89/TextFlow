@@ -1,0 +1,44 @@
+# Python artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtualenvs / env files
+.env
+.venv/
+venv/
+env/
+ENV/
+
+# Git
+.git
+.gitignore
+
+# IDE/editor files
+.vscode/
+.idea/
+
+# Jupyter
+.ipynb_checkpoints
+
+# Mounted dirs (keep out of image to avoid large copies)
+data/
+logs/
+output/
+
+# Large model/checkpoint files
+*.pt
+*.pth
+*.ckpt
+models/checkpoints/
+models/*.pt
+weights/
+
+# Build / packaging
+build/
+dist/
+*.egg-info/
+
+# Caches / misc
+.pytest_cache/
+.DS_Store
