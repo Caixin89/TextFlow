@@ -79,10 +79,7 @@ def main():
     with open(data_path, "r") as file:
         data = json.load(file)
 
-    for (i, (key, sample)) in tqdm(enumerate(data.items())):
-        if i == 10:
-            break # for quick testing
-
+    for key, sample in tqdm(data.items()):
         prompt = load_evaluation_prompt(
             sample["question"], sample["response"], sample["answer"]
         )
