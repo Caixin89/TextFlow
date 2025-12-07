@@ -100,10 +100,10 @@ Evaluation Rules:
 
 You must respond with a single JSON object and nothing else:
 
-{
+{{
   "verdict": "Correct" | "Incorrect",
   "explanation": "1–3 sentences explaining your decision."
-}
+}}
 
 Now judge the following:
 

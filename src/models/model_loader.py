@@ -8,7 +8,7 @@ from models.local_models import (generate_local_response,
                                  generate_local_response_tool_use,
                                  load_local_model)
 from models.prompt_utils import load_messages
-from utils import encode_image, strip_provider_from_get_model_name
+from utils import encode_image, get_base_model_name
 
 CONFIG = config["model_config"]
 
@@ -30,7 +30,7 @@ class ModelWrapper:
     def generate_response(self, prompt, image_path=None, representation=None):
         image = encode_image(image_path, self.model_name) if image_path else None
         tool_use = representation is not None
-        messages = load_messages(strip_provider_from_get_model_name(self.model_name), prompt, image)
+        messages = load_messages(get_base_model_name(self.model_name), prompt, image)
 
         if self.is_api_model:
             if tool_use:
@@ -56,5 +56,5 @@ class ModelWrapper:
                 )
 
     def generate_evaluation_response(self, prompt, seed):
-        messages = load_messages(strip_provider_from_get_model_name(self.model_name), prompt)
+        messages = load_messages(get_base_model_name(self.model_name), prompt)
         return generate_api_evaluation_response(self.model_name, self.model, messages, seed)

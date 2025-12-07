@@ -2,6 +2,7 @@ import argparse
 import json
 import logging
 import os
+import re
 from datetime import datetime
 
 from tqdm import tqdm
@@ -19,9 +20,17 @@ def main():
     )
     parser.add_argument(
         "--model_names",
-        nargs="*",
-        default=["openrouter/openai/gpt-5.1-chat", "openrouter/anthropic/claude-sonnet-4.5", "openrouter/mistralai/mistral-large-2411"],
-        help="The LLMs used as the evaluator.",
+        nargs="+",
+        default=[
+            "openrouter/openai/gpt-5.1-chat",
+            "openrouter/anthropic/claude-sonnet-4.5",
+            "openrouter/mistralai/mistral-large-2411",
+        ],
+        help=(
+            "One or more model names (e.g. --model_names a b c), "
+            "or a single comma- or space-separated string (e.g. \"a,b,c\" or \"a b c\"). "
+            "The value will be normalized into a Python list of strings."
+        ),
     )
     parser.add_argument(
         "--seed",
@@ -36,6 +45,14 @@ def main():
         help="Data path of the experiment result to evaluate.",
     )
     args = parser.parse_args()
+
+    # Normalize model_names into a flat list[str].
+    # Accepts: separate args, comma-separated single arg, or space-separated single arg from env.
+    model_names = []
+    for token in args.model_names:
+        model_names.extend([m for m in re.split(r'[,\s]+', token.strip()) if m])
+    args.model_names = model_names
+
     model_names = args.model_names
     seed = args.seed
     data_path = args.data_path

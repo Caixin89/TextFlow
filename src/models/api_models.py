@@ -7,7 +7,7 @@ from openai import OpenAI
 from config import config
 from models.mermaid_parser import Mermaid2Flowchart
 from models.prompt_utils import load_tools, load_tools_code
-from utils import strip_provider_from_get_model_name
+from utils import get_base_model_name
 
 max_new_tokens = config["model_config"]["max_new_tokens"]
 temperature = config["model_config"]["temperature"]
@@ -16,7 +16,12 @@ def is_openrouter_model(model_name):
     return model_name.startswith("openrouter/")
 
 def get_model_id(model_name):
-    return config["model_version"].get(strip_provider_from_get_model_name(model_name))
+    logger = logging.getLogger(__name__)
+    model_id = config["model_version"].get(get_base_model_name(model_name))
+    if not model_id:
+        model_id = model_name.removeprefix("openrouter/")
+        logger.warning(f"Model version for {model_name} not found, using {model_id} as model ID.")
+    return model_id
 
 def load_api_model(model_name):
     logger = logging.getLogger(__name__)
@@ -69,7 +74,7 @@ def generate_api_response_tool_use(model_name, client, messages, representation)
 
     # Tool use is only implemented for gpt-4o and gpt-4o-mini.
     # But it can be esaily extend to any LLMs that support tool use.
-    if strip_provider_from_get_model_name(model_name) in ["gpt-4o", "gpt-4o-mini"]:
+    if get_base_model_name(model_name) in ["gpt-4o", "gpt-4o-mini"]:
         tools = load_tools()
         completion = client.chat.completions.create(
             model=model_id,
@@ -245,10 +250,31 @@ def generate_api_evaluation_response(model_name, client, messages, seed):
         extra_body={
             "provider":{
                 "only": ["openai", "mistral", "anthropic"],
-                "require_parameters": True
-            }
+            },
+            "require_parameters": True
         },
-        response_format={"type": "json_object"}
+        response_format={
+            "type": "json_schema",
+            "json_schema": {
+                "name": "judgement",
+                "strict": True,
+                "schema": {
+                    "type": "object",
+                    "properties": {
+                        "verdict": {
+                            "type": "string",
+                            "description": "\"Correct\" | \"Incorrect\""
+                        },
+                        "explanation": {
+                            "type": "string",
+                            "description": "1–3 sentences explaining your decision."
+                        },
+                    },
+                    "required": ["verdict", "explanation"],
+                    "additionalProperties": False
+                }
+            }
+        }
     )
     # Extract response content as JSON
     response_in_json = json.loads(completion.choices[0].message.content)
