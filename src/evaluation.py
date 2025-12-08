@@ -79,15 +79,15 @@ def main():
     with open(data_path, "r") as file:
         data = json.load(file)
 
-    for key, sample in tqdm(data.items()):
+    for (key, sample) in tqdm(data.items(), total=len(data)):
         prompt = load_evaluation_prompt(
             sample["question"], sample["response"], sample["answer"]
         )
         judgements = [m.generate_evaluation_response(prompt, seed) for m in models]
         final_decision = majority_vote([j["verdict"] for j in judgements])
         result = {"final_decision": final_decision}
-        for j in judgements:
-            result[f"decision{len(result)+1}"] = { "verdict": j["verdict"], "explanation": j["explanation"] }
+        for idx, j in enumerate(judgements, start=1):
+            result[f"decision{idx}"] = { "verdict": j["verdict"], "explanation": j["explanation"] }
         # Append the evaluation result to
         data[key] = {**data[key], **result}
 
