@@ -1,5 +1,7 @@
 import json
 import logging
+import time
+import re
 
 from anthropic import Anthropic
 from openai import OpenAI
@@ -240,42 +242,55 @@ def generate_api_evaluation_response(model_name, client, messages, seed):
     logger = logging.getLogger(__name__)
     model_id = get_model_id(model_name)
 
-    # GPT-4o is used as evaluator
-    completion = client.chat.completions.create(
-        model=model_id,
-        max_tokens=max_new_tokens,
-        temperature=0,
-        messages=messages,
-        seed=seed,
-        extra_body={
-            "provider":{
-                "only": ["openai", "mistral", "anthropic"],
+    logger.debug("Evaluator model: %s ", model_id)
+
+    start = time.time()
+    try:
+        completion = client.chat.completions.create(
+            model=model_id,
+            max_tokens=max_new_tokens,
+            temperature=0,
+            messages=messages,
+            seed=seed,
+            extra_body={
+                "provider": {"only": ["openai", "mistral", "anthropic"]},
+                "require_parameters": True,
             },
-            "require_parameters": True
-        },
-        response_format={
-            "type": "json_schema",
-            "json_schema": {
-                "name": "judgement",
-                "strict": True,
-                "schema": {
-                    "type": "object",
-                    "properties": {
-                        "verdict": {
-                            "type": "string",
-                            "description": "\"Correct\" | \"Incorrect\""
+            response_format={
+                "type": "json_schema",
+                "json_schema": {
+                    "name": "judgement",
+                    "strict": True,
+                    "schema": {
+                        "type": "object",
+                        "properties": {
+                            "verdict": {"type": "string", "description": "\"Correct\" | \"Incorrect\""},
+                            "explanation": {"type": "string", "description": "1–3 sentences explaining your decision."},
                         },
-                        "explanation": {
-                            "type": "string",
-                            "description": "1–3 sentences explaining your decision."
-                        },
+                        "required": ["verdict", "explanation"],
+                        "additionalProperties": False,
                     },
-                    "required": ["verdict", "explanation"],
-                    "additionalProperties": False
-                }
-            }
-        }
-    )
-    # Extract response content as JSON
-    response_in_json = json.loads(completion.choices[0].message.content)
+                },
+            },
+        )
+        raw = completion.choices[0].message.content
+        response_in_json = json.loads(raw)
+    except json.JSONDecodeError:
+        try:
+            # Only attempt to extract JSON from fenced code blocks (```json or ```)
+            fence_re = re.compile(r'```(?:json)?\s*(\{.*\}|\[.*\])\s*```', re.I | re.S)
+            m = fence_re.search(raw)
+            response_in_json = json.loads(m.group(1))
+        except Exception as e:
+            elapsed = time.time() - start
+            logger.error("Evaluation request failed after %.2fs: JSON decode error: %s", elapsed, e)
+            logger.error("Raw response: %s", raw)
+            raise
+    except Exception as e:
+        elapsed = time.time() - start
+        logger.error("Evaluation request failed after %.2fs: %s", elapsed, e)
+        raise
+
+    elapsed = time.time() - start
+    logger.info("Evaluation request completed in %.2fs (model=%s)", elapsed, model_id)
     return response_in_json

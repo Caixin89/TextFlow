@@ -23,7 +23,7 @@ def main():
         nargs="+",
         default=[
             "openrouter/openai/gpt-5.1-chat",
-            "openrouter/anthropic/claude-sonnet-4.5",
+            "openrouter/anthropic/claude-haiku-4.5",
             "openrouter/mistralai/mistral-large-2411",
         ],
         help=(
