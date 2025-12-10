@@ -238,59 +238,70 @@ def generate_api_response_tool_use(model_name, client, messages, representation)
     return response
 
 
-def generate_api_evaluation_response(model_name, client, messages, seed):
+def generate_api_evaluation_response(model_name, client, messages, seed, max_retries: int = 3):
     logger = logging.getLogger(__name__)
     model_id = get_model_id(model_name)
+    logger.debug("Evaluator model: %s", model_id)
 
-    logger.debug("Evaluator model: %s ", model_id)
+    fence_re = re.compile(r'```(?:json)?\s*(\{.*\}|\[.*\])\s*```', re.I | re.S)
+    any_json_re = re.compile(r'(\{.*\}|\[.*\])', re.S)
 
     start = time.time()
-    try:
-        completion = client.chat.completions.create(
-            model=model_id,
-            max_tokens=max_new_tokens,
-            temperature=0,
-            messages=messages,
-            seed=seed,
-            extra_body={
-                "provider": {"only": ["openai", "mistral", "anthropic"]},
-                "require_parameters": True,
-            },
-            response_format={
-                "type": "json_schema",
-                "json_schema": {
-                    "name": "judgement",
-                    "strict": True,
-                    "schema": {
-                        "type": "object",
-                        "properties": {
-                            "verdict": {"type": "string", "description": "\"Correct\" | \"Incorrect\""},
-                            "explanation": {"type": "string", "description": "1–3 sentences explaining your decision."},
-                        },
-                        "required": ["verdict", "explanation"],
-                        "additionalProperties": False,
-                    },
-                },
-            },
-        )
-        raw = completion.choices[0].message.content
-        response_in_json = json.loads(raw)
-    except json.JSONDecodeError:
-        try:
-            # Only attempt to extract JSON from fenced code blocks (```json or ```)
-            fence_re = re.compile(r'```(?:json)?\s*(\{.*\}|\[.*\])\s*```', re.I | re.S)
-            m = fence_re.search(raw)
-            response_in_json = json.loads(m.group(1))
-        except Exception as e:
-            elapsed = time.time() - start
-            logger.error("Evaluation request failed after %.2fs: JSON decode error: %s", elapsed, e)
-            logger.error("Raw response: %s", raw)
-            raise
-    except Exception as e:
-        elapsed = time.time() - start
-        logger.error("Evaluation request failed after %.2fs: %s", elapsed, e)
-        raise
+    raw = None
+    last_exc = None
 
-    elapsed = time.time() - start
-    logger.info("Evaluation request completed in %.2fs (model=%s)", elapsed, model_id)
-    return response_in_json
+    for attempt in range(1, max_retries + 1):
+        try:
+            completion = client.chat.completions.create(
+                model=model_id,
+                max_tokens=max_new_tokens,
+                temperature=0,
+                messages=messages,
+                seed=seed,
+                extra_body={"provider": {"only": ["openai", "mistral", "anthropic"]}},
+            )
+
+            # assume content is always a string
+            raw = completion.choices[0].message.content or ""
+
+            # 1) Try direct JSON (response is raw JSON text)
+            try:
+                response_in_json = json.loads(raw)
+                elapsed = time.time() - start
+                logger.info("Evaluation request completed in %.2fs (model=%s)", elapsed, model_id)
+                return response_in_json
+            except Exception:
+                pass
+
+            # 2) Try fenced JSON block ```json ... ``` or ```
+            m = fence_re.search(raw)
+            if m:
+                candidate = m.group(1)
+                response_in_json = json.loads(candidate)
+                elapsed = time.time() - start
+                logger.info("Evaluation request completed in %.2fs (model=%s)", elapsed, model_id)
+                return response_in_json
+
+            # 3) Fallback: find first {...} or [...] anywhere in text
+            m2 = any_json_re.search(raw)
+            if m2:
+                candidate = m2.group(1)
+                response_in_json = json.loads(candidate)
+                elapsed = time.time() - start
+                logger.info("Evaluation request completed in %.2fs (model=%s)", elapsed, model_id)
+                return response_in_json
+
+            # nothing parsed
+            raise json.JSONDecodeError("No JSON found in response", raw, 0)
+
+        except Exception as e:
+            last_exc = e
+            elapsed = time.time() - start
+            logger.warning("Attempt %d/%d failed after %.2fs: %s", attempt, max_retries, elapsed, e)
+            if attempt == max_retries:
+                logger.error("Evaluation request failed after %.2fs: %s", elapsed, e)
+                logger.error("Raw response (if any): %s", raw)
+                raise
+            time.sleep(2 ** (attempt - 1))
+
+    raise last_exc
