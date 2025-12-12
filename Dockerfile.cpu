@@ -32,5 +32,4 @@ COPY requirements.cpu.txt .
 RUN pip install --no-cache-dir -r requirements.cpu.txt
 
 # Copy source
-COPY src/ ./src
-COPY . .
+# COPY src/ ./src

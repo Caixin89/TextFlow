@@ -28,6 +28,5 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy source code and other project files
-COPY src/ ./src
-COPY . .
+# Copy source code
+# COPY src/ ./src
