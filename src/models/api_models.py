@@ -3,7 +3,6 @@ import logging
 import time
 import re
 
-from anthropic import Anthropic
 from openai import OpenAI
 
 from config import config
@@ -28,16 +27,11 @@ def get_model_id(model_name):
 def load_api_model(model_name):
     logger = logging.getLogger(__name__)
     api_keys = config["api_keys"]
-
-    if model_name == "claude-3-5-sonnet":
-        client = Anthropic(api_key=api_keys["ANTHROPIC_API_KEY"])
-    elif model_name in ["gpt-4o", "gpt-4o-mini"]:
-        client = OpenAI(api_key=api_keys["OPENAI_API_KEY"])
-    elif is_openrouter_model(model_name):
+        
+    if is_openrouter_model(model_name):
         client = OpenAI(base_url="https://openrouter.ai/api/v1", api_key=api_keys["OPENROUTER_API_KEY"])
     else:
-        logger.error(f"API model {model_name} is not supported.")
-        raise ValueError(f"API model {model_name} is not supported.")
+        client = OpenAI(api_key=api_keys["OPENAI_API_KEY"])
 
     logger.info(f"Loading model {model_name}...")
     return client
@@ -47,26 +41,13 @@ def generate_api_response(model_name, client, messages, image=None):
     logger = logging.getLogger(__name__)
     model_id = get_model_id(model_name)
 
-    if model_name == "claude-3-5-sonnet":
-        message = client.messages.create(
-            model=model_id,
-            max_tokens=max_new_tokens,
-            temperature=temperature,
-            system="",
-            messages=messages,
-        )
-        response = message.content[0].text
-    elif is_openrouter_model(model_name) or model_name in ["gpt-4o", "gpt-4o-mini"]:
-        completion = client.chat.completions.create(
-            model=model_id,
-            max_tokens=max_new_tokens,
-            temperature=temperature,
-            messages=messages,
-        )
-        response = completion.choices[0].message.content
-    else:
-        logger.error(f"Response generation for {model_name} is not implemented.")
-        raise ValueError(f"Response generation for {model_name} is not implemented.")
+    completion = client.chat.completions.create(
+        model=model_id,
+        max_tokens=max_new_tokens,
+        temperature=temperature,
+        messages=messages,
+    )
+    response = completion.choices[0].message.content
 
     return response
 

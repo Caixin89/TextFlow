@@ -55,7 +55,7 @@ def main():
         logger.info(f"{arg}: {value}")
     logger.info(f"Logs saved to {os.path.abspath(log_file)}")
 
-    model = ModelWrapper(textualizer_base_name)
+    model = ModelWrapper(textualizer)
 
     data_path = os.path.join(config["file_paths"][dataset], "test.json")
     with open(data_path, "r") as file:

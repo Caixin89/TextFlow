@@ -10,6 +10,7 @@ from config import config
 from logger import setup_logger
 from models import ModelWrapper
 from prompts import load_vqa_prompt
+from utils import get_base_model_name
 
 
 def main():
@@ -72,7 +73,7 @@ def main():
             sample_id += 1
 
     output_dir = os.path.join(config["file_paths"]["output"], dataset, "vqa")
-    output_file = os.path.join(output_dir, f"{model_name}.json")
+    output_file = os.path.join(output_dir, f"{get_base_model_name(model_name)}.json")
     os.makedirs(output_dir, exist_ok=True)
     with open(output_file, "w") as file:
         json.dump(results, file, indent=4)

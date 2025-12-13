@@ -1,4 +1,4 @@
-def load_messages(model_name, prompt, image=None):
+def load_messages(prompt, image=None):
     # Text only messages (Note that VLMs can be used as LLMs without image input)
     if not image:
         return [
