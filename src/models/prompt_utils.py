@@ -29,6 +29,11 @@ def load_tools():
             "function": {
                 "name": "get_number_of_nodes",
                 "description": "Returns the number of nodes in the flowchart.",
+                "parameters": {
+                    "type": "object",
+                    "properties": {},
+                    "additionalProperties": False
+                },
             },
         },
         {
@@ -36,6 +41,11 @@ def load_tools():
             "function": {
                 "name": "get_number_of_edges",
                 "description": "Returns the number of edges in the flowchart.",
+                "parameters": {
+                    "type": "object",
+                    "properties": {},
+                    "additionalProperties": False
+                },
             },
         },
         {
@@ -101,6 +111,11 @@ def load_tools():
             "function": {
                 "name": "get_max_indegree",
                 "description": "Returns the maximum indegree (number of incoming edges) for any node.",
+                "parameters": {
+                    "type": "object",
+                    "properties": {},
+                    "additionalProperties": False
+                },                
             },
         },
         {
@@ -108,6 +123,11 @@ def load_tools():
             "function": {
                 "name": "get_max_outdegree",
                 "description": "Returns the maximum outdegree (number of outgoing edges) for any node.",
+                "parameters": {
+                    "type": "object",
+                    "properties": {},
+                    "additionalProperties": False
+                },                
             },
         },
     ]

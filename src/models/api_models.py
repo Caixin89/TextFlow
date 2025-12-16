@@ -65,7 +65,7 @@ def generate_api_response_tool_use(model_name, client, messages, representation)
     )
     response = completion.choices[0].message.content
     # Response directly without tool use
-    if response is not None:
+    if response:
         return response
     # Use tools
     else:

@@ -1,0 +1,2322 @@
+{
+    "0": {
+        "key": "wiki00071",
+        "question_id": "1",
+        "question": "What book should be read for a humorous take on Taoist philosophy?",
+        "response": "Read \u201cZhuangzi Speaks\u201d and \u201cThe Tao Speaks.\u201d",
+        "answer": "'Zhuangzi Speaks' and 'The Tao Speaks'",
+        "final_decision": "Correct",
+        "decision1": {
+            "verdict": "Correct",
+            "explanation": "The model answer repeats exactly the same two books as the ground truth with no added or missing conditions."
+        },
+        "decision2": {
+            "verdict": "Correct",
+            "explanation": "The MODEL ANSWER identifies the same two books as the GROUND TRUTH ANSWER: 'Zhuangzi Speaks' and 'The Tao Speaks'. The only difference is stylistic\u2014the model uses quotation marks instead of single quotes and frames the answer as an imperative instruction ('Read...') rather than a list. These are minor wording variations that do not change the semantic meaning or the core content of the answer."
+        },
+        "decision3": {
+            "verdict": "Correct",
+            "explanation": "The model answer correctly identifies both books mentioned in the ground truth answer, using a slight paraphrase that does not change the meaning."
+        }
+    },
+    "1": {
+        "key": "wiki00071",
+        "question_id": "2",
+        "question": "What should one seek when searching for translations of the Tao Te Ching?",
+        "response": "Quality translations of the Tao Te Ching and other Chinese texts.",
+        "answer": "Quality and accuracy",
+        "final_decision": "Incorrect",
+        "decision1": {
+            "verdict": "Incorrect",
+            "explanation": "The model answer adds \u201cother Chinese texts,\u201d which is not supported by the ground truth and changes the scope. The ground truth focuses specifically on quality and accuracy for the Tao Te Ching translations."
+        },
+        "decision2": {
+            "verdict": "Incorrect",
+            "explanation": "The model answer adds an unsupported condition by specifying 'and other Chinese texts,' which is not mentioned in the ground truth answer. The ground truth focuses specifically on seeking 'Quality and accuracy' for translations of the Tao Te Ching, while the model answer broadens the scope to include other Chinese texts, which introduces a meaningful difference in scope and specificity."
+        },
+        "decision3": {
+            "verdict": "Incorrect",
+            "explanation": "The model answer introduces an additional concept 'other Chinese texts' which is not mentioned in the ground truth answer."
+        }
+    },
+    "2": {
+        "key": "wiki00071",
+        "question_id": "3",
+        "question": "Assuming I'm at the step where I'm comparing translations for quality and accuracy, and I eventually find a quality translation, what are the immediate next two steps in the process?",
+        "response": "Use the selected translation for study, then apply the philosophical principles of Taoism to daily actions.",
+        "answer": "The immediate next steps would be 'Use the selected translation for study' followed by 'Apply the philosophical principles of Taoism to daily actions'.",
+        "final_decision": "Correct",
+        "decision1": {
+            "verdict": "Correct",
+            "explanation": "The model answer matches the ground truth exactly in meaning and sequence. No conditions or steps are altered or omitted."
+        },
+        "decision2": {
+            "verdict": "Correct",
+            "explanation": "The MODEL ANSWER expresses the same two sequential steps as the GROUND TRUTH ANSWER: (1) 'Use the selected translation for study' and (2) 'Apply the philosophical principles of Taoism to daily actions'. The model uses a paraphrased connector ('then' instead of 'followed by') but conveys identical meaning and order without omitting or altering any essential information."
+        },
+        "decision3": {
+            "verdict": "Correct",
+            "explanation": "The model answer correctly identifies the next two steps in the process, which are 'Use the selected translation for study' and 'Apply the philosophical principles of Taoism to daily actions', matching the ground truth answer."
+        }
+    },
+    "3": {
+        "key": "wiki00071",
+        "question_id": "4",
+        "question": "How many nodes exist in the given flowchart?",
+        "response": "24",
+        "answer": "25",
+        "final_decision": "Incorrect",
+        "decision1": {
+            "verdict": "Incorrect",
+            "explanation": "The model answer gives 24 nodes while the ground truth states 25. The numerical answers do not match."
+        },
+        "decision2": {
+            "verdict": "Incorrect",
+            "explanation": "The ground truth answer states there are 25 nodes in the flowchart, while the model answer claims there are 24 nodes. Since this is a factual count question with a specific numerical answer, a difference of one node represents a meaningful discrepancy. The model answer is objectively incorrect."
+        },
+        "decision3": {
+            "verdict": "Incorrect",
+            "explanation": "The model answer states '24' while the ground truth answer is '25'. This numerical difference is significant and changes the meaning."
+        }
+    },
+    "4": {
+        "key": "wiki00071",
+        "question_id": "5",
+        "question": "How many edges exist in the given flowchart?",
+        "response": "28",
+        "answer": "29",
+        "final_decision": "Incorrect",
+        "decision1": {
+            "verdict": "Incorrect",
+            "explanation": "The model answer gives 28 edges, but the ground truth states 29. The numerical answers do not match."
+        },
+        "decision2": {
+            "verdict": "Incorrect",
+            "explanation": "The model answer states there are 28 edges in the flowchart, while the ground truth answer specifies 29 edges. Since the question asks for a specific numerical count of edges, and the two answers differ by one edge, they are not semantically equivalent. A difference in the count of structural elements is a meaningful discrepancy that cannot be reconciled through paraphrasing."
+        },
+        "decision3": {
+            "verdict": "Incorrect",
+            "explanation": "The model answer states '28' while the ground truth answer is '29'. This numerical difference is significant and changes the meaning."
+        }
+    },
+    "5": {
+        "key": "wiki00071",
+        "question_id": "6",
+        "question": "Is the node \"\"Read 'The Tao of Pooh' and 'The Te of Piglet'\"\" direct predecessor of the node \"\"Focus on the philosophical aspects of Taoism\"\"?",
+        "response": "No",
+        "answer": "No",
+        "final_decision": "Correct",
+        "decision1": {
+            "verdict": "Correct",
+            "explanation": "The model answer matches the ground truth answer exactly, indicating the same meaning."
+        },
+        "decision2": {
+            "verdict": "Correct",
+            "explanation": "Both the ground truth answer and the model answer are identical: 'No'. Since they provide the same response to the question about whether one node is a direct predecessor of another, they are semantically equivalent."
+        },
+        "decision3": {
+            "verdict": "Correct",
+            "explanation": "The model answer 'No' is semantically equivalent to the ground truth answer 'No'."
+        }
+    },
+    "6": {
+        "key": "instruct00856",
+        "question_id": "1",
+        "question": "What should be done if there are accuracy issues with the Airsoft gun?",
+        "response": "Disassemble the Airsoft gun and inspect its internal components.",
+        "answer": "Disassemble the Airsoft gun",
+        "final_decision": "Incorrect",
+        "decision1": {
+            "verdict": "Incorrect",
+            "explanation": "The model answer adds an additional action (inspecting internal components) not present in the ground truth. Since this introduces extra unsupported steps, it is not semantically equivalent."
+        },
+        "decision2": {
+            "verdict": "Correct",
+            "explanation": "The model answer is semantically equivalent to the ground truth. Both convey that disassembly of the Airsoft gun is the required action for addressing accuracy issues. The model answer's addition of 'and inspect its internal components' is a natural elaboration of what disassembly entails and does not contradict or meaningfully alter the core instruction. This represents a reasonable paraphrase rather than a meaningful deviation."
+        },
+        "decision3": {
+            "verdict": "Incorrect",
+            "explanation": "The model answer adds an additional action 'inspect its internal components' which is not present in the ground truth answer."
+        }
+    },
+    "7": {
+        "key": "instruct00856",
+        "question_id": "2",
+        "question": "How should a cracked barrel mount on the Airsoft gun be repaired?",
+        "response": "Repair it with Krazy Glue.",
+        "answer": "Repair it with Krazy Glue",
+        "final_decision": "Correct",
+        "decision1": {
+            "verdict": "Correct",
+            "explanation": "The model answer matches the ground truth answer exactly with no semantic differences."
+        },
+        "decision2": {
+            "verdict": "Correct",
+            "explanation": "The MODEL ANSWER is semantically equivalent to the GROUND TRUTH ANSWER. Both specify the same repair method (Krazy Glue) for a cracked barrel mount on an Airsoft gun. The only difference is a minor stylistic variation (period placement), which does not affect the meaning or content of the answer."
+        },
+        "decision3": {
+            "verdict": "Correct",
+            "explanation": "The model answer is semantically equivalent to the ground truth answer, as both specify the same method of repair using Krazy Glue."
+        }
+    },
+    "8": {
+        "key": "instruct00856",
+        "question_id": "3",
+        "question": "Liam is customizing an Airsoft gun to fit a Steampunk theme for his short film, but he's having trouble giving the leather pieces a finished look with perfect edging. If he can't figure out how to edge the leather properly, what should he do to keep the project moving forward?",
+        "response": "Continue without edging.",
+        "answer": "Continue the modification process without edging the leather.",
+        "final_decision": "Correct",
+        "decision1": {
+            "verdict": "Correct",
+            "explanation": "The model answer conveys the same action as the ground truth: proceed without edging the leather. It contains no additional or missing conditions."
+        },
+        "decision2": {
+            "verdict": "Correct",
+            "explanation": "The MODEL ANSWER conveys the same essential meaning as the GROUND TRUTH ANSWER. Both indicate that Liam should proceed with the project without applying edging to the leather pieces. The MODEL ANSWER is a concise paraphrase that omits only the word 'modification process,' which is a stylistic difference that does not alter the core meaning or outcome being described."
+        },
+        "decision3": {
+            "verdict": "Correct",
+            "explanation": "The model answer 'Continue without edging' is semantically equivalent to the ground truth answer 'Continue the modification process without edging the leather.' Both answers convey the same action of proceeding without performing the edging on the leather."
+        }
+    },
+    "9": {
+        "key": "instruct00856",
+        "question_id": "4",
+        "question": "Assuming the Airsoft gun has been disassembled due to accuracy issues, what would be the next step if the internal components inspection reveals no cracked barrel mount?",
+        "response": "Begin aesthetic modification.",
+        "answer": "If no cracked barrel mount is found, the next step would be 'Begin aesthetic modification'.",
+        "final_decision": "Correct",
+        "decision1": {
+            "verdict": "Correct",
+            "explanation": "The model answer matches the ground truth answer exactly in meaning with no missing or extra conditions."
+        },
+        "decision2": {
+            "verdict": "Correct",
+            "explanation": "The MODEL ANSWER states 'Begin aesthetic modification,' which is semantically equivalent to the GROUND TRUTH ANSWER that specifies 'the next step would be Begin aesthetic modification.' Both answers identify the same procedural outcome. The MODEL ANSWER is a concise paraphrase that preserves the essential meaning without the framing language, which is acceptable per the paraphrasing rule."
+        },
+        "decision3": {
+            "verdict": "Correct",
+            "explanation": "The model answer correctly identifies the next step as 'Begin aesthetic modification,' which matches the ground truth answer."
+        }
+    },
+    "10": {
+        "key": "instruct00856",
+        "question_id": "5",
+        "question": "How many nodes exist in the given flowchart?",
+        "response": "19",
+        "answer": "19",
+        "final_decision": "Correct",
+        "decision1": {
+            "verdict": "Correct",
+            "explanation": "The model answer gives the same number as the ground truth with no added conditions or differences."
+        },
+        "decision2": {
+            "verdict": "Correct",
+            "explanation": "Both the ground truth answer and the model answer state that there are 19 nodes in the flowchart. The answers are identical and therefore semantically equivalent."
+        },
+        "decision3": {
+            "verdict": "Correct",
+            "explanation": "The model answer matches the ground truth answer exactly."
+        }
+    },
+    "11": {
+        "key": "instruct00856",
+        "question_id": "6",
+        "question": "How many edges exist in the given flowchart?",
+        "response": "22",
+        "answer": "22",
+        "final_decision": "Correct",
+        "decision1": {
+            "verdict": "Correct",
+            "explanation": "The model answer matches the ground truth exactly with no semantic differences."
+        },
+        "decision2": {
+            "verdict": "Correct",
+            "explanation": "Both the ground truth answer and the model answer state that there are 22 edges in the flowchart. The answers are identical and therefore semantically equivalent."
+        },
+        "decision3": {
+            "verdict": "Correct",
+            "explanation": "The model answer matches the ground truth answer exactly."
+        }
+    },
+    "12": {
+        "key": "instruct00856",
+        "question_id": "7",
+        "question": "Is the node \"\"Steampunk-themed Airsoft gun\"\" direct predecessor of the node \"\"Apply edging to leather\"\"?",
+        "response": "No",
+        "answer": "No",
+        "final_decision": "Correct",
+        "decision1": {
+            "verdict": "Correct",
+            "explanation": "The model answer matches the ground truth and gives the same response to the question."
+        },
+        "decision2": {
+            "verdict": "Correct",
+            "explanation": "Both the ground truth answer and the model answer are identical, stating 'No' to the question of whether 'Steampunk-themed Airsoft gun' is a direct predecessor of 'Apply edging to leather'. Since the answers match exactly, the model answer is semantically equivalent to the ground truth."
+        },
+        "decision3": {
+            "verdict": "Correct",
+            "explanation": "The model answer 'No' is semantically equivalent to the ground truth answer 'No'."
+        }
+    },
+    "13": {
+        "key": "instruct00856",
+        "question_id": "8",
+        "question": "How many edges exist in the shortest path between \"\"Cracked barrel mount?\"\" and \"\"Steampunk-themed Airsoft gun\"\"?",
+        "response": "7",
+        "answer": "7",
+        "final_decision": "Correct",
+        "decision1": {
+            "verdict": "Correct",
+            "explanation": "The model answer matches the ground truth exactly with the same numerical value and no differing conditions."
+        },
+        "decision2": {
+            "verdict": "Correct",
+            "explanation": "Both the ground truth answer and the model answer state that there are 7 edges in the shortest path between 'Cracked barrel mount?' and 'Steampunk-themed Airsoft gun'. The answers are identical and therefore semantically equivalent."
+        },
+        "decision3": {
+            "verdict": "Correct",
+            "explanation": "The model answer matches the ground truth answer exactly."
+        }
+    },
+    "14": {
+        "key": "instruct00856",
+        "question_id": "9",
+        "question": "An indegree of is the number of incoming edges for a node in a flowchart. What is the maximum indegree for the flowchart?",
+        "response": "3",
+        "answer": "3",
+        "final_decision": "Correct",
+        "decision1": {
+            "verdict": "Correct",
+            "explanation": "The model answer matches the ground truth exactly, providing the same numerical value with no differences in meaning."
+        },
+        "decision2": {
+            "verdict": "Correct",
+            "explanation": "Both the ground truth answer and the model answer state that the maximum indegree for the flowchart is 3. The answers are identical and therefore semantically equivalent."
+        },
+        "decision3": {
+            "verdict": "Correct",
+            "explanation": "The model answer matches the ground truth answer exactly."
+        }
+    },
+    "15": {
+        "key": "code00268",
+        "question_id": "1",
+        "question": "How is the initial value of 'incl' determined?",
+        "response": "It is set to the maximum of the first column\u2019s two values: max(grid[0][0], grid[1][0]).",
+        "answer": "It is the maximum value of the first column of the grid.",
+        "final_decision": "Incorrect",
+        "decision1": {
+            "verdict": "Correct",
+            "explanation": "The model answer matches the meaning of the ground truth by identifying the initial value as the maximum of the first column. It simply specifies the two values in that column."
+        },
+        "decision2": {
+            "verdict": "Incorrect",
+            "explanation": "The model answer specifies that 'incl' is the maximum of only two specific values (grid[0][0] and grid[1][0]), whereas the ground truth states it is the maximum value of the entire first column. The model answer is overly restrictive and assumes the first column has only two elements, which contradicts the general statement that it should be the maximum of all values in the first column."
+        },
+        "decision3": {
+            "verdict": "Incorrect",
+            "explanation": "The model answer specifies that the initial value of 'incl' is determined by the maximum of only two values from the first column, while the ground truth answer indicates it is the maximum value of the entire first column."
+        }
+    },
+    "16": {
+        "key": "code00268",
+        "question_id": "2",
+        "question": "Imagine you are writing a program to process a grid of numbers for a game. You've just initialized two variables, `incl` and `excl`, and you're about to enter a loop that starts with `i=1`. In this loop, you need to update a variable `excl_new`. Based on the algorithm you're following, what value should `excl_new` be assigned?",
+        "response": "excl_new = max(excl, incl)",
+        "answer": "The maximum of `excl` and `incl`.",
+        "final_decision": "Correct",
+        "decision1": {
+            "verdict": "Correct",
+            "explanation": "The model answer matches the ground truth by assigning excl_new to the maximum of excl and incl using equivalent wording."
+        },
+        "decision2": {
+            "verdict": "Correct",
+            "explanation": "The MODEL ANSWER directly expresses the same meaning as the GROUND TRUTH ANSWER. Both state that `excl_new` should be assigned the maximum of `excl` and `incl`. The model answer uses the explicit `max()` function notation, which is a standard and precise way to express the concept described in the ground truth. There is no meaningful difference in condition, logic, or outcome."
+        },
+        "decision3": {
+            "verdict": "Correct",
+            "explanation": "The model answer correctly states that excl_new should be assigned the maximum of excl and incl, which is semantically equivalent to the ground truth answer."
+        }
+    },
+    "17": {
+        "key": "code00268",
+        "question_id": "3",
+        "question": "As you continue to iterate through the grid in your number-crunching application, you find yourself updating two variables, `incl` and `excl`, at each step. Once you have calculated the new value for `incl`, which involves adding the maximum of grid[0][i] or grid[1][i] to `excl`, what's the next immediate action you must take before the next iteration?",
+        "response": "Update `excl` to `excl_new`.",
+        "answer": "Set the value of `excl` to `excl_new`.",
+        "final_decision": "Correct",
+        "decision1": {
+            "verdict": "Correct",
+            "explanation": "The model answer conveys the same required action: assigning excl to excl_new before the next iteration."
+        },
+        "decision2": {
+            "verdict": "Correct",
+            "explanation": "The MODEL ANSWER 'Update `excl` to `excl_new`' is semantically equivalent to the GROUND TRUTH ANSWER 'Set the value of `excl` to `excl_new`'. Both express the same action of assigning the new value to the `excl` variable before proceeding to the next iteration. The verbs 'update' and 'set' are interchangeable in this context."
+        },
+        "decision3": {
+            "verdict": "Correct",
+            "explanation": "The model answer 'Update excl to excl_new' is semantically equivalent to the ground truth answer 'Set the value of excl to excl_new'."
+        }
+    },
+    "18": {
+        "key": "code00268",
+        "question_id": "4",
+        "question": "What will be the value of `incl` after the first iteration of the loop starting at node E, given that `grid` is a 2x2 matrix with values [[1,2],[3,4]]?",
+        "response": "4",
+        "answer": "The value of `incl` after the first iteration will be 5.",
+        "final_decision": "Incorrect",
+        "decision1": {
+            "verdict": "Incorrect",
+            "explanation": "The model answer gives 4, but the ground truth says the correct value is 5. The answers are not semantically equivalent."
+        },
+        "decision2": {
+            "verdict": "Incorrect",
+            "explanation": "The ground truth answer states that `incl` will be 5 after the first iteration, while the model answer states it will be 4. These are different numerical values. Without reconstructing the flowchart, we cannot verify which is correct, but they are semantically different outcomes. The model answer contradicts the ground truth answer directly."
+        },
+        "decision3": {
+            "verdict": "Incorrect",
+            "explanation": "The model answer states that the value of `incl` will be 4, which differs from the ground truth answer of 5."
+        }
+    },
+    "19": {
+        "key": "code00268",
+        "question_id": "5",
+        "question": "If the loop at node E has completed two iterations for an input `n` of 3, what will be the sequence of steps executed up to the point of outputting the result?",
+        "response": "Start \u2192 Accept input \u2192 Initialize incl \u2192 Initialize excl \u2192 Enter loop \u2192 Iteration 1: compute excl_new \u2192 update incl \u2192 update excl \u2192 Iteration 2: compute excl_new \u2192 update incl \u2192 update excl \u2192 Exit loop \u2192 Output max(excl, incl).",
+        "answer": "The sequence is initializing `incl` and `excl`, two iterations of calculating `excl_new`, updating `incl`, updating `excl`, and then outputting the maximum of `excl` and `incl`.",
+        "final_decision": "Correct",
+        "decision1": {
+            "verdict": "Correct",
+            "explanation": "The model answer lists the same initialization steps, two loop iterations with the same updates, and the final output of the max of excl and incl. It matches the ground truth sequence without adding contradictory conditions."
+        },
+        "decision2": {
+            "verdict": "Correct",
+            "explanation": "The MODEL ANSWER provides a detailed step-by-step sequence that is semantically equivalent to the GROUND TRUTH ANSWER. Both describe the same logical flow: initialization of `incl` and `excl`, two complete iterations of the loop (each computing `excl_new` and updating both variables), loop exit, and final output of the maximum. The MODEL ANSWER's explicit enumeration of steps and inclusion of input acceptance and loop entry/exit points are paraphrases that do not contradict the ground truth and accurately represent the same computational sequence."
+        },
+        "decision3": {
+            "verdict": "Correct",
+            "explanation": "The model answer accurately describes the sequence of steps, including the initialization, two iterations of the loop with the same updates, and the final output of the maximum value."
+        }
+    },
+    "20": {
+        "key": "code00268",
+        "question_id": "6",
+        "question": "How many nodes exist in the given flowchart?",
+        "response": "10",
+        "answer": "10",
+        "final_decision": "Correct",
+        "decision1": {
+            "verdict": "Correct",
+            "explanation": "The model answer matches the ground truth exactly with no semantic differences."
+        },
+        "decision2": {
+            "verdict": "Correct",
+            "explanation": "Both the ground truth answer and the model answer state that there are 10 nodes in the flowchart. The answers are identical and therefore semantically equivalent."
+        },
+        "decision3": {
+            "verdict": "Correct",
+            "explanation": "The model answer matches the ground truth answer exactly."
+        }
+    },
+    "21": {
+        "key": "code00268",
+        "question_id": "7",
+        "question": "How many edges exist in the given flowchart?",
+        "response": "10",
+        "answer": "10",
+        "final_decision": "Correct",
+        "decision1": {
+            "verdict": "Correct",
+            "explanation": "The model answer matches the ground truth exactly with no semantic differences."
+        },
+        "decision2": {
+            "verdict": "Correct",
+            "explanation": "Both the ground truth answer and the model answer state that there are 10 edges in the flowchart. The answers are identical and therefore semantically equivalent."
+        },
+        "decision3": {
+            "verdict": "Correct",
+            "explanation": "The model answer matches the ground truth answer exactly."
+        }
+    },
+    "22": {
+        "key": "code00404",
+        "question_id": "1",
+        "question": "Under what condition will the binary search loop terminate?",
+        "response": "The loop terminates when low becomes greater than high.",
+        "answer": "When 'low' is greater than 'high'",
+        "final_decision": "Correct",
+        "decision1": {
+            "verdict": "Correct",
+            "explanation": "The model answer expresses the same termination condition\u2014low > high\u2014as the ground truth without adding or omitting any conditions."
+        },
+        "decision2": {
+            "verdict": "Correct",
+            "explanation": "The MODEL ANSWER expresses the same termination condition as the GROUND TRUTH ANSWER. Both state that the binary search loop terminates when 'low' is greater than 'high'. The MODEL ANSWER uses slightly different wording ('becomes greater than' vs. 'is greater than'), but this is a stylistic variation that does not change the semantic meaning of the condition."
+        },
+        "decision3": {
+            "verdict": "Correct",
+            "explanation": "The model answer accurately conveys the same condition as the ground truth answer, stating that the loop terminates when 'low' is greater than 'high'."
+        }
+    },
+    "23": {
+        "key": "code00404",
+        "question_id": "2",
+        "question": "In her latest project, Mia is implementing a binary search algorithm to find the last occurrence of an element in a sorted array. She has already initialized the necessary variables. If in her current iteration, the middle element is greater than the target element, what should Mia do next?",
+        "response": "She should set **high = mid \u2212 1** to continue searching in the left half of the array.",
+        "answer": "Set 'high' to 'mid - 1'.",
+        "final_decision": "Correct",
+        "decision1": {
+            "verdict": "Correct",
+            "explanation": "The model answer conveys the same action as the ground truth: setting high to mid minus 1 when the middle element is greater than the target."
+        },
+        "decision2": {
+            "verdict": "Correct",
+            "explanation": "The MODEL ANSWER correctly identifies that 'high' should be set to 'mid - 1', which is the exact action specified in the GROUND TRUTH ANSWER. The additional explanation about 'continuing searching in the left half of the array' is a valid paraphrase that provides context without contradicting or altering the core instruction. Both answers convey the same semantic meaning."
+        },
+        "decision3": {
+            "verdict": "Correct",
+            "explanation": "The model answer accurately reflects the ground truth answer by stating that 'high' should be set to 'mid - 1', which is the correct action to continue searching in the left half of the array when the middle element is greater than the target element."
+        }
+    },
+    "24": {
+        "key": "code00404",
+        "question_id": "3",
+        "question": "Carlos is debugging a binary search function that is supposed to return the last position of an element in an array. He notices that the function is not returning the correct position when the element is found. According to the flowchart, what step might Carlos have missed if the element is found at 'mid'?",
+        "response": "He likely missed the step where **`res` is set to `mid`** when `arr[mid] == x`.",
+        "answer": "Setting 'res' to 'mid'.",
+        "final_decision": "Correct",
+        "decision1": {
+            "verdict": "Correct",
+            "explanation": "The model answer states the same missed step as the ground truth: assigning res to mid when the element is found. It is a direct paraphrase with no added conditions."
+        },
+        "decision2": {
+            "verdict": "Correct",
+            "explanation": "Both answers identify the same essential step that Carlos missed: setting the variable 'res' to 'mid' when the element is found. The model answer provides slightly more context by specifying the condition (arr[mid] == x), but this additional detail is consistent with and supportive of the ground truth answer rather than contradictory. The core meaning is semantically equivalent."
+        },
+        "decision3": {
+            "verdict": "Correct",
+            "explanation": "The model answer accurately reflects the ground truth answer, stating that Carlos likely missed setting 'res' to 'mid'."
+        }
+    },
+    "25": {
+        "key": "code00404",
+        "question_id": "4",
+        "question": "After setting 'high' to 'mid - 1', what is the next condition that is evaluated and what would be the next step if 'low' is still less than or equal to 'high'?",
+        "response": "The next condition evaluated is **low <= high**.  \nIf it is still true, the algorithm proceeds to **recalculate mid = (low + high) // 2** and continue the loop.",
+        "answer": "The next condition checks if 'low' is less than or equal to 'high', and if true, it recalculates 'mid'.",
+        "final_decision": "Correct",
+        "decision1": {
+            "verdict": "Correct",
+            "explanation": "The model answer matches the ground truth, identifying the same condition (low <= high) and the same next step (recalculating mid)."
+        },
+        "decision2": {
+            "verdict": "Correct",
+            "explanation": "Both answers identify the same condition ('low <= high') and describe the same outcome (recalculating 'mid'). The model answer provides slightly more detail by specifying the exact formula for recalculating mid and mentioning the loop continuation, but this additional detail is consistent with and supportive of the ground truth answer rather than contradictory. The semantic meaning is equivalent."
+        },
+        "decision3": {
+            "verdict": "Correct",
+            "explanation": "The model answer correctly identifies the next condition ('low <= high') and the subsequent step ('recalculate mid = (low + high) // 2'), which is semantically equivalent to the ground truth answer."
+        }
+    },
+    "26": {
+        "key": "code00404",
+        "question_id": "5",
+        "question": "What operation is performed immediately after the 'arr[mid] < x' condition evaluates to false, and what is the following step if the array continues to be searched?",
+        "response": "After the condition `arr[mid] < x` evaluates to false, the operation performed is setting `res` to `mid`.  \nThe following step is setting `low` to `mid + 1` to continue searching the array.",
+        "answer": "If 'arr[mid] < x' is false, 'res' is set to 'mid', followed by an increment of 'low' to 'mid + 1' before the search continues.",
+        "final_decision": "Correct",
+        "decision1": {
+            "verdict": "Correct",
+            "explanation": "The model answer matches the ground truth in stating that res is set to mid and then low is updated to mid + 1 to continue the search. No conditions or steps are missing or altered."
+        },
+        "decision2": {
+            "verdict": "Correct",
+            "explanation": "The MODEL ANSWER correctly identifies both the immediate operation (setting `res` to `mid`) and the following step (setting `low` to `mid + 1`) that occur when `arr[mid] < x` evaluates to false. The answer is semantically equivalent to the GROUND TRUTH ANSWER, with only minor wording differences that do not change the meaning or logic described."
+        },
+        "decision3": {
+            "verdict": "Correct",
+            "explanation": "The model answer correctly identifies the operations performed immediately after the condition 'arr[mid] < x' evaluates to false, which are setting 'res' to 'mid' and then incrementing 'low' to 'mid + 1' to continue the search."
+        }
+    },
+    "27": {
+        "key": "code00404",
+        "question_id": "6",
+        "question": "How many nodes exist in the given flowchart?",
+        "response": "15",
+        "answer": "15",
+        "final_decision": "Correct",
+        "decision1": {
+            "verdict": "Correct",
+            "explanation": "The model answer matches the ground truth exactly with no semantic differences."
+        },
+        "decision2": {
+            "verdict": "Correct",
+            "explanation": "Both the ground truth answer and the model answer state that there are 15 nodes in the flowchart. The answers are identical and therefore semantically equivalent."
+        },
+        "decision3": {
+            "verdict": "Correct",
+            "explanation": "The model answer matches the ground truth answer exactly."
+        }
+    },
+    "28": {
+        "key": "code00404",
+        "question_id": "7",
+        "question": "How many edges exist in the given flowchart?",
+        "response": "17",
+        "answer": "17",
+        "final_decision": "Correct",
+        "decision1": {
+            "verdict": "Correct",
+            "explanation": "The model answer matches the ground truth exactly, with no differences in meaning."
+        },
+        "decision2": {
+            "verdict": "Correct",
+            "explanation": "Both the ground truth answer and the model answer state that there are 17 edges in the flowchart. The answers are identical and therefore semantically equivalent."
+        },
+        "decision3": {
+            "verdict": "Correct",
+            "explanation": "The model answer matches the ground truth answer exactly."
+        }
+    },
+    "29": {
+        "key": "code00404",
+        "question_id": "8",
+        "question": "Is the node \"\"Initialize 'low' to 0\"\" direct successor of the node \"\"Receive the array 'arr', the element to find 'x', and the size of the array 'n'\"\"?",
+        "response": "Yes.",
+        "answer": "Yes",
+        "final_decision": "Correct",
+        "decision1": {
+            "verdict": "Correct",
+            "explanation": "The model answer affirms the same outcome as the ground truth without adding or omitting any conditions."
+        },
+        "decision2": {
+            "verdict": "Correct",
+            "explanation": "Both answers affirm that the node 'Initialize 'low' to 0' is a direct successor of the node 'Receive the array 'arr', the element to find 'x', and the size of the array 'n''. The model answer provides the same semantic meaning as the ground truth, with only a minor stylistic difference (addition of a period), which does not affect the correctness of the response."
+        },
+        "decision3": {
+            "verdict": "Correct",
+            "explanation": "The model answer 'Yes' is semantically equivalent to the ground truth answer 'Yes'."
+        }
+    },
+    "30": {
+        "key": "code00404",
+        "question_id": "9",
+        "question": "Is the node \"\"Initialize 'res' to -1\"\" direct predecessor of the node \"\"'low' <= 'high'?\"\"?",
+        "response": "Yes.",
+        "answer": "Yes",
+        "final_decision": "Correct",
+        "decision1": {
+            "verdict": "Correct",
+            "explanation": "The model answer matches the ground truth and affirms the same relationship without adding or omitting conditions."
+        },
+        "decision2": {
+            "verdict": "Correct",
+            "explanation": "The MODEL ANSWER states 'Yes.' which is semantically equivalent to the GROUND TRUTH ANSWER of 'Yes'. Both answers provide the same affirmative response to the question about whether the node 'Initialize 'res' to -1' is a direct predecessor of the node ''low' <= 'high'?'. The minor stylistic difference (addition of a period) does not change the meaning."
+        },
+        "decision3": {
+            "verdict": "Correct",
+            "explanation": "The model answer 'Yes' is semantically equivalent to the ground truth answer 'Yes'."
+        }
+    },
+    "31": {
+        "key": "code00404",
+        "question_id": "10",
+        "question": "An indegree of is the number of incoming edges for a node in a flowchart. What is the maximum indegree for the flowchart?",
+        "response": "4",
+        "answer": "4",
+        "final_decision": "Correct",
+        "decision1": {
+            "verdict": "Correct",
+            "explanation": "The model answer matches the ground truth exactly with no semantic differences."
+        },
+        "decision2": {
+            "verdict": "Correct",
+            "explanation": "Both the ground truth answer and the model answer state that the maximum indegree for the flowchart is 4. The answers are identical and therefore semantically equivalent."
+        },
+        "decision3": {
+            "verdict": "Correct",
+            "explanation": "The model answer matches the ground truth answer exactly."
+        }
+    },
+    "32": {
+        "key": "instruct00665",
+        "question_id": "1",
+        "question": "After mixing the egg and soup powder with noodles, what is the next step?",
+        "response": "Form noodle buns.",
+        "answer": "Form noodle buns",
+        "final_decision": "Correct",
+        "decision1": {
+            "verdict": "Correct",
+            "explanation": "The model answer matches the ground truth exactly with no semantic differences."
+        },
+        "decision2": {
+            "verdict": "Correct",
+            "explanation": "The MODEL ANSWER expresses the exact same meaning as the GROUND TRUTH ANSWER. Both state that the next step after mixing egg and soup powder with noodles is to form noodle buns. The only difference is the addition of a period in the MODEL ANSWER, which is a minor stylistic variation that does not affect the semantic content."
+        },
+        "decision3": {
+            "verdict": "Correct",
+            "explanation": "The model answer 'Form noodle buns' is semantically equivalent to the ground truth answer 'Form noodle buns'."
+        }
+    },
+    "33": {
+        "key": "instruct00665",
+        "question_id": "2",
+        "question": "Leo is preparing to make ramen burgers for his food blog and wants to capture every detail of the process. After boiling the noodles, what critical step should he document next to ensure the noodles are ready for the subsequent stages?",
+        "response": "He should document letting the cooked noodles cool.",
+        "answer": "Leo should document the cooling of the noodles, which is critical before mixing them with egg and soup powder.",
+        "final_decision": "Correct",
+        "decision1": {
+            "verdict": "Correct",
+            "explanation": "The model answer conveys the same essential step of documenting the cooling of the noodles before proceeding. No critical conditions are omitted or added."
+        },
+        "decision2": {
+            "verdict": "Correct",
+            "explanation": "The model answer captures the essential meaning of the ground truth answer. Both responses identify that Leo should document the cooling of the noodles after boiling. While the model answer is more concise and omits the specific details about mixing with egg and soup powder, it correctly identifies the critical next step (cooling) that must be documented. The omission of downstream details does not contradict the core requirement of the question, which asks what critical step should be documented next."
+        },
+        "decision3": {
+            "verdict": "Correct",
+            "explanation": "The model answer captures the essential step of cooling the noodles, which is semantically equivalent to the ground truth answer."
+        }
+    },
+    "34": {
+        "key": "instruct00665",
+        "question_id": "3",
+        "question": "If I'm currently at the step where I need to refrigerate noodle buns, what was the immediate previous step and what is the next step?",
+        "response": "Previous step: Form noodle buns  \nNext step: Pan-fry noodle buns",
+        "answer": "The immediate previous step was forming noodle buns, and the next step is to pan-fry the noodle buns.",
+        "final_decision": "Correct",
+        "decision1": {
+            "verdict": "Correct",
+            "explanation": "The model answer matches the ground truth exactly, identifying the same previous and next steps with no added or missing conditions."
+        },
+        "decision2": {
+            "verdict": "Correct",
+            "explanation": "The MODEL ANSWER correctly identifies both the immediate previous step (forming noodle buns) and the next step (pan-frying noodle buns), which matches the GROUND TRUTH ANSWER. The model uses slightly different wording ('Form' instead of 'forming' and 'Pan-fry' instead of 'pan-fry'), but these are minor stylistic variations that preserve the semantic meaning without changing the substance of the answer."
+        },
+        "decision3": {
+            "verdict": "Correct",
+            "explanation": "The model answer correctly identifies the previous step as 'Form noodle buns' and the next step as 'Pan-fry noodle buns,' which matches the ground truth answer."
+        }
+    },
+    "35": {
+        "key": "instruct00665",
+        "question_id": "4",
+        "question": "How many nodes exist in the given flowchart?",
+        "response": "12",
+        "answer": "13",
+        "final_decision": "Incorrect",
+        "decision1": {
+            "verdict": "Incorrect",
+            "explanation": "The model answer gives a different number of nodes than the ground truth. This is a direct contradiction with no ambiguity."
+        },
+        "decision2": {
+            "verdict": "Incorrect",
+            "explanation": "The ground truth answer states there are 13 nodes in the flowchart, while the model answer claims there are 12 nodes. Since these are different numerical counts and the question asks for a specific quantity, there is a meaningful difference. The model answer is factually incorrect regarding the node count."
+        },
+        "decision3": {
+            "verdict": "Incorrect",
+            "explanation": "The model answer states '12' while the ground truth answer is '13'. This numerical difference is significant and changes the meaning."
+        }
+    },
+    "36": {
+        "key": "instruct00665",
+        "question_id": "5",
+        "question": "How many edges exist in the given flowchart?",
+        "response": "14",
+        "answer": "15",
+        "final_decision": "Incorrect",
+        "decision1": {
+            "verdict": "Incorrect",
+            "explanation": "The model answer gives a different number of edges than the ground truth. Numerical answers must match exactly."
+        },
+        "decision2": {
+            "verdict": "Incorrect",
+            "explanation": "The model answer states there are 14 edges in the flowchart, while the ground truth answer specifies 15 edges. Since this is a factual question about a specific structural property of the flowchart, these answers are not semantically equivalent\u2014they represent different counts of the flowchart's connections."
+        },
+        "decision3": {
+            "verdict": "Incorrect",
+            "explanation": "The model answer states '14' while the ground truth answer is '15'. This numerical discrepancy is a meaningful difference."
+        }
+    },
+    "37": {
+        "key": "instruct00665",
+        "question_id": "6",
+        "question": "Is the node \"\"Ramen burger satisfactory?\"\" direct successor of the node \"\"Refrigerate noodle buns\"\"?",
+        "response": "No",
+        "answer": "No",
+        "final_decision": "Correct",
+        "decision1": {
+            "verdict": "Correct",
+            "explanation": "The model answer matches the ground truth by stating 'No' to the question, conveying the same meaning without adding or omitting conditions."
+        },
+        "decision2": {
+            "verdict": "Correct",
+            "explanation": "Both the ground truth answer and the model answer are identical, both stating 'No'. Since they provide the same response to the question about whether 'Ramen burger satisfactory?' is a direct successor of 'Refrigerate noodle buns?', the model answer is semantically equivalent to the ground truth."
+        },
+        "decision3": {
+            "verdict": "Correct",
+            "explanation": "The model answer 'No' is semantically equivalent to the ground truth answer 'No'."
+        }
+    },
+    "38": {
+        "key": "instruct00665",
+        "question_id": "7",
+        "question": "How many edges exist in the shortest path between \"\"Assemble ramen burger\"\" and \"\"End\"\"?",
+        "response": "2",
+        "answer": "3",
+        "final_decision": "Incorrect",
+        "decision1": {
+            "verdict": "Incorrect",
+            "explanation": "The model answer gives a different number of edges than the ground truth. This is a factual mismatch, so it is not semantically equivalent."
+        },
+        "decision2": {
+            "verdict": "Incorrect",
+            "explanation": "The ground truth answer specifies 3 edges in the shortest path from \"Assemble ramen burger\" to \"End\", while the model answer claims 2 edges. These are contradictory counts of the same path length. Without reconstructing the flowchart, the model's answer of 2 edges directly contradicts the ground truth of 3 edges, representing a factual discrepancy in path counting."
+        },
+        "decision3": {
+            "verdict": "Incorrect",
+            "explanation": "The model answer states '2' while the ground truth answer is '3'. This numerical difference is significant and changes the meaning."
+        }
+    },
+    "39": {
+        "key": "instruct00665",
+        "question_id": "8",
+        "question": "Is the node \"\"Ramen burger satisfactory?\"\" direct successor of the node \"\"Ramen burger ready\"\"?",
+        "response": "No",
+        "answer": "Yes",
+        "final_decision": "Incorrect",
+        "decision1": {
+            "verdict": "Incorrect",
+            "explanation": "The ground truth says the nodes are directly connected, while the model answer denies this. The meanings conflict."
+        },
+        "decision2": {
+            "verdict": "Incorrect",
+            "explanation": "The model answer contradicts the ground truth answer. The question asks whether 'Ramen burger satisfactory?' is a direct successor of 'Ramen burger ready', and the ground truth confirms this relationship exists (Yes). The model answer denies this relationship (No), which is semantically opposite and therefore incorrect."
+        },
+        "decision3": {
+            "verdict": "Incorrect",
+            "explanation": "The model answer 'No' contradicts the ground truth answer 'Yes'."
+        }
+    },
+    "40": {
+        "key": "wiki00409",
+        "question_id": "1",
+        "question": "What should be said to invoke inner wisdom during the meditation?",
+        "response": "\"Om inner wisdom, guide me\"",
+        "answer": "Om inner wisdom, guide me",
+        "final_decision": "Correct",
+        "decision1": {
+            "verdict": "Correct",
+            "explanation": "The model answer exactly matches the meaning of the ground truth answer without adding or missing any conditions."
+        },
+        "decision2": {
+            "verdict": "Correct",
+            "explanation": "The MODEL ANSWER provides the exact same phrase as the GROUND TRUTH ANSWER, with only a stylistic difference in quotation marks. Both convey the identical invocation to be said during meditation, so they are semantically equivalent."
+        },
+        "decision3": {
+            "verdict": "Correct",
+            "explanation": "The model answer is semantically equivalent to the ground truth answer, as it conveys the same phrase with the addition of quotation marks, which do not change the meaning."
+        }
+    },
+    "41": {
+        "key": "wiki00409",
+        "question_id": "2",
+        "question": "How many times should the 'Amitabha' mantra be repeated at the end of the meditation?",
+        "response": "Ten times.",
+        "answer": "Ten times",
+        "final_decision": "Correct",
+        "decision1": {
+            "verdict": "Correct",
+            "explanation": "The model answer matches the ground truth exactly; both state the mantra should be repeated ten times."
+        },
+        "decision2": {
+            "verdict": "Correct",
+            "explanation": "The MODEL ANSWER states 'Ten times.' which is semantically equivalent to the GROUND TRUTH ANSWER 'Ten times'. Both answers provide the same numerical value and meaning, with only a minor stylistic difference (the addition of a period in the model answer). This difference does not affect the semantic content or correctness of the response."
+        },
+        "decision3": {
+            "verdict": "Correct",
+            "explanation": "The model answer 'Ten times' is semantically equivalent to the ground truth answer 'Ten times'."
+        }
+    },
+    "42": {
+        "key": "wiki00409",
+        "question_id": "3",
+        "question": "Marcus has been practicing Amitabha meditation for some time. However, during a recent session, he found himself unable to visualize a connection with Buddha Amitabha, which is an essential part of his practice. According to his meditation routine, what should Marcus do next when he cannot establish this connection?",
+        "response": "He should return to saying \u201cOm inner wisdom, guide me\u201d and try again.",
+        "answer": "Return to seeking guidance by repeating the request for inner wisdom.",
+        "final_decision": "Correct",
+        "decision1": {
+            "verdict": "Correct",
+            "explanation": "The model answer conveys the same action of returning to a repeated request for inner wisdom and trying again, matching the ground truth meaning."
+        },
+        "decision2": {
+            "verdict": "Correct",
+            "explanation": "The MODEL ANSWER is semantically equivalent to the GROUND TRUTH ANSWER. Both convey that Marcus should return to a practice of seeking guidance through a repeated request or invocation for inner wisdom. The model answer provides a more specific formulation of the request ('Om inner wisdom, guide me') while the ground truth uses more general language ('seeking guidance by repeating the request for inner wisdom'), but they describe the same essential action and outcome."
+        },
+        "decision3": {
+            "verdict": "Correct",
+            "explanation": "The model answer accurately reflects the ground truth answer, as both indicate that Marcus should return to seeking guidance by repeating a request for inner wisdom."
+        }
+    },
+    "43": {
+        "key": "wiki00409",
+        "question_id": "4",
+        "question": "After a long day of work, Naomi engages in Amitabha meditation to replenish her energy. She knows that a particular part of the practice involves repeating a mantra while focusing on her body. What should Naomi do to fill her body with energy, strength, and happiness?",
+        "response": "Focus on your body and repeat the \u201cA\u2011Mi\u2011Ta\u2011Bha\u201d mantra.",
+        "answer": "Look to the left and right, then focus on her body and repeat the mantra 'A-Mi-Ta-Bha' several times.",
+        "final_decision": "Incorrect",
+        "decision1": {
+            "verdict": "Incorrect",
+            "explanation": "The model answer omits the required step of looking to the left and right, which is included in the ground truth as part of the action needed to fill her body with energy, strength, and happiness."
+        },
+        "decision2": {
+            "verdict": "Incorrect",
+            "explanation": "The ground truth answer includes an essential preliminary step: 'Look to the left and right' before focusing on the body and repeating the mantra. The model answer omits this required condition, which represents a meaningful difference in the complete procedure Naomi should follow. This omission makes the model answer incomplete with respect to the full instructions implied by the question."
+        },
+        "decision3": {
+            "verdict": "Incorrect",
+            "explanation": "The model answer omits the essential condition of looking to the left and right before focusing on the body and repeating the mantra."
+        }
+    },
+    "44": {
+        "key": "wiki00409",
+        "question_id": "5",
+        "question": "Currently, the mantra 'Amitabha' has been said ten times; if no energy flow of Buddha Amitabha is sensed, what is the next immediate action and how many times does this action loop back to a previous step before reaching the end of the meditation?",
+        "response": "Immediate action: return to the step **\u201cSay \u2018Amitabha\u2019 mantra ten times\u201d**.\n\nNumber of loops: this action **repeats indefinitely** (an unlimited number of times) until the energy flow *is* sensed.",
+        "answer": "If no energy flow is sensed, you repeat the mantra 'Amitabha' ten times again; this action may loop indefinitely until a 'Yes' response at the 'Sensed energy flow of Buddha Amitabha?' decision point, only then will the meditation end.",
+        "final_decision": "Correct",
+        "decision1": {
+            "verdict": "Correct",
+            "explanation": "The model answer restates that the practitioner repeats the mantra ten times and that the loop can continue indefinitely until energy is sensed, matching the ground truth meaning."
+        },
+        "decision2": {
+            "verdict": "Correct",
+            "explanation": "The MODEL ANSWER correctly identifies that the immediate action is to return to saying the 'Amitabha' mantra ten times, and accurately states that this loops indefinitely until energy flow is sensed. Both answers convey the same essential logic: the process repeats the mantra-saying step in a loop until a positive response occurs at the decision point. The MODEL ANSWER's phrasing of 'unlimited number of times' is semantically equivalent to the GROUND TRUTH's 'may loop indefinitely,' and both correctly indicate the meditation ends only when energy flow is sensed."
+        },
+        "decision3": {
+            "verdict": "Correct",
+            "explanation": "The model answer correctly identifies the immediate action of repeating the mantra 'Amitabha' ten times and specifies that this action repeats indefinitely until the energy flow is sensed, which is semantically equivalent to the ground truth answer."
+        }
+    },
+    "45": {
+        "key": "wiki00409",
+        "question_id": "6",
+        "question": "Starting from the 'Find a comfortable seated position' step, what is the description of the fourth step encountered and which mantra is focused on at this particular step?",
+        "response": "The fourth step is **\u201cAwareness of grounding with the earth.\u201d**  \nNo mantra is focused on at this step.",
+        "answer": "The fourth step is 'Awareness of grounding with the earth', and the mantra focused on at this step is 'A-Mi-Ta-Bha'.",
+        "final_decision": "Incorrect",
+        "decision1": {
+            "verdict": "Incorrect",
+            "explanation": "The model answer contradicts the ground truth by stating there is no mantra, whereas the ground truth specifies the mantra 'A-Mi-Ta-Bha'."
+        },
+        "decision2": {
+            "verdict": "Incorrect",
+            "explanation": "The MODEL ANSWER correctly identifies the fourth step as 'Awareness of grounding with the earth,' but it contradicts the GROUND TRUTH ANSWER by stating that no mantra is focused on at this step. The GROUND TRUTH explicitly states that the mantra 'A-Mi-Ta-Bha' is focused on at this step, which is an essential detail that the MODEL ANSWER omits and denies."
+        },
+        "decision3": {
+            "verdict": "Incorrect",
+            "explanation": "The model answer incorrectly states that no mantra is focused on, while the ground truth answer specifies 'A-Mi-Ta-Bha' as the mantra."
+        }
+    },
+    "46": {
+        "key": "wiki00409",
+        "question_id": "7",
+        "question": "How many nodes exist in the given flowchart?",
+        "response": "28",
+        "answer": "28",
+        "final_decision": "Correct",
+        "decision1": {
+            "verdict": "Correct",
+            "explanation": "The model answer exactly matches the ground truth answer of 28, with no differences in meaning."
+        },
+        "decision2": {
+            "verdict": "Correct",
+            "explanation": "Both the ground truth answer and the model answer state that there are 28 nodes in the flowchart. The answers are identical and therefore semantically equivalent."
+        },
+        "decision3": {
+            "verdict": "Correct",
+            "explanation": "The model answer matches the ground truth answer exactly."
+        }
+    },
+    "47": {
+        "key": "wiki00409",
+        "question_id": "8",
+        "question": "How many edges exist in the given flowchart?",
+        "response": "29",
+        "answer": "29",
+        "final_decision": "Correct",
+        "decision1": {
+            "verdict": "Correct",
+            "explanation": "The model answer matches the ground truth exactly with no differences in meaning."
+        },
+        "decision2": {
+            "verdict": "Correct",
+            "explanation": "Both the ground truth answer and the model answer state that there are 29 edges in the flowchart. The answers are identical and therefore semantically equivalent."
+        },
+        "decision3": {
+            "verdict": "Correct",
+            "explanation": "The model answer matches the ground truth answer exactly."
+        }
+    },
+    "48": {
+        "key": "wiki00409",
+        "question_id": "9",
+        "question": "Is the node \"\"Activation of feet chakra\"\" direct predecessor of the node \"\"Look to the left and right\"\"?",
+        "response": "Yes.",
+        "answer": "Yes",
+        "final_decision": "Correct",
+        "decision1": {
+            "verdict": "Correct",
+            "explanation": "The model answer matches the ground truth and affirms the same relationship without adding or omitting conditions."
+        },
+        "decision2": {
+            "verdict": "Correct",
+            "explanation": "Both answers affirm that 'Activation of feet chakra' is a direct predecessor of 'Look to the left and right'. The MODEL ANSWER provides the same semantic meaning as the GROUND TRUTH ANSWER, with only a minor stylistic difference (addition of a period), which does not affect the correctness of the response."
+        },
+        "decision3": {
+            "verdict": "Correct",
+            "explanation": "The model answer 'Yes' is semantically equivalent to the ground truth answer 'Yes'."
+        }
+    },
+    "49": {
+        "key": "wiki00409",
+        "question_id": "10",
+        "question": "Is the node \"\"Start Amitabha Meditation\"\" direct predecessor of the node \"\"Expectation of guidance towards life in light\"\"?",
+        "response": "No",
+        "answer": "No",
+        "final_decision": "Correct",
+        "decision1": {
+            "verdict": "Correct",
+            "explanation": "Both answers state that the node is not a direct predecessor, with no added or missing conditions."
+        },
+        "decision2": {
+            "verdict": "Correct",
+            "explanation": "Both the ground truth answer and the model answer are identical, both stating 'No' to the question of whether 'Start Amitabha Meditation' is a direct predecessor of 'Expectation of guidance towards life in light'. Since the answers match exactly, the model answer is semantically equivalent to the ground truth."
+        },
+        "decision3": {
+            "verdict": "Correct",
+            "explanation": "The model answer 'No' is semantically equivalent to the ground truth answer 'No'."
+        }
+    },
+    "50": {
+        "key": "code00412",
+        "question_id": "1",
+        "question": "What is the initial value assigned to the counter variable for tracking lowercase letters?",
+        "response": "0",
+        "answer": "0",
+        "final_decision": "Correct",
+        "decision1": {
+            "verdict": "Correct",
+            "explanation": "The model answer matches the ground truth exactly and provides the same initial value."
+        },
+        "decision2": {
+            "verdict": "Correct",
+            "explanation": "Both the ground truth answer and the model answer state that the initial value assigned to the counter variable for tracking lowercase letters is 0. The answers are identical and semantically equivalent."
+        },
+        "decision3": {
+            "verdict": "Correct",
+            "explanation": "The model answer '0' is semantically equivalent to the ground truth answer '0'."
+        }
+    },
+    "51": {
+        "key": "code00412",
+        "question_id": "2",
+        "question": "After receiving a string of text from a user, Jamie needs to determine how many characters are lowercase. She is currently looking at a specific character within the string. If this character is not a lowercase letter, what should Jamie do next?",
+        "response": "Move to the next character (increment the index and continue the loop).",
+        "answer": "Move to the next character in the string.",
+        "final_decision": "Correct",
+        "decision1": {
+            "verdict": "Correct",
+            "explanation": "The model answer conveys the same action of proceeding to the next character in the string with no additional conditions. It is semantically equivalent to the ground truth."
+        },
+        "decision2": {
+            "verdict": "Correct",
+            "explanation": "The MODEL ANSWER is semantically equivalent to the GROUND TRUTH ANSWER. Both convey the same action: proceeding to examine the next character in the string. The MODEL ANSWER provides additional implementation detail (incrementing the index and continuing the loop), which is a valid paraphrase that clarifies the mechanism of moving to the next character without contradicting or changing the fundamental meaning of the ground truth answer."
+        },
+        "decision3": {
+            "verdict": "Correct",
+            "explanation": "The model answer accurately conveys the same meaning as the ground truth answer, instructing Jamie to proceed to the next character in the string."
+        }
+    },
+    "52": {
+        "key": "code00412",
+        "question_id": "3",
+        "question": "In a software module, a function is designed to count lowercase letters in a given string. The function has completed its iteration through the string. What is the next action that the function should perform?",
+        "response": "Output the value of lowercase_count.",
+        "answer": "Output the count of lowercase letters.",
+        "final_decision": "Correct",
+        "decision1": {
+            "verdict": "Correct",
+            "explanation": "Both answers state that the function should output the count of lowercase letters, with the model using a variable name to express the same idea."
+        },
+        "decision2": {
+            "verdict": "Correct",
+            "explanation": "Both answers express the same semantic meaning: the function should output the result of counting lowercase letters. The MODEL ANSWER uses the specific variable name 'lowercase_count' while the GROUND TRUTH uses the more general term 'count of lowercase letters,' but they refer to the same action and outcome. This is a valid paraphrase that does not change the meaning."
+        },
+        "decision3": {
+            "verdict": "Correct",
+            "explanation": "The model answer 'Output the value of lowercase_count' is semantically equivalent to the ground truth answer 'Output the count of lowercase letters' as both refer to the same action of outputting the count of lowercase letters."
+        }
+    },
+    "53": {
+        "key": "code00412",
+        "question_id": "4",
+        "question": "When the index 'i' is found to be equal to the length of 'input_string', what is the immediate next operation performed in the process?",
+        "response": "Output `lowercase_count`.",
+        "answer": "The immediate next operation is to output the 'lowercase_count'.",
+        "final_decision": "Correct",
+        "decision1": {
+            "verdict": "Correct",
+            "explanation": "The model answer conveys the identical action of outputting the lowercase_count when i equals the length of the input string."
+        },
+        "decision2": {
+            "verdict": "Correct",
+            "explanation": "Both answers convey the same essential meaning: when index 'i' equals the length of 'input_string', the next operation is to output the 'lowercase_count'. The model answer uses slightly different wording ('Output `lowercase_count`' vs. 'output the lowercase_count'), but this is a stylistic variation that does not change the semantic content. Both identify the same operation and outcome."
+        },
+        "decision3": {
+            "verdict": "Correct",
+            "explanation": "The model answer accurately states the next operation is to output 'lowercase_count', which is semantically equivalent to the ground truth answer."
+        }
+    },
+    "54": {
+        "key": "code00412",
+        "question_id": "5",
+        "question": "If 'current_char' is determined not to be a lowercase letter, what is the next operation, and how many operations are performed before the algorithm checks the condition again at the 'Is `i` less than the length of `input_string`?' node?",
+        "response": "Next operation: Move to next character.\n\nNumber of operations before the condition is checked again: 2 (Move to next character, Increment i).",
+        "answer": "The next operation is to move to the next character, and two operations are performed before re-evaluating the condition at the 'Is `i` less than the length of `input_string`?' node.",
+        "final_decision": "Correct",
+        "decision1": {
+            "verdict": "Correct",
+            "explanation": "The model answer matches the ground truth: it identifies the next operation as moving to the next character and states that two operations occur before the condition is checked again."
+        },
+        "decision2": {
+            "verdict": "Correct",
+            "explanation": "The MODEL ANSWER correctly identifies both required components: (1) the next operation is to move to the next character, which matches the ground truth, and (2) it specifies that 2 operations are performed before re-evaluating the condition, with explicit enumeration of those operations (Move to next character, Increment i). The model answer provides the same semantic content as the ground truth, with additional clarity through enumeration."
+        },
+        "decision3": {
+            "verdict": "Correct",
+            "explanation": "The model answer correctly identifies the next operation as moving to the next character and specifies that two operations are performed before the condition is checked again, which matches the ground truth answer."
+        }
+    },
+    "55": {
+        "key": "wiki00552",
+        "question_id": "1",
+        "question": "What should be applied after preparing the Potato-Honey paste?",
+        "response": "Apply the Potato-Honey Paste.",
+        "answer": "Apply the Potato-Honey paste",
+        "final_decision": "Correct",
+        "decision1": {
+            "verdict": "Correct",
+            "explanation": "The model answer conveys the same action as the ground truth with only minor wording differences. The meaning is identical."
+        },
+        "decision2": {
+            "verdict": "Correct",
+            "explanation": "The MODEL ANSWER and GROUND TRUTH ANSWER are semantically equivalent. Both state that the Potato-Honey paste should be applied after preparation. The only differences are minor stylistic variations (capitalization of 'Paste' and punctuation), which do not change the meaning or substance of the answer."
+        },
+        "decision3": {
+            "verdict": "Correct",
+            "explanation": "The model answer is semantically equivalent to the ground truth answer, as both indicate that the Potato-Honey paste should be applied."
+        }
+    },
+    "56": {
+        "key": "wiki00552",
+        "question_id": "2",
+        "question": "What is the final step after applying each remedy?",
+        "response": "Rinse off with cool water.",
+        "answer": "Rinse off with cool water",
+        "final_decision": "Correct",
+        "decision1": {
+            "verdict": "Correct",
+            "explanation": "The model answer matches the ground truth answer exactly with no change in meaning."
+        },
+        "decision2": {
+            "verdict": "Correct",
+            "explanation": "The MODEL ANSWER expresses the exact same meaning as the GROUND TRUTH ANSWER. The only difference is the addition of a period at the end of the MODEL ANSWER, which is a minor stylistic difference that does not change the semantic content. Both answers identify the same final step: rinsing off with cool water."
+        },
+        "decision3": {
+            "verdict": "Correct",
+            "explanation": "The model answer is semantically equivalent to the ground truth answer, as both specify the same final step: 'Rinse off with cool water'."
+        }
+    },
+    "57": {
+        "key": "wiki00552",
+        "question_id": "3",
+        "question": "Liam has been using the Chickpea paste remedy for his brown spots and is about to complete his first application. He knows he must wait for the paste to dry but is unsure what to do next. What is Liam's next step once the Chickpea paste has dried?",
+        "response": "Rinse off with cool water.",
+        "answer": "Once the Chickpea paste is dry, Liam should rinse it off with cool water.",
+        "final_decision": "Correct",
+        "decision1": {
+            "verdict": "Correct",
+            "explanation": "The model answer conveys the same action as the ground truth: rinse off the paste with cool water after it dries."
+        },
+        "decision2": {
+            "verdict": "Correct",
+            "explanation": "The MODEL ANSWER conveys the same essential instruction as the GROUND TRUTH ANSWER: to rinse off the dried chickpea paste with cool water. While the model answer is more concise and omits some contextual framing (e.g., 'Once the Chickpea paste is dry, Liam should'), it preserves the core meaning and the specific action required. The omission of context does not change the semantic equivalence regarding what Liam's next step should be."
+        },
+        "decision3": {
+            "verdict": "Correct",
+            "explanation": "The model answer captures the essential action of rinsing off with cool water, which is semantically equivalent to the ground truth answer."
+        }
+    },
+    "58": {
+        "key": "wiki00552",
+        "question_id": "4",
+        "question": "Sophia, wanting to tackle her brown spots, opts for a Potato-Honey paste. She has just mixed the ingredients and is about to apply the paste. How long should Sophia leave the Potato-Honey paste on her brown spots before rinsing?",
+        "response": "15 minutes.",
+        "answer": "Sophia should leave the Potato-Honey paste on for about 15 minutes before rinsing.",
+        "final_decision": "Correct",
+        "decision1": {
+            "verdict": "Correct",
+            "explanation": "The model answer restates the same duration of 15 minutes with no missing or added conditions."
+        },
+        "decision2": {
+            "verdict": "Correct",
+            "explanation": "The model answer provides the essential information requested in the question: the duration Sophia should leave the Potato-Honey paste on before rinsing. While the model answer is more concise than the ground truth (omitting the phrase 'about' and 'before rinsing'), it conveys the same factual content\u201415 minutes\u2014which is the core answer to the question. The stylistic difference does not change the semantic meaning."
+        },
+        "decision3": {
+            "verdict": "Correct",
+            "explanation": "The model answer '15 minutes' is semantically equivalent to the ground truth answer 'Sophia should leave the Potato-Honey paste on for about 15 minutes before rinsing.'"
+        }
+    },
+    "59": {
+        "key": "wiki00552",
+        "question_id": "5",
+        "question": "Oliver decided to make use of a Papaya mask to lighten the brown spots on his arms. After applying the mask, he got distracted by a phone call. How can Oliver tell when it's time to rinse off the Papaya mask?",
+        "response": "He should rinse it off once the Papaya mask has dried.",
+        "answer": "Oliver can rinse off the Papaya mask once it has dried on his skin.",
+        "final_decision": "Correct",
+        "decision1": {
+            "verdict": "Correct",
+            "explanation": "The model answer matches the ground truth by stating that the mask should be rinsed off once it has dried. No conditions or details differ."
+        },
+        "decision2": {
+            "verdict": "Correct",
+            "explanation": "The MODEL ANSWER conveys the same essential meaning as the GROUND TRUTH ANSWER. Both state that Oliver should rinse off the mask once it has dried. The model answer omits the phrase \"on his skin,\" but this is a minor stylistic difference that does not change the core meaning\u2014drying is the key condition for rinsing, and the location (on skin) is contextually implied and not a meaningful distinction."
+        },
+        "decision3": {
+            "verdict": "Correct",
+            "explanation": "The model answer accurately conveys the same meaning as the ground truth answer, indicating that Oliver should rinse off the Papaya mask once it has dried."
+        }
+    },
+    "60": {
+        "key": "wiki00552",
+        "question_id": "6",
+        "question": "If I'm currently at the step where I have just finished applying the Papaya Mask, what is the next decision I will encounter and what are the possible next steps following that decision?",
+        "response": "The next decision is whether the Papaya Mask is dry.\n\nPossible next steps:\n- If yes: Rinse off with cool water.\n- Then proceed to \u201cPapaya Mask Application Complete.\u201d",
+        "answer": "The next decision is 'Dry?', and the possible next steps are either to rinse off with cool water if 'Yes' or to continue waiting if 'No'.",
+        "final_decision": "Incorrect",
+        "decision1": {
+            "verdict": "Incorrect",
+            "explanation": "The model answer omits the 'No' branch (continue waiting) and adds an unsupported step about the application being complete. These differ from the ground truth conditions and outcomes."
+        },
+        "decision2": {
+            "verdict": "Incorrect",
+            "explanation": "The MODEL ANSWER correctly identifies the next decision as 'Dry?' but incompletely describes the possible next steps. It only describes the 'Yes' branch (rinse off with cool water) and omits the 'No' branch (continue waiting), which is an essential condition present in the GROUND TRUTH ANSWER. Additionally, the model adds information about 'Papaya Mask Application Complete' that is not mentioned in the ground truth, which may or may not be accurate but goes beyond what was asked."
+        },
+        "decision3": {
+            "verdict": "Incorrect",
+            "explanation": "The model answer omits the essential condition of continuing to wait if the mask is not dry and adds an unsupported step of proceeding to 'Papaya Mask Application Complete', which is not mentioned in the ground truth answer."
+        }
+    },
+    "61": {
+        "key": "wiki00552",
+        "question_id": "7",
+        "question": "Assuming the decision at the 'Another Remedy?' node is 'No', what was the last paste that was applied, and how many steps ago was it completed?",
+        "response": "The last paste applied was the **Chickpea Paste**, completed at node **V**.  \nIt was completed **1 step** before the decision at \u201cAnother Remedy?\u201d.",
+        "answer": "The last paste applied was Chickpea Paste, and it was completed one step before the 'Another Remedy?' decision.",
+        "final_decision": "Correct",
+        "decision1": {
+            "verdict": "Correct",
+            "explanation": "The model answer states the same paste (Chickpea Paste) and the same timing (1 step before the decision), matching the ground truth meaning."
+        },
+        "decision2": {
+            "verdict": "Correct",
+            "explanation": "Both answers identify the same paste (Chickpea Paste) and the same temporal relationship (1 step before the 'Another Remedy?' decision). The model answer provides additional detail by specifying node V, which is a paraphrasing enhancement rather than a contradiction. The core semantic content\u2014what paste was applied and when relative to the decision point\u2014is equivalent between both answers."
+        },
+        "decision3": {
+            "verdict": "Correct",
+            "explanation": "The model answer correctly identifies the last paste applied as Chickpea Paste and specifies that it was completed one step before the 'Another Remedy?' decision, matching the ground truth answer."
+        }
+    },
+    "62": {
+        "key": "wiki00552",
+        "question_id": "8",
+        "question": "How many nodes exist in the given flowchart?",
+        "response": "24",
+        "answer": "24",
+        "final_decision": "Correct",
+        "decision1": {
+            "verdict": "Correct",
+            "explanation": "The model answer matches the ground truth exactly with no semantic differences."
+        },
+        "decision2": {
+            "verdict": "Correct",
+            "explanation": "Both the ground truth answer and the model answer state that there are 24 nodes in the flowchart. The answers are identical and therefore semantically equivalent."
+        },
+        "decision3": {
+            "verdict": "Correct",
+            "explanation": "The model answer matches the ground truth answer exactly."
+        }
+    },
+    "63": {
+        "key": "wiki00552",
+        "question_id": "9",
+        "question": "How many edges exist in the given flowchart?",
+        "response": "24",
+        "answer": "24",
+        "final_decision": "Correct",
+        "decision1": {
+            "verdict": "Correct",
+            "explanation": "The model answer matches the ground truth exactly with the same number of edges."
+        },
+        "decision2": {
+            "verdict": "Correct",
+            "explanation": "Both the ground truth answer and the model answer state that there are 24 edges in the flowchart. The answers are identical and therefore semantically equivalent."
+        },
+        "decision3": {
+            "verdict": "Correct",
+            "explanation": "The model answer matches the ground truth answer exactly."
+        }
+    },
+    "64": {
+        "key": "wiki00552",
+        "question_id": "10",
+        "question": "How many edges exist in the shortest path between \"\"Wait 15 mins?\"\" and \"\"Input: Raw Ingredients\"\"?",
+        "response": "19",
+        "answer": "19",
+        "final_decision": "Correct",
+        "decision1": {
+            "verdict": "Correct",
+            "explanation": "The model answer matches the ground truth answer exactly, indicating the same number of edges in the shortest path."
+        },
+        "decision2": {
+            "verdict": "Correct",
+            "explanation": "Both the ground truth answer and the model answer state that there are 19 edges in the shortest path between 'Wait 15 mins?' and 'Input: Raw Ingredients'. The answers are identical and therefore semantically equivalent."
+        },
+        "decision3": {
+            "verdict": "Correct",
+            "explanation": "The model answer matches the ground truth answer exactly."
+        }
+    },
+    "65": {
+        "key": "wiki00552",
+        "question_id": "11",
+        "question": "Is the node \"\"Chickpea Paste Application Complete\"\" direct predecessor of the node \"\"Another Remedy?\"\"?",
+        "response": "Yes",
+        "answer": "Yes",
+        "final_decision": "Correct",
+        "decision1": {
+            "verdict": "Correct",
+            "explanation": "The model answer matches the ground truth and provides the same yes/no response without altering meaning."
+        },
+        "decision2": {
+            "verdict": "Correct",
+            "explanation": "Both the ground truth answer and the model answer are identical, stating 'Yes' to the question of whether 'Chickpea Paste Application Complete' is a direct predecessor of 'Another Remedy?'. Since they match exactly, the model answer is semantically equivalent to the ground truth."
+        },
+        "decision3": {
+            "verdict": "Correct",
+            "explanation": "The model answer 'Yes' is semantically equivalent to the ground truth answer 'Yes'."
+        }
+    },
+    "66": {
+        "key": "instruct00300",
+        "question_id": "1",
+        "question": "What is the final product of the process described in the flowchart?",
+        "response": "The final product is a fishing pole carrying tube.",
+        "answer": "Fishing Pole Carrying Tube",
+        "final_decision": "Correct",
+        "decision1": {
+            "verdict": "Correct",
+            "explanation": "The model answer restates the ground truth answer with the same meaning and no added or missing conditions."
+        },
+        "decision2": {
+            "verdict": "Correct",
+            "explanation": "The MODEL ANSWER expresses the same meaning as the GROUND TRUTH ANSWER. Both identify the final product as a fishing pole carrying tube. The difference in phrasing ('Fishing Pole Carrying Tube' vs. 'a fishing pole carrying tube') is purely stylistic and does not change the semantic content."
+        },
+        "decision3": {
+            "verdict": "Correct",
+            "explanation": "The model answer accurately conveys the same meaning as the ground truth answer, stating that the final product is a 'fishing pole carrying tube'."
+        }
+    },
+    "67": {
+        "key": "instruct00300",
+        "question_id": "2",
+        "question": "Jeremiah is putting together his own fishing pole carrying tube and has decided to add a personal touch by wrapping it in his favorite team's duct tape. However, he's concerned that the cap might not fit over the tape. What should Jeremiah do if the cap is too tight to fit over the duct tape wrapped PVC pipe?",
+        "response": "He should adjust the tape or carefully force the cap on.",
+        "answer": "Adjust the tape or force the cap on to ensure a snug fit.",
+        "final_decision": "Correct",
+        "decision1": {
+            "verdict": "Correct",
+            "explanation": "The model answer conveys the same two options as the ground truth without adding or removing conditions."
+        },
+        "decision2": {
+            "verdict": "Correct",
+            "explanation": "The MODEL ANSWER is semantically equivalent to the GROUND TRUTH ANSWER. Both convey the same two options: (1) adjust the tape and (2) force the cap on. The addition of the word 'carefully' in the model answer is a minor stylistic enhancement that does not change the core meaning and actually provides helpful clarification without contradicting the ground truth. The phrase 'ensure a snug fit' in the ground truth is implied by the model's actions and does not represent a meaningful difference."
+        },
+        "decision3": {
+            "verdict": "Correct",
+            "explanation": "The model answer accurately reflects the ground truth answer, suggesting that Jeremiah should either adjust the tape or force the cap on to ensure a snug fit."
+        }
+    },
+    "68": {
+        "key": "instruct00300",
+        "question_id": "3",
+        "question": "Ben has arrived at his favorite fishing spot with his newly made fishing pole carrying tube. Before he can start fishing, what does he need to do with his fishing rods that were stored in the tube?",
+        "response": "He needs to remount the reels onto his fishing rods.",
+        "answer": "Remount the reels onto the fishing rods.",
+        "final_decision": "Correct",
+        "decision1": {
+            "verdict": "Correct",
+            "explanation": "The model answer matches the ground truth exactly in meaning and specifies the same action of remounting the reels onto the fishing rods."
+        },
+        "decision2": {
+            "verdict": "Correct",
+            "explanation": "The MODEL ANSWER expresses the same essential meaning as the GROUND TRUTH ANSWER. Both convey that Ben needs to remount the reels onto the fishing rods before he can start fishing. The MODEL ANSWER uses slightly different wording (\"He needs to remount\" vs. \"Remount\") but this is a stylistic variation that does not change the semantic content or meaning."
+        },
+        "decision3": {
+            "verdict": "Correct",
+            "explanation": "The model answer accurately conveys the same meaning as the ground truth answer, stating that Ben needs to remount the reels onto his fishing rods."
+        }
+    },
+    "69": {
+        "key": "instruct00300",
+        "question_id": "4",
+        "question": "After cutting the PVC pipe to a 3-foot length, what is the next step and what would be the next decision point encountered?",
+        "response": "Next step: Prepare PVC Pipe.  \nNext decision point: \u201cWrap PVC in Duct tape?\u201d",
+        "answer": "The next step is to prepare the PVC pipe and the next decision point is whether to wrap the PVC in duct tape.",
+        "final_decision": "Correct",
+        "decision1": {
+            "verdict": "Correct",
+            "explanation": "The model answer conveys the same next step and decision point as the ground truth without adding or omitting conditions."
+        },
+        "decision2": {
+            "verdict": "Correct",
+            "explanation": "The MODEL ANSWER correctly identifies both the next step (Prepare PVC Pipe) and the next decision point (Wrap PVC in Duct tape?) after cutting the PVC pipe to 3 feet. The phrasing differs slightly from the ground truth (using a question format for the decision point rather than a statement), but the semantic meaning is identical\u2014both convey the same procedural sequence and decision requirement."
+        },
+        "decision3": {
+            "verdict": "Correct",
+            "explanation": "The model answer correctly identifies the next step as 'Prepare PVC Pipe' and the next decision point as 'Wrap PVC in Duct tape,' which is semantically equivalent to the ground truth answer."
+        }
+    },
+    "70": {
+        "key": "instruct00300",
+        "question_id": "5",
+        "question": "If the current task is to drill holes and attach bolts, which decision could have directly led to this step without any intermediate actions?",
+        "response": "Either decision G (\u201cWrap PVC in Duct tape?\u201d \u2192 No) or decision J (\u201cCap fitting too tight?\u201d \u2192 No) could directly lead to \u201cDrill Holes and Attach Bolts.\u201d",
+        "answer": "The decision that could have led directly to drilling holes and attaching bolts is choosing not to wrap the PVC in duct tape.",
+        "final_decision": "Incorrect",
+        "decision1": {
+            "verdict": "Incorrect",
+            "explanation": "The ground truth states only the 'No' decision on wrapping the PVC in duct tape leads directly to the step. The model adds an additional decision path not supported by the ground truth."
+        },
+        "decision2": {
+            "verdict": "Incorrect",
+            "explanation": "The ground truth identifies a single decision (not wrapping PVC in duct tape) as leading directly to drilling holes and attaching bolts. The model answer introduces an additional decision (J: \"Cap fitting too tight?\" \u2192 No) that is not mentioned in the ground truth. Since the question asks which decision could have led to this step, adding an unsupported condition that wasn't in the ground truth constitutes a meaningful difference in the flowchart logic, making the answer incorrect."
+        },
+        "decision3": {
+            "verdict": "Incorrect",
+            "explanation": "The model answer introduces an additional condition (decision J) that is not present in the ground truth answer, which only mentions the decision not to wrap the PVC in duct tape."
+        }
+    },
+    "71": {
+        "key": "instruct00300",
+        "question_id": "6",
+        "question": "Starting from 'Gather Materials and Tools', what is the minimum number of steps required to reach 'Usage Instructions' without encountering any 'No' decisions?",
+        "response": "It is impossible.  \nThe only way to reach **Usage Instructions (R)** is by taking the **No** branch at **\"Reached the fishing spot?\" (P)**, so there is no path from **Gather Materials and Tools (B)** to **R** that avoids all \u201cNo\u201d decisions.",
+        "answer": "The minimum number of steps to reach 'Usage Instructions' without any 'No' decisions is ten.",
+        "final_decision": "Incorrect",
+        "decision1": {
+            "verdict": "Incorrect",
+            "explanation": "The ground truth states a valid ten\u2011step path exists without any 'No' decisions, while the model answer claims it is impossible. These meanings directly conflict."
+        },
+        "decision2": {
+            "verdict": "Incorrect",
+            "explanation": "The ground truth answer states that the minimum number of steps is ten, implying a valid path exists from 'Gather Materials and Tools' to 'Usage Instructions' without encountering any 'No' decisions. The model answer claims this is impossible and that all paths require at least one 'No' decision. These are contradictory claims about the feasibility of the path itself, not merely different step counts. Without access to the flowchart, we must defer to the ground truth's assertion that such a path exists with 10 steps."
+        },
+        "decision3": {
+            "verdict": "Incorrect",
+            "explanation": "The model answer states that it is impossible to reach 'Usage Instructions' without encountering any 'No' decisions, which directly contradicts the ground truth answer that specifies a minimum number of steps."
+        }
+    },
+    "72": {
+        "key": "instruct00300",
+        "question_id": "7",
+        "question": "How many nodes exist in the given flowchart?",
+        "response": "20",
+        "answer": "20",
+        "final_decision": "Correct",
+        "decision1": {
+            "verdict": "Correct",
+            "explanation": "The model answer matches the ground truth exactly with no semantic differences."
+        },
+        "decision2": {
+            "verdict": "Correct",
+            "explanation": "Both the ground truth answer and the model answer state that there are 20 nodes in the flowchart. The answers are identical and therefore semantically equivalent."
+        },
+        "decision3": {
+            "verdict": "Correct",
+            "explanation": "The model answer matches the ground truth answer exactly."
+        }
+    },
+    "73": {
+        "key": "instruct00300",
+        "question_id": "8",
+        "question": "How many edges exist in the given flowchart?",
+        "response": "24",
+        "answer": "24",
+        "final_decision": "Correct",
+        "decision1": {
+            "verdict": "Correct",
+            "explanation": "The model answer matches the ground truth exactly with no differences in meaning."
+        },
+        "decision2": {
+            "verdict": "Correct",
+            "explanation": "Both the ground truth answer and the model answer state that there are 24 edges in the flowchart. The answers are identical and therefore semantically equivalent."
+        },
+        "decision3": {
+            "verdict": "Correct",
+            "explanation": "The model answer matches the ground truth answer exactly."
+        }
+    },
+    "74": {
+        "key": "instruct00300",
+        "question_id": "9",
+        "question": "Is the node \"\"Gather Materials and Tools\"\" direct successor of the node \"\"Start\"\"?",
+        "response": "Yes.",
+        "answer": "Yes",
+        "final_decision": "Correct",
+        "decision1": {
+            "verdict": "Correct",
+            "explanation": "The model answer conveys the same meaning as the ground truth, affirming that the node is a direct successor. There are no added or missing conditions."
+        },
+        "decision2": {
+            "verdict": "Correct",
+            "explanation": "Both answers affirm that 'Gather Materials and Tools' is a direct successor of 'Start'. The model answer is a paraphrased version of the ground truth answer with identical semantic meaning, differing only in punctuation (addition of a period)."
+        },
+        "decision3": {
+            "verdict": "Correct",
+            "explanation": "The model answer 'Yes' is semantically equivalent to the ground truth answer 'Yes'."
+        }
+    },
+    "75": {
+        "key": "instruct00300",
+        "question_id": "10",
+        "question": "How many edges exist in the shortest path between \"\"Cap fitting too tight?\"\" and \"\"End\"\"?",
+        "response": "8",
+        "answer": "9",
+        "final_decision": "Incorrect",
+        "decision1": {
+            "verdict": "Incorrect",
+            "explanation": "The model answer gives 8 edges while the ground truth states 9, so the numerical result does not match."
+        },
+        "decision2": {
+            "verdict": "Incorrect",
+            "explanation": "The ground truth answer specifies 9 edges in the shortest path from \"Cap fitting too tight?\" to \"End\", while the model answer claims 8 edges. Since these are different numerical values representing the path length, they cannot both be correct. Without reconstructing the flowchart, the ground truth answer of 9 edges is the authoritative reference, making the model's answer of 8 edges incorrect."
+        },
+        "decision3": {
+            "verdict": "Incorrect",
+            "explanation": "The model answer states '8' while the ground truth answer is '9'. This numerical difference is significant and changes the meaning."
+        }
+    },
+    "76": {
+        "key": "instruct00300",
+        "question_id": "11",
+        "question": "An indegree of is the number of incoming edges for a node in a flowchart. What is the maximum indegree for the flowchart?",
+        "response": "3",
+        "answer": "3",
+        "final_decision": "Correct",
+        "decision1": {
+            "verdict": "Correct",
+            "explanation": "The model answer matches the ground truth exactly with no change in meaning."
+        },
+        "decision2": {
+            "verdict": "Correct",
+            "explanation": "Both the ground truth answer and the model answer state that the maximum indegree for the flowchart is 3. The answers are identical and therefore semantically equivalent."
+        },
+        "decision3": {
+            "verdict": "Correct",
+            "explanation": "The model answer matches the ground truth answer exactly."
+        }
+    },
+    "77": {
+        "key": "instruct00286",
+        "question_id": "1",
+        "question": "What stitch length should be set on the sewing machine for gathering fabric?",
+        "response": "A long stitch length of 3\u20134.",
+        "answer": "A long stitch length of 3-4",
+        "final_decision": "Correct",
+        "decision1": {
+            "verdict": "Correct",
+            "explanation": "The model answer exactly matches the ground truth in meaning and detail with no differences."
+        },
+        "decision2": {
+            "verdict": "Correct",
+            "explanation": "The MODEL ANSWER is semantically equivalent to the GROUND TRUTH ANSWER. Both specify the same stitch length range (3-4) for gathering fabric, and both correctly identify it as a long stitch length. The only difference is the use of an en-dash (\u2013) instead of a hyphen (-), which is a minor stylistic variation that does not change the meaning."
+        },
+        "decision3": {
+            "verdict": "Correct",
+            "explanation": "The model answer matches the ground truth answer exactly, specifying the same stitch length range for gathering fabric."
+        }
+    },
+    "78": {
+        "key": "instruct00286",
+        "question_id": "2",
+        "question": "How far from the edge should the first line of stitching be when gathering fabric?",
+        "response": "1/8 inch from the edge.",
+        "answer": "1/8 inch from the edge",
+        "final_decision": "Correct",
+        "decision1": {
+            "verdict": "Correct",
+            "explanation": "The model answer matches the ground truth exactly with no differences in meaning."
+        },
+        "decision2": {
+            "verdict": "Correct",
+            "explanation": "The MODEL ANSWER is semantically equivalent to the GROUND TRUTH ANSWER. Both specify the same measurement (1/8 inch from the edge) for the first line of stitching when gathering fabric. The only difference is a minor stylistic variation (period at the end), which does not change the meaning."
+        },
+        "decision3": {
+            "verdict": "Correct",
+            "explanation": "The model answer matches the ground truth answer exactly."
+        }
+    },
+    "79": {
+        "key": "instruct00286",
+        "question_id": "3",
+        "question": "What is the final step to secure the gathers in the fabric?",
+        "response": "Sew over the gathers with a normal stitch length.",
+        "answer": "Sew over the gathers with a normal stitch length",
+        "final_decision": "Correct",
+        "decision1": {
+            "verdict": "Correct",
+            "explanation": "The model answer matches the ground truth exactly and conveys the same meaning."
+        },
+        "decision2": {
+            "verdict": "Correct",
+            "explanation": "The MODEL ANSWER is semantically equivalent to the GROUND TRUTH ANSWER. Both convey the identical instruction: sewing over the gathers using a normal stitch length. The only difference is the addition of a period at the end of the MODEL ANSWER, which is a minor stylistic variation that does not change the meaning."
+        },
+        "decision3": {
+            "verdict": "Correct",
+            "explanation": "The MODEL ANSWER is semantically equivalent to the GROUND TRUTH ANSWER, as both specify the same final step to secure the gathers in the fabric."
+        }
+    },
+    "80": {
+        "key": "instruct00286",
+        "question_id": "4",
+        "question": "Liam has gathered his fabric to the correct fullness and has secured the gathers by tying the thread tails. However, he's unsure if he should cut off the excess thread right away. What is the next step he should take according to the instructions?",
+        "response": "Trim the excess thread tails.",
+        "answer": "Liam should trim the excess thread tails after securing the gathers.",
+        "final_decision": "Correct",
+        "decision1": {
+            "verdict": "Correct",
+            "explanation": "Both answers state that the next step is to trim the excess thread tails. The model answer matches the ground truth meaning without adding or omitting conditions."
+        },
+        "decision2": {
+            "verdict": "Correct",
+            "explanation": "Both answers convey the same essential instruction: Liam should trim/cut off the excess thread tails. The MODEL ANSWER is a more concise paraphrase of the GROUND TRUTH ANSWER, omitting only the subject pronoun and auxiliary verb, but preserving the core meaning and action required. The semantic content is equivalent."
+        },
+        "decision3": {
+            "verdict": "Correct",
+            "explanation": "The model answer correctly states that the next step is to trim the excess thread tails, which is semantically equivalent to the ground truth answer."
+        }
+    },
+    "81": {
+        "key": "instruct00286",
+        "question_id": "5",
+        "question": "If I am currently at the step where I am pulling the top threads to gather the fabric, but find that the gathers are not to the desired length, what will my next two steps be?",
+        "response": "Your next two steps are:\n\n1. Reached desired length or gather?  \n2. Tie thread tails together",
+        "answer": "You would gather from the other end, then check if you've reached the desired length or gather.",
+        "final_decision": "Incorrect",
+        "decision1": {
+            "verdict": "Incorrect",
+            "explanation": "The model answer omits the required step of gathering from the other end and instead introduces tying thread tails, which is not in the ground truth. It also changes the order of steps."
+        },
+        "decision2": {
+            "verdict": "Incorrect",
+            "explanation": "The ground truth specifies that the next two steps are to (1) gather from the other end, and (2) check if the desired length has been reached. The model answer instead lists (1) a decision point/check and (2) tying thread tails together. This differs fundamentally in the second step\u2014tying threads is not the same as gathering from the other end, which is the essential action needed when gathers are not to the desired length."
+        },
+        "decision3": {
+            "verdict": "Incorrect",
+            "explanation": "The model answer introduces an unsupported condition 'Tie thread tails together' which is not mentioned in the ground truth answer."
+        }
+    },
+    "82": {
+        "key": "instruct00286",
+        "question_id": "6",
+        "question": "Assuming I have just finished sewing over the gathers with a normal stitch length, but the gathering technique is not yet complete, what is my immediate next action?",
+        "response": "Modify securing stitches or remove the initial gathering stitches.",
+        "answer": "You would modify securing stitches or remove initial gathering stitches.",
+        "final_decision": "Correct",
+        "decision1": {
+            "verdict": "Correct",
+            "explanation": "The model answer matches the ground truth exactly in meaning with no missing or added conditions."
+        },
+        "decision2": {
+            "verdict": "Correct",
+            "explanation": "The MODEL ANSWER is semantically equivalent to the GROUND TRUTH ANSWER. Both convey the same two possible next actions: modifying securing stitches or removing initial gathering stitches. The only difference is the addition of the article 'the' before 'initial gathering stitches' in the model answer, which is a minor stylistic variation that does not change the meaning or substance of the response."
+        },
+        "decision3": {
+            "verdict": "Correct",
+            "explanation": "The model answer is semantically equivalent to the ground truth answer, as it conveys the same actions: modifying securing stitches or removing initial gathering stitches."
+        }
+    },
+    "83": {
+        "key": "instruct00286",
+        "question_id": "7",
+        "question": "How many nodes exist in the given flowchart?",
+        "response": "19",
+        "answer": "19",
+        "final_decision": "Correct",
+        "decision1": {
+            "verdict": "Correct",
+            "explanation": "The model answer matches the ground truth exactly with no differences in meaning."
+        },
+        "decision2": {
+            "verdict": "Correct",
+            "explanation": "Both the ground truth answer and the model answer state that there are 19 nodes in the flowchart. The answers are identical and therefore semantically equivalent."
+        },
+        "decision3": {
+            "verdict": "Correct",
+            "explanation": "The model answer matches the ground truth answer exactly."
+        }
+    },
+    "84": {
+        "key": "instruct00286",
+        "question_id": "8",
+        "question": "How many edges exist in the given flowchart?",
+        "response": "20",
+        "answer": "21",
+        "final_decision": "Incorrect",
+        "decision1": {
+            "verdict": "Incorrect",
+            "explanation": "The model answer gives 20 edges, but the ground truth states 21. The numerical answers do not match."
+        },
+        "decision2": {
+            "verdict": "Incorrect",
+            "explanation": "The model answer states there are 20 edges in the flowchart, while the ground truth answer specifies 21 edges. Since the question asks for a specific numerical count of edges, and the two answers differ by one edge, they are not semantically equivalent. A discrepancy in the count of structural elements represents a meaningful difference."
+        },
+        "decision3": {
+            "verdict": "Incorrect",
+            "explanation": "The model answer states '20' while the ground truth answer is '21'. This numerical difference is significant and changes the meaning."
+        }
+    },
+    "85": {
+        "key": "instruct00286",
+        "question_id": "9",
+        "question": "How many edges exist in the shortest path between \"\"Tie thread tails together\"\" and \"\"Fabric gathered to desired length or fullness\"\"?",
+        "response": "1",
+        "answer": "1",
+        "final_decision": "Correct",
+        "decision1": {
+            "verdict": "Correct",
+            "explanation": "The model answer gives the same numeric value as the ground truth and matches its meaning exactly."
+        },
+        "decision2": {
+            "verdict": "Correct",
+            "explanation": "Both the ground truth answer and the model answer state that there is 1 edge in the shortest path between the two specified nodes. The answers are identical and semantically equivalent."
+        },
+        "decision3": {
+            "verdict": "Correct",
+            "explanation": "The model answer matches the ground truth answer exactly, indicating there is 1 edge in the shortest path."
+        }
+    },
+    "86": {
+        "key": "instruct00286",
+        "question_id": "10",
+        "question": "Is the node \"\"End\"\" direct successor of the node \"\"Modify securing stitches or remove initial gathering stitches\"\"?",
+        "response": "Yes",
+        "answer": "Yes",
+        "final_decision": "Correct",
+        "decision1": {
+            "verdict": "Correct",
+            "explanation": "The model answer matches the ground truth answer exactly with no semantic differences."
+        },
+        "decision2": {
+            "verdict": "Correct",
+            "explanation": "Both the ground truth answer and the model answer are identical, stating 'Yes' to the question of whether the 'End' node is a direct successor of the 'Modify securing stitches or remove initial gathering stitches' node. Since they match exactly, the model answer is semantically equivalent to the ground truth."
+        },
+        "decision3": {
+            "verdict": "Correct",
+            "explanation": "The model answer 'Yes' is semantically equivalent to the ground truth answer 'Yes'."
+        }
+    },
+    "87": {
+        "key": "wiki00347",
+        "question_id": "1",
+        "question": "What additional information should be included if the honoree's name is unisex?",
+        "response": "Their gender should be specified.",
+        "answer": "The honoree's gender",
+        "final_decision": "Correct",
+        "decision1": {
+            "verdict": "Correct",
+            "explanation": "The model answer conveys the same requirement as the ground truth: to include/specify the honoree's gender when the name is unisex."
+        },
+        "decision2": {
+            "verdict": "Correct",
+            "explanation": "Both answers convey the same essential meaning: when an honoree has a unisex name, additional information about their gender is needed. The MODEL ANSWER's phrasing 'Their gender should be specified' is a paraphrase of the GROUND TRUTH ANSWER's 'The honoree's gender' and expresses the identical requirement without any meaningful difference in condition or outcome."
+        },
+        "decision3": {
+            "verdict": "Correct",
+            "explanation": "The model answer accurately conveys the same meaning as the ground truth answer, specifying that the honoree's gender should be included."
+        }
+    },
+    "88": {
+        "key": "wiki00347",
+        "question_id": "2",
+        "question": "How far in advance should the letter be mailed for a birthday?",
+        "response": "6 to 8 weeks before the birthday.",
+        "answer": "6 to 8 weeks before the birthday",
+        "final_decision": "Correct",
+        "decision1": {
+            "verdict": "Correct",
+            "explanation": "The model answer exactly matches the ground truth answer with no semantic differences."
+        },
+        "decision2": {
+            "verdict": "Correct",
+            "explanation": "The MODEL ANSWER is semantically equivalent to the GROUND TRUTH ANSWER. Both specify the same timeframe of 6 to 8 weeks before the birthday for mailing a letter. The only difference is a minor stylistic variation (period placement), which does not affect the meaning or accuracy of the response."
+        },
+        "decision3": {
+            "verdict": "Correct",
+            "explanation": "The model answer matches the ground truth answer exactly, specifying the same time frame of 6 to 8 weeks before the birthday."
+        }
+    },
+    "89": {
+        "key": "wiki00347",
+        "question_id": "3",
+        "question": "After completing the letter to the White House Greetings Office for her uncle's 80th birthday, Rachel is unsure about the postage required to mail it. She does not want to risk the letter being returned for insufficient postage. What should Rachel do to correctly send her letter?",
+        "response": "She should take the letter to the post office and have them apply the correct postage.",
+        "answer": "Rachel should take the letter to the post office to pay for the correct amount of postage.",
+        "final_decision": "Correct",
+        "decision1": {
+            "verdict": "Correct",
+            "explanation": "Both answers state that Rachel should take the letter to the post office to have the correct postage applied, conveying the same action and outcome."
+        },
+        "decision2": {
+            "verdict": "Correct",
+            "explanation": "Both answers convey the same essential meaning: Rachel should go to the post office to ensure the letter receives the correct postage. The model answer uses 'have them apply the correct postage' while the ground truth says 'pay for the correct amount of postage,' but these are semantically equivalent actions that accomplish the same goal of ensuring proper postage is applied by postal professionals."
+        },
+        "decision3": {
+            "verdict": "Correct",
+            "explanation": "The model answer conveys the same meaning as the ground truth answer, as both indicate that Rachel should go to the post office to ensure the correct postage is applied."
+        }
+    },
+    "90": {
+        "key": "wiki00347",
+        "question_id": "4",
+        "question": "Thomas is preparing to send a letter to the White House Greetings Office for his sister's 100th birthday celebration. Unfortunately, he has missed the preferred 6 to 8-week window before her birthday. What can Thomas do with the letter at this point?",
+        "response": "He should mail the letter anyway.",
+        "answer": "Although it may be too late, Thomas should mail the letter anyway.",
+        "final_decision": "Correct",
+        "decision1": {
+            "verdict": "Correct",
+            "explanation": "The model answer conveys the same meaning as the ground truth answer: despite being late, he should mail the letter anyway."
+        },
+        "decision2": {
+            "verdict": "Correct",
+            "explanation": "The MODEL ANSWER conveys the same essential meaning as the GROUND TRUTH ANSWER. Both indicate that Thomas should proceed with mailing the letter despite missing the preferred deadline. The MODEL ANSWER omits the qualifier 'Although it may be too late,' but this is a stylistic difference that does not change the core directive or outcome. The key instruction\u2014that Thomas should mail the letter anyway\u2014is preserved and semantically equivalent."
+        },
+        "decision3": {
+            "verdict": "Correct",
+            "explanation": "The model answer captures the essential meaning of the ground truth answer, which is that Thomas should mail the letter despite the delay."
+        }
+    },
+    "91": {
+        "key": "wiki00347",
+        "question_id": "5",
+        "question": "If I need to store the letter because it is more than 8 weeks to the birthday, what will be the next step after storing, and what should I have determined right before deciding to store the letter?",
+        "response": "After storing the letter, the next step is to end the process.  \nRight before deciding to store it, you determined that the birthday is more than 8 weeks away.",
+        "answer": "After storing, the next step is to wait until it is 6 to 8 weeks before the birthday, and I should have determined that it was indeed more than 8 weeks to the birthday.",
+        "final_decision": "Incorrect",
+        "decision1": {
+            "verdict": "Incorrect",
+            "explanation": "The model answer says the process ends after storing, while the ground truth states the next step is to wait until it is 6\u20138 weeks before the birthday. This is a meaningful difference in the described next step."
+        },
+        "decision2": {
+            "verdict": "Incorrect",
+            "explanation": "The MODEL ANSWER states that after storing the letter, the next step is to 'end the process,' which contradicts the GROUND TRUTH ANSWER that the next step is to 'wait until it is 6 to 8 weeks before the birthday.' This represents a fundamental difference in the flowchart's logic and outcome. While the MODEL ANSWER correctly identifies what should have been determined before storing (that the birthday is more than 8 weeks away), the critical error regarding the subsequent step makes this answer semantically inequivalent."
+        },
+        "decision3": {
+            "verdict": "Incorrect",
+            "explanation": "The model answer incorrectly states that the next step after storing the letter is to end the process, whereas the ground truth answer specifies waiting until it is 6 to 8 weeks before the birthday."
+        }
+    },
+    "92": {
+        "key": "wiki00347",
+        "question_id": "6",
+        "question": "How many nodes exist in the given flowchart?",
+        "response": "20",
+        "answer": "20",
+        "final_decision": "Correct",
+        "decision1": {
+            "verdict": "Correct",
+            "explanation": "The model answer matches the ground truth exactly with no semantic differences."
+        },
+        "decision2": {
+            "verdict": "Correct",
+            "explanation": "Both the ground truth answer and the model answer state that there are 20 nodes in the flowchart. The answers are identical and therefore semantically equivalent."
+        },
+        "decision3": {
+            "verdict": "Correct",
+            "explanation": "The model answer matches the ground truth answer exactly."
+        }
+    },
+    "93": {
+        "key": "wiki00347",
+        "question_id": "7",
+        "question": "How many edges exist in the given flowchart?",
+        "response": "22",
+        "answer": "22",
+        "final_decision": "Correct",
+        "decision1": {
+            "verdict": "Correct",
+            "explanation": "The model answer matches the ground truth exactly with no differences in meaning."
+        },
+        "decision2": {
+            "verdict": "Correct",
+            "explanation": "Both the ground truth answer and the model answer state that there are 22 edges in the flowchart. The answers are identical and therefore semantically equivalent."
+        },
+        "decision3": {
+            "verdict": "Correct",
+            "explanation": "The model answer matches the ground truth answer exactly."
+        }
+    },
+    "94": {
+        "key": "wiki00347",
+        "question_id": "8",
+        "question": "Is the node \"\"Specify Honoree's Gender if Unisex\"\" direct predecessor of the node \"\"Know Correct Postage?\"\"?",
+        "response": "No. The direct predecessor of \"Know Correct Postage?\" is \"Address Envelope to White House Greetings Office,\" not \"Specify Honoree's Gender if Unisex.\"",
+        "answer": "No",
+        "final_decision": "Correct",
+        "decision1": {
+            "verdict": "Correct",
+            "explanation": "The model answer gives the same answer of \u2018No\u2019 and does not introduce any contradictory conditions; the extra detail does not change the core meaning."
+        },
+        "decision2": {
+            "verdict": "Correct",
+            "explanation": "Both answers agree that the node 'Specify Honoree's Gender if Unisex' is NOT a direct predecessor of 'Know Correct Postage?'. The model answer provides additional supporting detail by identifying what the actual direct predecessor is, but this elaboration does not contradict the ground truth and remains semantically equivalent to the core answer of 'No'."
+        },
+        "decision3": {
+            "verdict": "Correct",
+            "explanation": "The model answer correctly states that 'Specify Honoree's Gender if Unisex' is not the direct predecessor of 'Know Correct Postage?'."
+        }
+    },
+    "95": {
+        "key": "wiki00347",
+        "question_id": "9",
+        "question": "An indegree of is the number of incoming edges for a node in a flowchart. What is the maximum indegree for the flowchart?",
+        "response": "3",
+        "answer": "3",
+        "final_decision": "Correct",
+        "decision1": {
+            "verdict": "Correct",
+            "explanation": "The model answer matches the ground truth exactly with no differences in meaning."
+        },
+        "decision2": {
+            "verdict": "Correct",
+            "explanation": "Both the ground truth answer and the model answer state that the maximum indegree for the flowchart is 3. The answers are identical and therefore semantically equivalent."
+        },
+        "decision3": {
+            "verdict": "Correct",
+            "explanation": "The model answer matches the ground truth answer exactly."
+        }
+    },
+    "96": {
+        "key": "wiki00416",
+        "question_id": "1",
+        "question": "What should be done if a dog with kidney disease is not in the early stages?",
+        "response": "Consider alternative treatments.",
+        "answer": "Consider alternative treatments",
+        "final_decision": "Correct",
+        "decision1": {
+            "verdict": "Correct",
+            "explanation": "The model answer matches the ground truth answer exactly in meaning."
+        },
+        "decision2": {
+            "verdict": "Correct",
+            "explanation": "The MODEL ANSWER is semantically equivalent to the GROUND TRUTH ANSWER. Both convey the same meaning: when a dog with kidney disease is not in the early stages, the appropriate action is to consider alternative treatments. The only difference is a minor stylistic variation (period placement), which does not affect the semantic content."
+        },
+        "decision3": {
+            "verdict": "Correct",
+            "explanation": "The model answer is semantically equivalent to the ground truth answer, as it conveys the same meaning despite the minor difference in punctuation."
+        }
+    },
+    "97": {
+        "key": "wiki00416",
+        "question_id": "2",
+        "question": "What should be done if a veterinarian prescribes benazepril off-label for a dog?",
+        "response": "Proceed with the veterinarian's guidance.",
+        "answer": "Proceed with the veterinarian's guidance",
+        "final_decision": "Correct",
+        "decision1": {
+            "verdict": "Correct",
+            "explanation": "The model answer matches the ground truth exactly with no semantic differences."
+        },
+        "decision2": {
+            "verdict": "Correct",
+            "explanation": "The MODEL ANSWER is semantically equivalent to the GROUND TRUTH ANSWER. Both convey the same meaning: that one should follow the veterinarian's guidance when benazepril is prescribed off-label for a dog. The only difference is a minor stylistic addition of a period in the MODEL ANSWER, which does not change the semantic content."
+        },
+        "decision3": {
+            "verdict": "Correct",
+            "explanation": "The model answer is semantically equivalent to the ground truth answer, as it conveys the same meaning of following the veterinarian's guidance."
+        }
+    },
+    "98": {
+        "key": "wiki00416",
+        "question_id": "3",
+        "question": "Craig's dog, Whiskers, has been on ACE inhibitors for a few weeks to treat kidney disease. However, Craig has noticed no improvement in Whiskers' condition and is concerned about the potential worsening of kidney failure. What should be Craig's next step according to the treatment process?",
+        "response": "Determine whether the ACE inhibitor being used (e.g., benazepril) is licensed for dogs and then follow the veterinarian\u2019s guidance.",
+        "answer": "Craig should monitor Whiskers' condition to ensure the treatment with ACE inhibitors is not worsening the kidney failure.",
+        "final_decision": "Incorrect",
+        "decision1": {
+            "verdict": "Incorrect",
+            "explanation": "The ground truth focuses specifically on monitoring Whiskers\u2019 condition for worsening kidney failure. The model answer introduces unrelated steps about checking drug licensing and following veterinarian guidance, which changes the required action."
+        },
+        "decision2": {
+            "verdict": "Incorrect",
+            "explanation": "The model answer introduces a new condition about verifying whether the ACE inhibitor is licensed for dogs, which is not present in the ground truth answer. The ground truth specifies that Craig should monitor Whiskers' condition to ensure the treatment is not worsening kidney failure, whereas the model answer shifts focus to drug licensing verification and following veterinary guidance\u2014a different procedural step that goes beyond the monitoring requirement stated in the ground truth."
+        },
+        "decision3": {
+            "verdict": "Incorrect",
+            "explanation": "The model answer introduces an unsupported condition about checking if the ACE inhibitor is licensed for dogs, which is not mentioned in the ground truth answer."
+        }
+    },
+    "99": {
+        "key": "wiki00416",
+        "question_id": "4",
+        "question": "When Samantha's veterinarian suggested the use of benazepril to treat her dog's kidney disease, she was concerned because she knew that benazepril was originally developed for cats. What should Samantha take into consideration before deciding to use benazepril as a treatment for her dog?",
+        "response": "She should consider whether benazepril is actually licensed for dogs, and if not, whether her veterinarian is intentionally prescribing it off\u2011label. She should also weigh the vet\u2019s guidance about its safety and dosing for early\u2011stage kidney disease in dogs, and compare it with any dog\u2011specific alternatives the vet might recommend.",
+        "answer": "Samantha should consider that benazepril is not officially licensed for use in dogs, and decide whether to proceed with off-label use under a veterinarian's guidance.",
+        "final_decision": "Incorrect",
+        "decision1": {
+            "verdict": "Incorrect",
+            "explanation": "The model answer adds extra considerations such as dosing, safety specifics, and comparing dog\u2011specific alternatives, which are not present in the ground truth. These additions introduce requirements beyond simply considering its off\u2011label status under veterinary guidance."
+        },
+        "decision2": {
+            "verdict": "Correct",
+            "explanation": "The model answer captures the essential consideration from the ground truth\u2014that benazepril may not be officially licensed for dogs and that off-label use under veterinary guidance is a key factor. The model answer expands on this by explicitly mentioning the veterinarian's role in prescribing off-label, safety/dosing considerations, and alternative options, all of which are reasonable elaborations that support the core decision-making process without contradicting the ground truth. The additional details are contextually appropriate and do not introduce unsupported conditions."
+        },
+        "decision3": {
+            "verdict": "Incorrect",
+            "explanation": "The model answer introduces additional considerations about the vet\u2019s guidance on safety, dosing, and alternatives, which are not present in the ground truth answer. The ground truth answer focuses solely on the licensing and off-label use, making the model answer semantically different."
+        }
+    },
+    "100": {
+        "key": "wiki00416",
+        "question_id": "5",
+        "question": "If a dog is currently being treated with ACE inhibitors for kidney disease, what was the decision made at the first decision point, and what is the immediate next step after administration?",
+        "response": "Decision: Yes (the dog is in early stages of kidney disease).  \nImmediate next step after administration: Monitor the dog's condition.",
+        "answer": "The decision was 'Yes' at the 'Dog in early stages of kidney disease?' node, and the immediate next step is 'Monitor the dog's condition'.",
+        "final_decision": "Correct",
+        "decision1": {
+            "verdict": "Correct",
+            "explanation": "The model answer matches the ground truth on both the initial decision and the immediate next step. No essential information is missing or altered."
+        },
+        "decision2": {
+            "verdict": "Correct",
+            "explanation": "The MODEL ANSWER correctly identifies that the decision at the first decision point was 'Yes' (the dog is in early stages of kidney disease) and accurately states that the immediate next step after administration is 'Monitor the dog's condition.' The model answer uses slightly different phrasing but conveys the same semantic meaning as the GROUND TRUTH ANSWER, with no omissions or contradictions of essential information."
+        },
+        "decision3": {
+            "verdict": "Correct",
+            "explanation": "The model answer correctly identifies the decision as 'Yes' and the next step as 'Monitor the dog's condition', which matches the ground truth answer."
+        }
+    },
+    "101": {
+        "key": "wiki00416",
+        "question_id": "6",
+        "question": "How many nodes exist in the given flowchart?",
+        "response": "16",
+        "answer": "16",
+        "final_decision": "Correct",
+        "decision1": {
+            "verdict": "Correct",
+            "explanation": "The model answer gives the same numerical result as the ground truth with no differences in meaning."
+        },
+        "decision2": {
+            "verdict": "Correct",
+            "explanation": "Both the ground truth answer and the model answer state that there are 16 nodes in the flowchart. The answers are identical and therefore semantically equivalent."
+        },
+        "decision3": {
+            "verdict": "Correct",
+            "explanation": "The model answer matches the ground truth answer exactly."
+        }
+    },
+    "102": {
+        "key": "wiki00416",
+        "question_id": "7",
+        "question": "How many edges exist in the given flowchart?",
+        "response": "18",
+        "answer": "18",
+        "final_decision": "Correct",
+        "decision1": {
+            "verdict": "Correct",
+            "explanation": "The model answer matches the ground truth exactly with no semantic differences."
+        },
+        "decision2": {
+            "verdict": "Correct",
+            "explanation": "Both the ground truth answer and the model answer state that there are 18 edges in the flowchart. The answers are identical and therefore semantically equivalent."
+        },
+        "decision3": {
+            "verdict": "Correct",
+            "explanation": "The model answer matches the ground truth answer exactly."
+        }
+    },
+    "103": {
+        "key": "wiki00416",
+        "question_id": "8",
+        "question": "Is the node \"\"End\"\" direct predecessor of the node \"\"Identify kidney disease in a dog\"\"?",
+        "response": "No.",
+        "answer": "No",
+        "final_decision": "Correct",
+        "decision1": {
+            "verdict": "Correct",
+            "explanation": "The model answer matches the ground truth by stating the same outcome with no added conditions or differences."
+        },
+        "decision2": {
+            "verdict": "Correct",
+            "explanation": "Both the ground truth answer and the model answer state 'No' to the question of whether 'End' is a direct predecessor of 'Identify kidney disease in a dog'. The model answer is a direct paraphrase of the ground truth with identical meaning, differing only in the addition of a period, which is a stylistic difference that does not affect semantic equivalence."
+        },
+        "decision3": {
+            "verdict": "Correct",
+            "explanation": "The model answer 'No' is semantically equivalent to the ground truth answer 'No'."
+        }
+    },
+    "104": {
+        "key": "wiki00416",
+        "question_id": "9",
+        "question": "How many edges exist in the shortest path between \"\"Proceed with ACE inhibitor treatment\"\" and \"\"Acknowledge medication developed for cats\"\"?",
+        "response": "6",
+        "answer": "6",
+        "final_decision": "Correct",
+        "decision1": {
+            "verdict": "Correct",
+            "explanation": "The model answer matches the ground truth answer exactly, with no differences in meaning."
+        },
+        "decision2": {
+            "verdict": "Correct",
+            "explanation": "Both the ground truth answer and the model answer state that there are 6 edges in the shortest path between the two specified nodes. The answers are identical and therefore semantically equivalent."
+        },
+        "decision3": {
+            "verdict": "Correct",
+            "explanation": "The model answer matches the ground truth answer exactly."
+        }
+    },
+    "105": {
+        "key": "wiki00416",
+        "question_id": "10",
+        "question": "An indegree of is the number of incoming edges for a node in a flowchart. What is the maximum indegree for the flowchart?",
+        "response": "The maximum indegree is 3.",
+        "answer": "3",
+        "final_decision": "Correct",
+        "decision1": {
+            "verdict": "Correct",
+            "explanation": "The model answer restates the ground truth value without altering its meaning. Both specify the maximum indegree as 3."
+        },
+        "decision2": {
+            "verdict": "Correct",
+            "explanation": "The model answer states that the maximum indegree is 3, which is semantically equivalent to the ground truth answer of 3. Both convey the same factual information about the maximum number of incoming edges for any node in the flowchart, with the model answer simply expressing it in a complete sentence rather than as a single number."
+        },
+        "decision3": {
+            "verdict": "Correct",
+            "explanation": "The model answer accurately states that the maximum indegree is 3, which is semantically equivalent to the ground truth answer."
+        }
+    },
+    "106": {
+        "key": "instruct00811",
+        "question_id": "1",
+        "question": "What tools are needed to begin dismantling a pallet?",
+        "response": "lump mallet, claw hammer, prybar, and scrap wood.",
+        "answer": "Lump mallet, claw hammer, prybar, and scrap wood",
+        "final_decision": "Correct",
+        "decision1": {
+            "verdict": "Correct",
+            "explanation": "The model answer exactly matches the listed tools in the ground truth with no omissions or additions."
+        },
+        "decision2": {
+            "verdict": "Correct",
+            "explanation": "The MODEL ANSWER lists the exact same four tools as the GROUND TRUTH ANSWER (lump mallet, claw hammer, prybar, and scrap wood). The only difference is the addition of a period at the end of the MODEL ANSWER, which is a minor stylistic variation that does not change the semantic meaning or content."
+        },
+        "decision3": {
+            "verdict": "Correct",
+            "explanation": "The model answer lists the same tools as the ground truth answer, only differing in capitalization."
+        }
+    },
+    "107": {
+        "key": "instruct00811",
+        "question_id": "2",
+        "question": "What is the next step if nails are removed without bending?",
+        "response": "Use the prybar to remove the wooden strips.",
+        "answer": "Use a prybar to remove wooden strips",
+        "final_decision": "Correct",
+        "decision1": {
+            "verdict": "Correct",
+            "explanation": "The model answer matches the ground truth answer in meaning without adding or omitting any conditions."
+        },
+        "decision2": {
+            "verdict": "Correct",
+            "explanation": "The MODEL ANSWER expresses the same meaning as the GROUND TRUTH ANSWER. Both state that a prybar should be used to remove wooden strips when nails are removed without bending. The only difference is the use of 'the' instead of 'a' and minor capitalization, which are stylistic variations that do not change the semantic meaning."
+        },
+        "decision3": {
+            "verdict": "Correct",
+            "explanation": "The model answer is semantically equivalent to the ground truth answer, as it conveys the same action and outcome."
+        }
+    },
+    "108": {
+        "key": "instruct00811",
+        "question_id": "3",
+        "question": "Ben is in the middle of removing the wooden strips from a pallet using a prybar, but he's finding it difficult as the strips are not coming off easily. He recalls there's a technique to address this issue. What should Ben do now?",
+        "response": "Use the alternate strips\u2011removal technique: turn the pallet, distribute blows, then stand the wood vertically and remove the chocks.",
+        "answer": "Ben should turn the pallet upside down, rest it on the chocks, and hit along each strip to loosen them.",
+        "final_decision": "Incorrect",
+        "decision1": {
+            "verdict": "Incorrect",
+            "explanation": "The model answer adds extra steps such as standing the wood vertically and removing the chocks, which are not in the ground truth. These additions change the described procedure."
+        },
+        "decision2": {
+            "verdict": "Incorrect",
+            "explanation": "The model answer introduces unsupported elements not present in the ground truth, such as 'stand the wood vertically' and 'remove the chocks,' which contradict the ground truth instruction to 'rest it on the chocks.' Additionally, the model answer lacks the essential detail of 'hit along each strip to loosen them,' which is a key part of the technique. The model's description of the procedure is fundamentally different from the ground truth's clear sequence of actions."
+        },
+        "decision3": {
+            "verdict": "Incorrect",
+            "explanation": "The model answer introduces an unsupported condition of standing the wood vertically and removing the chocks, which is not mentioned in the ground truth answer."
+        }
+    },
+    "109": {
+        "key": "instruct00811",
+        "question_id": "4",
+        "question": "Emma is preparing to dismantle an old wooden pallet and she's at the stage where she needs to assess its condition. What aspects of the pallet should she examine before proceeding with the dismantling process?",
+        "response": "She should check its size, shape, and overall condition.",
+        "answer": "Emma should examine the pallet's size, shape, and condition.",
+        "final_decision": "Correct",
+        "decision1": {
+            "verdict": "Correct",
+            "explanation": "The model answer includes all aspects from the ground truth\u2014size, shape, and condition\u2014with no added or missing requirements. It is a direct paraphrase with identical meaning."
+        },
+        "decision2": {
+            "verdict": "Correct",
+            "explanation": "The MODEL ANSWER is semantically equivalent to the GROUND TRUTH ANSWER. Both responses identify the same three aspects Emma should examine: size, shape, and condition. The use of 'overall condition' instead of just 'condition' is a minor stylistic variation that does not change the meaning, and 'She should check' is a natural paraphrase of 'Emma should examine.' The core information and requirements are identical."
+        },
+        "decision3": {
+            "verdict": "Correct",
+            "explanation": "The model answer is semantically equivalent to the ground truth answer, as it mentions all the required aspects: size, shape, and condition."
+        }
+    },
+    "110": {
+        "key": "instruct00811",
+        "question_id": "5",
+        "question": "If I have just finished distributing blows with the lump mallet, what is the immediate next step and what condition must be re-evaluated following this action?",
+        "response": "Next step: return to check \u201cAll Chocks Detached?\u201d  \nCondition to re\u2011evaluate: whether all chocks are now detached.",
+        "answer": "The immediate next step is to check if all chocks are detached, which must be re-evaluated.",
+        "final_decision": "Correct",
+        "decision1": {
+            "verdict": "Correct",
+            "explanation": "The model answer restates the same next step and the same condition to re-evaluate as in the ground truth without adding or omitting anything essential."
+        },
+        "decision2": {
+            "verdict": "Correct",
+            "explanation": "Both answers convey the same essential information: after distributing blows with the lump mallet, the next step is to check/return to the condition about whether all chocks are detached, and this condition must be re-evaluated. The MODEL ANSWER uses slightly more explicit phrasing ('return to check' and 'whether all chocks are now detached') but expresses semantically equivalent meaning to the GROUND TRUTH ANSWER without adding unsupported logic or omitting essential conditions."
+        },
+        "decision3": {
+            "verdict": "Correct",
+            "explanation": "The model answer accurately reflects the ground truth answer by stating that the next step is to check if all chocks are detached, which is the condition that must be re-evaluated."
+        }
+    },
+    "111": {
+        "key": "instruct00811",
+        "question_id": "6",
+        "question": "Assuming I am currently at the step where I am using the prybar to remove wooden strips, what would be my next course of action if I encounter difficulty with the strips' removal?",
+        "response": "If the strips are difficult to remove, your next action is to use an alternate strips\u2011removal technique.",
+        "answer": "If difficulty is encountered, the next step would be to alternate the strips removal technique.",
+        "final_decision": "Correct",
+        "decision1": {
+            "verdict": "Correct",
+            "explanation": "The model answer conveys the same meaning as the ground truth, indicating that one should switch to an alternate removal technique when encountering difficulty. No essential conditions differ."
+        },
+        "decision2": {
+            "verdict": "Correct",
+            "explanation": "Both answers convey the same essential meaning: when encountering difficulty removing the wooden strips, the next action is to switch to an alternate or alternative technique for removing the strips. The MODEL ANSWER uses 'use an alternate strips-removal technique' which is semantically equivalent to the GROUND TRUTH's 'alternate the strips removal technique.' The wording differs slightly but the core instruction and outcome are identical."
+        },
+        "decision3": {
+            "verdict": "Correct",
+            "explanation": "The model answer accurately conveys the same meaning as the ground truth answer, stating that if there is difficulty in removing the strips, the next step is to use an alternate technique."
+        }
+    },
+    "112": {
+        "key": "instruct00811",
+        "question_id": "7",
+        "question": "How many nodes exist in the given flowchart?",
+        "response": "22",
+        "answer": "22",
+        "final_decision": "Correct",
+        "decision1": {
+            "verdict": "Correct",
+            "explanation": "The model answer matches the ground truth exactly with no semantic differences."
+        },
+        "decision2": {
+            "verdict": "Correct",
+            "explanation": "Both the ground truth answer and the model answer state that there are 22 nodes in the flowchart. The answers are identical and therefore semantically equivalent."
+        },
+        "decision3": {
+            "verdict": "Correct",
+            "explanation": "The model answer matches the ground truth answer exactly."
+        }
+    },
+    "113": {
+        "key": "instruct00811",
+        "question_id": "8",
+        "question": "How many edges exist in the given flowchart?",
+        "response": "25",
+        "answer": "25",
+        "final_decision": "Correct",
+        "decision1": {
+            "verdict": "Correct",
+            "explanation": "The model answer provides the same number of edges as the ground truth. There is no semantic difference."
+        },
+        "decision2": {
+            "verdict": "Correct",
+            "explanation": "Both the ground truth answer and the model answer state that there are 25 edges in the flowchart. The answers are identical and therefore semantically equivalent."
+        },
+        "decision3": {
+            "verdict": "Correct",
+            "explanation": "The model answer matches the ground truth answer exactly."
+        }
+    },
+    "114": {
+        "key": "instruct00811",
+        "question_id": "9",
+        "question": "How many edges exist in the shortest path between \"\"Use Prybar to Remove Wooden Strips\"\" and \"\"Alternate Strips Removal Technique\"\"?",
+        "response": "2",
+        "answer": "2",
+        "final_decision": "Correct",
+        "decision1": {
+            "verdict": "Correct",
+            "explanation": "The model answer matches the ground truth exactly with no semantic differences."
+        },
+        "decision2": {
+            "verdict": "Correct",
+            "explanation": "Both the ground truth answer and the model answer state that there are 2 edges in the shortest path between the two specified nodes. The answers are identical and therefore semantically equivalent."
+        },
+        "decision3": {
+            "verdict": "Correct",
+            "explanation": "The model answer matches the ground truth answer exactly, indicating the same number of edges in the shortest path."
+        }
+    },
+    "115": {
+        "key": "instruct00811",
+        "question_id": "10",
+        "question": "Is the node \"\"All Nails Removed Without Bending?\"\" direct successor of the node \"\"Refer to YouTube Video for Guidance\"\"?",
+        "response": "No",
+        "answer": "No",
+        "final_decision": "Correct",
+        "decision1": {
+            "verdict": "Correct",
+            "explanation": "The model answer matches the ground truth answer exactly, indicating the same outcome."
+        },
+        "decision2": {
+            "verdict": "Correct",
+            "explanation": "Both the ground truth answer and the model answer are identical, stating 'No' to the question of whether 'All Nails Removed Without Bending?' is a direct successor of 'Refer to YouTube Video for Guidance'. Since the answers match exactly, the model answer is semantically equivalent to the ground truth."
+        },
+        "decision3": {
+            "verdict": "Correct",
+            "explanation": "The model answer 'No' is semantically equivalent to the ground truth answer 'No'."
+        }
+    }
+}
