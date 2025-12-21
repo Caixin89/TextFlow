@@ -6,12 +6,13 @@ services:
     env_file:
       - .env
     volumes:
+      - ./config.json:/app/config.json
       - ./data:/app/data
       - ./logs:/app/logs
       - ./output:/app/output
     runtime: nvidia
     environment:
-      - CUDA_VISIBLE_DEVICES=all
+      - NVIDIA_VISIBLE_DEVICES=all
 
   flowchart_vqa_cpu:
     build:
@@ -28,3 +29,32 @@ services:
     environment:
       # disable flash-attention at runtime for CPU container
       - ENABLE_FLASH_ATTENTION=0
+
+  genflowchart:
+    build:
+      context: .
+      dockerfile: ./GenFlowchart/Dockerfile
+    env_file:
+      - .env
+    volumes:
+      - ./data:/home/zhengxin.chai/GenFlowchart/data
+      - ./GenFlowchart/src:/home/zhengxin.chai/GenFlowchart/src
+      - ./output:/home/zhengxin.chai/GenFlowchart/output
+      - ~/.cache:/home/zhengxin.chai/.cache
+    command: ["python", "-m", "genflowchart"]
+    runtime: nvidia
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+
+  genflowchart_cpu:
+    build:
+      context: .
+      dockerfile: ./GenFlowchart/Dockerfile.cpu
+    env_file:
+      - .env
+    volumes:
+      - ./data:/home/zhengxin.chai/GenFlowchart/data
+      - ./GenFlowchart/src:/home/zhengxin.chai/GenFlowchart/src
+      - ./output:/home/zhengxin.chai/GenFlowchart/output
+      - ~/.cache:/home/zhengxin.chai/.cache
+    command: ["python", "-m", "genflowchart"]

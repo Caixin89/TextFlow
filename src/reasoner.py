@@ -76,7 +76,7 @@ def main():
 
     model = ModelWrapper(reasoner)
 
-    data_path = os.path.join(config["file_paths"][dataset], "test.json")
+    data_path = os.path.join(config["file_paths"][dataset], "new_dev.json")
     with open(data_path, "r") as file:
         data = json.load(file)
     keys = list(data.keys())
