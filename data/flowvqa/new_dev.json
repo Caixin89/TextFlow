@@ -1,0 +1,958 @@
+{
+  "wiki00071": {
+    "key": "wiki00071",
+    "title": "How to Become a Taoist",
+    "text": "It's not to be read in one sitting, but rather to be contemplated over time. But if you're looking for a gentler introduction especially if you're not yet committed, but simply deciding whether Taoism is right for you may we humbly suggest the following? The writings of Chuang-Tzu (Zhuangzi). His writings offer a more down-to-earth and humorous perspective on the principles of Taoism. Together, Lao-Tzu and Chuang-Tzu make up the yin and yang of primary Taoist texts, and we recommend both. Zhuangzi Speaks and The Tao Speaks by Ts'ai Chih Chung. The Tao of Pooh and The Te of Piglet by Benjamin Hoff these companion books are intended for those who do not fully understand Taoism, and though they're based on Winnie the Pooh, they're easily accessible to readers of all ages.; , Many translations of Taoist texts (see below) can be found in bookstores, libraries, and the Internet. Be sure to find a quality translation of the Tao Te Ching and other Chinese texts. Since the English and Chinese languages are so different, a good translation can make all the difference. , To be consistent, begin applying the philosophical principles to your actions. , Joining a Guan can benefit you greatly and improve the pace in which you achieve peace of mind and body. Alternatively the Reform Taoist Congregation offers an online community of philosophical Taoists. , This may lead to spiritual and philosophical communion, also known as \"peace\". Even before peace is achieved, it will begin to spread outward into other people and the world around you. , Neijia (Chinese neijia), usually translated as \"internal martial arts\", follow many Taoist principles, and are sometimes called \"physical Taoism\".",
+    "category1": "Philosophy and Religion",
+    "category2": "Hobbies and Crafts",
+    "tags": "['Taoism', 'Chinese Philosophy', 'Lao-Tzu', 'Chuang-Tzu', 'Tao Te Ching', 'Qi Gong', 'Tai Chi', 'Taoist Yoga', 'Guan', 'Meditation']",
+    "summary": "```markdown\n# Taoism Exploration System\n\n## Summary Representation\n\n### START:\n- Begin the process of exploring Taoism.\n\n### INPUT: \n- Acquire primary Taoist texts for reading.\n\n### PROCESS: [Acquire Texts]\n- Seek out the writings of Chuang-Tzu (Zhuangzi) for an accessible introduction to Taoism.\n\n### DECISION [IF]: Is the reader looking for a more humorous and down-to-earth perspective?\n  - Yes: Proceed to Chuang-Tzu's writings.\n  - No: Consider other Taoist texts.\n\n### PROCESS: [Chuang-Tzu's Writings]\n- Read \"Zhuangzi Speaks\" and \"The Tao Speaks\" by Ts'ai Chih Chung.\n\n### PROCESS: [Alternative Introduction]\n- For those unfamiliar with Taoism, read \"The Tao of Pooh\" and \"The Te of Piglet\" by Benjamin Hoff.\n\n### INPUT: \n- Search for quality translations of the Tao Te Ching and other Chinese texts.\n\n### PROCESS: [Evaluate Translations]\n- Compare translations to ensure the quality and accuracy of the text.\n\n### DECISION [IF]: Has a quality translation been found?\n  - Yes: Use the selected translation for study.\n  - No: Continue searching for a better translation.\n\n### PROCESS: [Philosophical Application]\n- Begin applying the philosophical principles of Taoism to daily actions.\n\n### DECISION [IF]: Is the reader applying principles consistently?\n  - Yes: Continue to the next step.\n  - No: Re-evaluate understanding and application of principles.\n\n### PROCESS: [Join a Community]\n- Consider joining a Taoist community, such as a Guan, or an online community like the Reform Taoist Congregation.\n\n### DECISION [IF]: Is the reader interested in joining a community?\n  - Yes: Join the preferred Taoist community.\n  - No: Continue individual study and application of Taoism.\n\n### PROCESS: [Achieve Peace]\n- Work towards achieving peace of mind and body through philosophical practice and community involvement.\n\n### OUTPUT: \n- The result is spiritual and philosophical communion, leading to peace.\n\n### PROCESS: [Spread Peace]\n- As peace is achieved, it begins to spread outward to other people and the world.\n\n### PROCESS: [Explore Neijia]\n- Explore Neijia, or \"internal martial arts,\" which align with many Taoist principles.\n\n### DECISION [IF]: Is the reader interested in physical aspects of Taoism?\n  - Yes: Practice Neijia as a form of \"physical Taoism.\"\n  - No: Focus on the philosophical aspects of Taoism.\n\n### END:\n- Continue the journey of Taoism exploration and practice at one's own pace.\n```\n",
+    "mermaid": "flowchart TD\n    A([\"Start\"]) --> B[/\"Acquire primary Taoist texts for reading.\"/]\n    B --> C[\"Seek out the writings of Chuang-Tzu (Zhuangzi)\"]\n    C --> D{\"Is the reader looking for a more humorous perspective?\"}\n    D -->|Yes| E[\"Read 'Zhuangzi Speaks' and 'The Tao Speaks'\"]\n    D -->|No| F[\"Consider other Taoist texts\"]\n    E --> G[\"Read 'The Tao of Pooh' and 'The Te of Piglet'\"]\n    F --> G\n    G --> H[/\"Search for quality translations of the Tao Te Ching and other Chinese texts.\"/]\n    H --> I[\"Compare translations for quality and accuracy\"]\n    I --> J{\"Has a quality translation been found?\"}\n    J -->|Yes| K[\"Use the selected translation for study\"]\n    J -->|No| I\n    K --> L[\"Apply the philosophical principles of Taoism to daily actions\"]\n    L --> M{\"Is the reader applying principles consistently?\"}\n    M -->|Yes| N[\"Consider joining a Taoist community\"]\n    M -->|No| L\n    N --> O{\"Is the reader interested in joining a community?\"}\n    O -->|Yes| P[\"Join the preferred Taoist community\"]\n    O -->|No| Q[\"Continue individual study and application of Taoism\"]\n    P --> R[\"Achieve peace of mind and body through practice and community\"]\n    Q --> R\n    R --> S[/\"Result is spiritual and philosophical communion, leading to peace.\"/]\n    S --> T[\"Spread peace to other people and the world\"]\n    T --> U[\"Explore Neijia (internal martial arts)\"]\n    U --> V{\"Is the reader interested in physical aspects of Taoism?\"}\n    V -->|Yes| W[\"Practice Neijia as a form of 'physical Taoism'\"]\n    V -->|No| X[\"Focus on the philosophical aspects of Taoism\"]\n    W --> Y([\"End\"])\n    X --> Y",
+    "qa": {
+      "1": {
+        "Q": "What book should be read for a humorous take on Taoist philosophy?",
+        "A1": "'Zhuangzi Speaks' and 'The Tao Speaks'",
+        "A2": "Read 'Zhuangzi Speaks' and 'The Tao Speaks'",
+        "A3": "'Zhuangzi Speaks' and 'The Tao Speaks' books",
+        "type": "fact_retrieval"
+      },
+      "2": {
+        "Q": "What should one seek when searching for translations of the Tao Te Ching?",
+        "A1": "Quality and accuracy",
+        "A2": "Translations with high quality and accuracy",
+        "A3": "Accurate and high-quality translations",
+        "type": "fact_retrieval"
+      },
+      "3": {
+        "Q": "Assuming I'm at the step where I'm comparing translations for quality and accuracy, and I eventually find a quality translation, what are the immediate next two steps in the process?",
+        "A1": "The immediate next steps would be 'Use the selected translation for study' followed by 'Apply the philosophical principles of Taoism to daily actions'.",
+        "A2": "Upon finding a quality translation, the subsequent steps are to use that translation for study and then to apply Taoism's philosophical principles consistently in daily life.",
+        "A3": "After confirming a quality translation, the next steps involve studying the translation and integrating Taoist philosophy into everyday actions.",
+        "type": "flow_referential"
+      },
+      "4": {
+        "Q": "How many nodes exist in the given flowchart?",
+        "A1": "25",
+        "type": "topological",
+        "A2": "There are twenty-five nodes in the flowchart.",
+        "A3": "Twenty-five Nodes"
+      },
+      "5": {
+        "Q": "How many edges exist in the given flowchart?",
+        "A1": "29",
+        "type": "topological",
+        "A2": "There are twenty-nine edges in the flowchart.",
+        "A3": "Twenty-nine Edges"
+      },
+      "6": {
+        "Q": "Is the node \"\"Read 'The Tao of Pooh' and 'The Te of Piglet'\"\" direct predecessor of the node \"\"Focus on the philosophical aspects of Taoism\"\"?",
+        "A1": "No",
+        "type": "topological",
+        "A2": "No, the node 'Read 'The Tao of Pooh' and 'The Te of Piglet' is not a direct predecessor of 'Focus on the philosophical aspects of Taoism.'",
+        "A3": "No direct predecessor relationship exists"
+      }
+    }
+  },
+  "instruct00856": {
+    "key": "instruct00856",
+    "title": "Functional Steampunk Airsoft Pistol",
+    "text": "When I saw the Steampunk Challenge it gave me the motivation to actually do this project which had been kicking around in my head for a while. I have a bunch of less-than powerful Airsoft guns lying around, a bunch of random junk, adhesives, and metallic paint. Combine all of this, and I get a Steampunk Airsoft gun! I also wanted the gun to work. Maybe not be easy to cock, or load, or aim, but at least fire. This one fits that description perfectly. This gun is not up to my personal artistic standards, but I couldn't figure out something to edge the leather with to my satisfaction, or something to cover the exposed glued woods on the ends of the scope. Without further ado, here is my Steampunk Airsoft gun. The gun I chose had some accuracy issues so i decided to to take it apart and maybe fix that. I found the problem- a cracked barrel mount- and patched it up with Krazy Glue (CA glue). That fixed it wonderfully",
+    "category1": "Outside",
+    "category2": "Launchers",
+    "url": "https://www.instructables.com/Functional-Steampunk-Airsoft-Pistol",
+    "summary": "```markdown\n# Steampunk Airsoft Gun Creation Process\n\n## Summary\nThe project involves converting a less-than-powerful Airsoft gun into a Steampunk-themed Airsoft gun using a collection of materials such as random junk, adhesives, and metallic paint. The objective is not only to achieve the Steampunk aesthetic but also to ensure the gun remains functional, capable of firing despite potential difficulties with cocking, loading, or aiming. There were some challenges faced in achieving the desired artistic standards, particularly in edging the leather and covering exposed glued woods on the scope's ends. The gun selected for modification had accuracy issues due to a cracked barrel mount, which was repaired using Krazy Glue.\n\n## Process Flow\n\nSTART: Begin the Steampunk Airsoft gun project.\n\nINPUT: Gather materials which include:\n- Airsoft gun with accuracy issues\n- Random junk\n- Adhesives\n- Metallic paint\n- Leather (for aesthetic purposes)\n\nPROCESS: Evaluate the Airsoft gun for functionality and accuracy.\n\nDECISION [IF]: Is the Airsoft gun suffering from accuracy issues?\n- Yes: Proceed to disassemble the gun.\n- No: Skip to the aesthetic modification process.\n\nPROCESS: Disassemble the Airsoft gun to identify the cause of the accuracy issues.\n\nINPUT: Inspect the internal components of the Airsoft gun.\n\nDECISION [IF]: Is there a cracked barrel mount?\n- Yes: Repair the crack.\n- No: Reassemble the gun and proceed to the aesthetic modification process.\n\nPROCESS: Repair the cracked barrel mount with Krazy Glue (CA glue).\n\nOUTPUT: The accuracy issue of the Airsoft gun is fixed.\n\nPROCESS: Reassemble the Airsoft gun after the repair is complete.\n\nPROCESS: Begin the aesthetic modification to achieve the Steampunk theme.\n\nDECISION [IF]: Can perfect edging for the leather be figured out?\n- Yes: Apply the edging to the leather.\n- No: Continue without edging.\n\nDECISION [IF]: Can a covering for the exposed glued woods on the scope's ends be found?\n- Yes: Apply the covering to the scope's ends.\n- No: Continue without covering.\n\nPROCESS: Apply random junk, adhesives, and metallic paint to create the Steampunk look.\n\nOUTPUT: A Steampunk-themed Airsoft gun that is functional but may not be easy to cock, load, or aim.\n\nEND: The Steampunk Airsoft gun project is complete.\n```\n",
+    "mermaid": "flowchart TD\n    A([\"Start\"]) --> B[/\"Gather materials\"/]\n    B --> C[\"Evaluate Airsoft gun functionality and accuracy\"]\n    C --> D{\"Accuracy issues?\"}\n    D -->|Yes| E[\"Disassemble Airsoft gun\"]\n    D -->|No| J[\"Begin aesthetic modification\"]\n    E --> F[/\"Inspect internal components\"/]\n    F --> G{\"Cracked barrel mount?\"}\n    G -->|Yes| H[\"Repair with Krazy Glue\"]\n    G -->|No| J\n    H --> I[\"Reassemble Airsoft gun\"]\n    I --> J\n    J --> K{\"Perfect leather edging?\"}\n    K -->|Yes| L[\"Apply edging to leather\"]\n    K -->|No| M[\"Continue without edging\"]\n    L --> M\n    M --> N{\"Cover exposed glued woods on scope ends?\"}\n    N -->|Yes| O[\"Apply covering to scope's ends\"]\n    N -->|No| P[\"Continue without covering\"]\n    O --> P\n    P --> Q[\"Apply random junk, adhesives, metallic paint\"]\n    Q --> R[/\"Steampunk-themed Airsoft gun\"/]\n    R --> S([\"End\"])",
+    "qa": {
+      "1": {
+        "Q": "What should be done if there are accuracy issues with the Airsoft gun?",
+        "A1": "Disassemble the Airsoft gun",
+        "A2": "Take apart the gun for inspection",
+        "A3": "Begin disassembly for further inspection",
+        "type": "fact_retrieval"
+      },
+      "2": {
+        "Q": "How should a cracked barrel mount on the Airsoft gun be repaired?",
+        "A1": "Repair it with Krazy Glue",
+        "A2": "Use Krazy Glue for the repair",
+        "A3": "Fix the cracked barrel mount with Krazy Glue",
+        "type": "fact_retrieval"
+      },
+      "3": {
+        "Q": "Liam is customizing an Airsoft gun to fit a Steampunk theme for his short film, but he's having trouble giving the leather pieces a finished look with perfect edging. If he can't figure out how to edge the leather properly, what should he do to keep the project moving forward?",
+        "A1": "Continue the modification process without edging the leather.",
+        "A2": "Proceed with the aesthetic changes without applying the leather edging.",
+        "A3": "Carry on with the Steampunk modifications, leaving the leather unedged.",
+        "type": "applied_scenario"
+      },
+      "4": {
+        "Q": "Assuming the Airsoft gun has been disassembled due to accuracy issues, what would be the next step if the internal components inspection reveals no cracked barrel mount?",
+        "A1": "If no cracked barrel mount is found, the next step would be 'Begin aesthetic modification'.",
+        "A2": "Upon finding the barrel mount intact, the subsequent action is to start the 'Begin aesthetic modification' process.",
+        "A3": "The following step after an intact barrel mount inspection would be to proceed with 'Begin aesthetic modification'.",
+        "type": "flow_referential"
+      },
+      "5": {
+        "Q": "How many nodes exist in the given flowchart?",
+        "A1": "19",
+        "type": "topological",
+        "A2": "There are nineteen nodes in the flowchart.",
+        "A3": "Nineteen Nodes"
+      },
+      "6": {
+        "Q": "How many edges exist in the given flowchart?",
+        "A1": "22",
+        "type": "topological",
+        "A2": "There are twenty-two edges in the flowchart.",
+        "A3": "Twenty-two Edges"
+      },
+      "7": {
+        "Q": "Is the node \"\"Steampunk-themed Airsoft gun\"\" direct predecessor of the node \"\"Apply edging to leather\"\"?",
+        "A1": "No",
+        "type": "topological",
+        "A2": "No, the node 'Steampunk-themed Airsoft gun' is not a direct predecessor of 'Apply edging to leather'.",
+        "A3": "No direct predecessor relationship exists"
+      },
+      "8": {
+        "Q": "How many edges exist in the shortest path between \"\"Cracked barrel mount?\"\" and \"\"Steampunk-themed Airsoft gun\"\"?",
+        "A1": "7",
+        "type": "topological",
+        "A2": "There are seven edges in the shortest path between 'Cracked barrel mount' and 'Steampunk-themed Airsoft gun'.",
+        "A3": "Seven edges in the shortest path between 'Cracked barrel mount' and 'Steampunk-themed Airsoft gun'."
+      },
+      "9": {
+        "Q": "An indegree of is the number of incoming edges for a node in a flowchart. What is the maximum indegree for the flowchart?",
+        "A1": "3",
+        "type": "topological",
+        "A2": "The maximum indegree for the flowchart is 3.",
+        "A3": "Three is the maximum indegree for the flowchart."
+      }
+    }
+  },
+  "code00268": {
+    "key": "code00268",
+    "code": "# Write a function to find out the maximum sum such that no two chosen numbers are adjacent for the given rectangular grid of dimension 2 x n.\ndef max_sum_rectangular_grid(grid, n):\n    incl = max(grid[0][0], grid[1][0])\n    excl = 0\n    for i in range(1, n):\n        excl_new = max(excl, incl)\n        incl = excl + max(grid[0][i], grid[1][i])\n        excl = excl_new\n    return max(excl, incl)\n",
+    "summary": "```markdown\n# Pseudocode for Finding Maximum Sum in a 2xN Rectangular Grid with Non-Adjacent Selection Constraint\n\n## START:\n- Begin the process to find the maximum sum in the grid.\n\n## INPUT:\n- Accept input `grid`, which is a 2-dimensional list representing the 2xN grid.\n- Accept input `n`, which is an integer representing the number of columns in the grid.\n\n## PROCESS:\n- Initialize `incl` to the maximum value of the first column of the grid (either `grid[0][0]` or `grid[1][0]`).\n- Initialize `excl` to 0, which represents the maximum sum excluding the last visited column.\n\n## PROCESS [FOR LOOP]:\n- Iterate `i` from 1 to `n-1` (inclusive) to process each column in the grid:\n  - Within the loop, execute the following steps:\n  \n    ### PROCESS:\n    - Calculate `excl_new` as the maximum of `excl` and `incl`.\n    \n    ### PROCESS:\n    - Update `incl` to the sum of `excl` and the maximum value of the current column (`grid[0][i]` or `grid[1][i]`).\n    \n    ### PROCESS:\n    - Update `excl` to the value of `excl_new`.\n  \n## OUTPUT:\n- After the loop concludes, calculate and output the final maximum sum by returning the maximum of `excl` and `incl`.\n\n## END:\n- The process of finding the maximum sum is complete.\n```\n\n**Note:** The control codes are indicated in bold before each step of the pseudocode. This annotated pseudocode describes the original Python function in a detailed step-by-step manner, with each step labeled according to its control code.",
+    "mermaid": "flowchart TD\n    A([\"Start\"]) --> B[/\"Accept input `grid` and `n`\"/]\n    B --> C[\"Initialize `incl` to max(grid[0][0], grid[1][0])\"]\n    C --> D[\"Initialize `excl` to 0\"]\n    D --> E{\"Loop from i=1 to n-1\"}\n    E -->|\"Yes\"| F[\"Calculate `excl_new` as max(`excl`, `incl`)\"]\n    F --> G[\"Update `incl` to `excl` + max(grid[0][i], grid[1][i])\"]\n    G --> H[\"Update `excl` to `excl_new`\"]\n    H --> E\n    E -->|\"No\"| I[/\"Output maximum of `excl` and `incl`\"/]\n    I --> J([\"End\"])",
+    "qa": {
+      "1": {
+        "Q": "How is the initial value of 'incl' determined?",
+        "A1": "It is the maximum value of the first column of the grid.",
+        "A2": "'incl' is initialized to the greater of grid[0][0] or grid[1][0].",
+        "A3": "The starting value for 'incl' comes from the highest value in the grid's first column.",
+        "type": "fact_retrieval"
+      },
+      "2": {
+        "Q": "Imagine you are writing a program to process a grid of numbers for a game. You've just initialized two variables, `incl` and `excl`, and you're about to enter a loop that starts with `i=1`. In this loop, you need to update a variable `excl_new`. Based on the algorithm you're following, what value should `excl_new` be assigned?",
+        "A1": "The maximum of `excl` and `incl`.",
+        "A2": "The greater value between `excl` and `incl`.",
+        "A3": "Choose the larger number from `excl` and `incl`.",
+        "type": "applied_scenario"
+      },
+      "3": {
+        "Q": "As you continue to iterate through the grid in your number-crunching application, you find yourself updating two variables, `incl` and `excl`, at each step. Once you have calculated the new value for `incl`, which involves adding the maximum of grid[0][i] or grid[1][i] to `excl`, what's the next immediate action you must take before the next iteration?",
+        "A1": "Set the value of `excl` to `excl_new`.",
+        "A2": "Update `excl` with the value of `excl_new`.",
+        "A3": "Assign `excl_new` to `excl`.",
+        "type": "applied_scenario"
+      },
+      "4": {
+        "Q": "What will be the value of `incl` after the first iteration of the loop starting at node E, given that `grid` is a 2x2 matrix with values [[1,2],[3,4]]?",
+        "A1": "The value of `incl` after the first iteration will be 5.",
+        "A2": "After the first loop iteration, `incl` is updated to 5.",
+        "A3": "5 is the updated value of `incl` post the initial loop iteration.",
+        "type": "flow_referential"
+      },
+      "5": {
+        "Q": "If the loop at node E has completed two iterations for an input `n` of 3, what will be the sequence of steps executed up to the point of outputting the result?",
+        "A1": "The sequence is initializing `incl` and `excl`, two iterations of calculating `excl_new`, updating `incl`, updating `excl`, and then outputting the maximum of `excl` and `incl`.",
+        "A2": "First, initialize `incl` and `excl`, then perform two loop iterations involving the calculation of `excl_new`, the update of `incl`, and `excl`, and finally output the max of `excl` and `incl`.",
+        "A3": "The steps are to initialize `incl` and `excl`, run two iterations for `excl_new` calculation, `incl` and `excl` updates, and conclude by outputting the larger of `excl` or `incl`.",
+        "type": "flow_referential"
+      },
+      "6": {
+        "Q": "How many nodes exist in the given flowchart?",
+        "A1": "10",
+        "type": "topological",
+        "A2": "There are a total of ten nodes in the flowchart.",
+        "A3": "Ten nodes in total"
+      },
+      "7": {
+        "Q": "How many edges exist in the given flowchart?",
+        "A1": "10",
+        "type": "topological",
+        "A2": "There are ten edges in the flowchart.",
+        "A3": "Ten Edges"
+      }
+    }
+  },
+  "code00404": {
+    "key": "code00404",
+    "code": "# Write a python function to find the last position of an element in a sorted array.\ndef last(arr, x, n):\n    low = 0\n    high = n - 1\n    res = -1\n    while low <= high:\n        mid = (low + high) // 2\n        if arr[mid] > x:\n            high = mid - 1\n        elif arr[mid] < x:\n            low = mid + 1\n        else:\n            res = mid\n            low = mid + 1\n    return res\n",
+    "summary": "```markdown\n# Pseudocode for finding the last position of an element in a sorted array\n\n## START\nSTART\n\n## INPUT\nINPUT: Receive the array `arr`, the element to find `x`, and the size of the array `n`\n\n## INITIALIZE VARIABLES\nPROCESS: Initialize `low` to 0\nPROCESS: Initialize `high` to `n - 1`\nPROCESS: Initialize `res` to -1\n\n## BEGIN BINARY SEARCH LOOP\nPROCESS: While `low` is less than or equal to `high`, do the following steps:\n\n  ### CALCULATE MIDPOINT\n  PROCESS: Calculate `mid` as the floor division of `low + high` by 2\n\n  ### DECISION: IS ELEMENT AT MID GREATER THAN X?\n  DECISION [IF]: Check if `arr[mid]` is greater than `x`\n    IF YES: \n      PROCESS: Set `high` to `mid - 1` and continue the loop\n    IF NO: Proceed to the next decision\n\n  ### DECISION: IS ELEMENT AT MID LESS THAN X?\n  DECISION [IF]: Check if `arr[mid]` is less than `x`\n    IF YES: \n      PROCESS: Set `low` to `mid + 1` and continue the loop\n    IF NO: Proceed to the next step\n\n  ### UPDATE RESULT AND LOW FOR NEXT ITERATION\n  PROCESS: Set `res` to `mid` because `arr[mid]` is equal to `x`\n  PROCESS: Set `low` to `mid + 1` to continue searching to the right\n\n## END BINARY SEARCH LOOP\n\n## OUTPUT\nOUTPUT: Return the value of `res`, the last position of `x` in `arr`\n\n## END\nEND\n```",
+    "mermaid": "flowchart TD\n    A([\"Start\"]) --> B[/\"Receive the array 'arr', the element to find 'x', and the size of the array 'n'\"/]\n    B --> C[\"Initialize 'low' to 0\"]\n    C --> D[\"Initialize 'high' to 'n - 1'\"]\n    D --> E[\"Initialize 'res' to -1\"]\n    E --> F{\"'low' <= 'high'?\"}\n    F -->|\"Yes\"| G[\"Calculate 'mid' as ('low' + 'high') // 2\"]\n    G --> H{\"'arr[mid]' > 'x'?\"}\n    H -->|\"Yes\"| I[\"Set 'high' to 'mid - 1'\"]\n    I --> F\n    H -->|\"No\"| J{\"'arr[mid]' < 'x'?\"}\n    J -->|\"Yes\"| K[\"Set 'low' to 'mid + 1'\"]\n    K --> F\n    J -->|\"No\"| L[\"Set 'res' to 'mid'\"]\n    L --> M[\"Set 'low' to 'mid + 1'\"]\n    M --> F\n    F -->|\"No\"| N[/\"Return the value of 'res', the last position of 'x' in 'arr'\"/]\n    N --> O([\"End\"])",
+    "qa": {
+      "1": {
+        "Q": "Under what condition will the binary search loop terminate?",
+        "A1": "When 'low' is greater than 'high'",
+        "A2": "The loop ends if 'low' exceeds 'high'",
+        "A3": "Termination occurs if 'low' surpasses 'high'",
+        "type": "fact_retrieval"
+      },
+      "2": {
+        "Q": "In her latest project, Mia is implementing a binary search algorithm to find the last occurrence of an element in a sorted array. She has already initialized the necessary variables. If in her current iteration, the middle element is greater than the target element, what should Mia do next?",
+        "A1": "Set 'high' to 'mid - 1'.",
+        "A2": "Update the 'high' index to one less than the 'mid' index.",
+        "A3": "Decrease the 'high' variable to the value of 'mid' minus one.",
+        "type": "applied_scenario"
+      },
+      "3": {
+        "Q": "Carlos is debugging a binary search function that is supposed to return the last position of an element in an array. He notices that the function is not returning the correct position when the element is found. According to the flowchart, what step might Carlos have missed if the element is found at 'mid'?",
+        "A1": "Setting 'res' to 'mid'.",
+        "A2": "Assigning the value of 'mid' to the 'res' variable.",
+        "A3": "Updating the result variable 'res' with the value of 'mid'.",
+        "type": "applied_scenario"
+      },
+      "4": {
+        "Q": "After setting 'high' to 'mid - 1', what is the next condition that is evaluated and what would be the next step if 'low' is still less than or equal to 'high'?",
+        "A1": "The next condition checks if 'low' is less than or equal to 'high', and if true, it recalculates 'mid'.",
+        "A2": "It evaluates whether 'low' <= 'high', and if so, proceeds to compute the new 'mid' value.",
+        "A3": "The process revisits the 'low' <= 'high' check, and if it holds, the next step is to determine 'mid' again.",
+        "type": "flow_referential"
+      },
+      "5": {
+        "Q": "What operation is performed immediately after the 'arr[mid] < x' condition evaluates to false, and what is the following step if the array continues to be searched?",
+        "A1": "If 'arr[mid] < x' is false, 'res' is set to 'mid', followed by an increment of 'low' to 'mid + 1' before the search continues.",
+        "A2": "Upon 'arr[mid] < x' evaluating to false, 'mid' is assigned to 'res', and then 'low' is updated to 'mid + 1' if the search needs to proceed.",
+        "A3": "The algorithm sets 'res' to 'mid' after a false evaluation of 'arr[mid] < x', then it increments 'low' to 'mid + 1' and resumes the search.",
+        "type": "flow_referential"
+      },
+      "6": {
+        "Q": "How many nodes exist in the given flowchart?",
+        "A1": "15",
+        "type": "topological",
+        "A2": "The flowchart contains fifteen nodes.",
+        "A3": "Fifteen Nodes"
+      },
+      "7": {
+        "Q": "How many edges exist in the given flowchart?",
+        "A1": "17",
+        "type": "topological",
+        "A2": "The flowchart contains seventeen edges.",
+        "A3": "Seventeen Edges"
+      },
+      "8": {
+        "Q": "Is the node \"\"Initialize 'low' to 0\"\" direct successor of the node \"\"Receive the array 'arr', the element to find 'x', and the size of the array 'n'\"\"?",
+        "A1": "Yes",
+        "type": "topological",
+        "A2": "Yes, the node 'Initialize 'low' to 0' directly succeeds the node 'Receive the array 'arr', the element to find 'x', and the size of the array 'n'.",
+        "A3": "Direct successor relationship confirmed"
+      },
+      "9": {
+        "Q": "Is the node \"\"Initialize 'res' to -1\"\" direct predecessor of the node \"\"'low' <= 'high'?\"\"?",
+        "A1": "Yes",
+        "type": "topological",
+        "A2": "Yes, the node 'Initialize 'res' to -1' directly precedes the node ''low' <= 'high'?",
+        "A3": "Direct predecessor relationship confirmed"
+      },
+      "10": {
+        "Q": "An indegree of is the number of incoming edges for a node in a flowchart. What is the maximum indegree for the flowchart?",
+        "A1": "4",
+        "type": "topological",
+        "A2": "The maximum indegree for the flowchart is 4.",
+        "A3": "Four is the maximum indegree for the flowchart."
+      }
+    }
+  },
+  "instruct00665": {
+    "key": "instruct00665",
+    "title": "Ramen Burger",
+    "text": "Making a ramen burger is easy, and the unusual noodle-y bun is sure to confuse and delight your taste buds; and your friends! The noodles are soft with great texture, and just like regular ramen noodles these noodle \"buns\" can be seasoned any way you like.Keizo Shimamoto created the ramen burger and shares all his ramen adventures on his blog. When he debuted the burger this year at a food fair in Brooklyn, NY people waited hours in long lineups for his original, noodle-y, twist on the classic burger. Now you can make your own ramen burger at home!All you need to make your own ramen burger buns are a pack of ramen noodles and an egg. 1 pack of ramen nooodles makes 4 \"buns\".Let's make a ramen burger! Open 1 package of ramen noodles and set included soup power aside. Place noodles into pot of boiling water, remove from heat and let soak for about 2 minutes. Strain water and let noodles cool completely, about 5-10 minutes. Once the noodles have cooled, crack an egg into the noodles and sprinkle in the soup powder. Gently mix until completely combined. To form the buns line any small round-bottomed dish with plastic food wrap. I used small disposable baking tins, but coffee cups or bowls without much taper also work well.Line the containers with plastic food wrap and scoop in a portion of noodles, then fold the plastic wrap over the noodle. I was able to stack my tins, and weighed them down with a large glass jar. The added weight from the jar will compress the noodles and help them keep a puck-like shape.Place the noodles and weight into the fridge for about 30 minutes. Set your range to high and heat up a frying pan. Add a drop of olive oil, then invert your noodle container into the frying pan. Let noodles cook for about 5-7 minutes and then carefully flip with a spatula. If your noodle puck is breaking apart allow to cook for another minute. Allow your noodles to cook the egg completely and get a nice golden brown colour.Don't worry if your first noodle bun doesn't turn out, it can take a few tries to get the buns to cook right. Practice makes perfect! The official recipe calls for green onion, arugula and soy sauce, but I went the classic bacon cheeseburger. Make your burger to suit your taste.Eating a ramen burger is an experience. The pan-fried noodle bun is crunchy on the outside, deliciously tender in the middle, and the perfect addition to any hamburger. The power soup base makes the noodles a little salty, and the beef flavour of the broth compliments my all beef hamburger patty. The texture is a little odd at first, but decidedly good. I promise you won't be disappointed with this burger. Have you made your own ramen burger? I want to see it!Happy making :)",
+    "category1": "Cooking",
+    "category2": "Main Course",
+    "url": "https://www.instructables.com/ramen-burger",
+    "summary": "```markdown\n# Ramen Burger Preparation System\n\n## Ingredients and Items Needed\n- Ramen noodles (1 pack)\n- Egg (1)\n- Soup powder (included in ramen package)\n- Plastic food wrap\n- Small round-bottomed dish, disposable baking tins, coffee cups, or bowls\n- Olive oil\n- Optional toppings: green onion, arugula, soy sauce, bacon, cheese\n- Frying pan\n- Spatula\n- Weight (e.g., large glass jar)\n- Refrigerator\n- Range/stove\n\n## Process Overview\n1. START: Begin the ramen burger bun making process.\n2. INPUT: Open a package of ramen noodles and separate the soup powder.\n3. PROCESS: Cook the noodles.\n4. DECISION: Check if noodles have cooled.\n5. PROCESS: Mix egg and soup powder with noodles.\n6. PROCESS: Form the noodle buns.\n7. PROCESS: Refrigerate the noodle buns.\n8. PROCESS: Pan-fry the noodle buns.\n9. DECISION: Check if noodle buns are properly cooked and shaped.\n10. PROCESS: Assemble the ramen burger with desired toppings.\n11. OUTPUT: Complete ramen burger ready to eat.\n12. END: Ramen burger preparation is finished.\n\n## Detailed Step-by-Step Representation\n\n### Preparing the Noodle Buns\n1. START: Initiate the process of making a ramen burger.\n2. INPUT: Open 1 package of ramen noodles and set aside the included soup powder.\n3. PROCESS: Boil water and cook ramen noodles for 2 minutes, then remove from heat.\n4. PROCESS: Strain the noodles and let them cool for 5-10 minutes.\n5. DECISION [IF]: Have the noodles cooled completely?\n   - Yes: Proceed to step 6.\n   - No: Continue to let noodles cool, then return to this decision step.\n6. INPUT: Crack an egg into the cooled noodles.\n7. PROCESS: Add the soup powder to the noodles and egg.\n8. PROCESS: Mix the noodles, egg, and soup powder gently until well combined.\n9. INPUT: Line a small round-bottomed dish with plastic food wrap.\n10. PROCESS: Scoop a portion of the noodle mixture into the lined dish.\n11. PROCESS: Fold the plastic wrap over the noodles and compress slightly.\n12. PROCESS: Stack containers if possible and weigh them down with a heavy object.\n13. PROCESS: Refrigerate the noodle buns with weight for 30 minutes.\n\n### Cooking the Noodle Buns\n14. PROCESS: Preheat a frying pan on high heat and add a drop of olive oil.\n15. PROCESS: Invert the noodle container into the frying pan to release the noodle bun.\n16. PROCESS: Cook the noodle bun for 5-7 minutes.\n17. DECISION [IF]: Is the noodle bun holding together properly?\n    - Yes: Proceed to step 18.\n    - No: Cook for an additional minute, then return to this decision step.\n18. PROCESS: Flip the noodle bun with a spatula and cook until golden brown.\n\n### Assembling the Ramen Burger\n19. PROCESS: Prepare additional toppings as desired.\n20. PROCESS: Assemble the ramen burger by placing a cooked noodle bun, followed by the burger patty and toppings, topped with another noodle bun.\n\n### Finalizing\n21. OUTPUT: The final product is a completed ramen burger ready for consumption.\n22. DECISION [IF]: Is the ramen burger satisfactory?\n    - Yes: Continue to step 23.\n    - No: Adjust cooking process or toppings as needed, then return to step 19.\n23. END: The process of making a ramen burger is complete.\n\n```\n",
+    "mermaid": "flowchart TD\n    A([\"Start\"]) --> B[\"Open package of ramen noodles\"]\n    B --> C[\"Cook noodles\"]\n    C --> D{\"Noodles cooled?\"}\n    D -->|\"Yes\"| E[\"Mix egg and soup powder with noodles\"]\n    D -->|\"No\"| C\n    E --> F[\"Form noodle buns\"]\n    F --> G[\"Refrigerate noodle buns\"]\n    G --> H[\"Pan-fry noodle buns\"]\n    H --> I{\"Noodle buns cooked?\"}\n    I -->|\"Yes\"| J[\"Assemble ramen burger\"]\n    I -->|\"No\"| H\n    J --> K[\"Ramen burger ready\"]\n    K --> L{\"Ramen burger satisfactory?\"}\n    L -->|\"Yes\"| M([\"End\"])\n    L -->|\"No\"| J",
+    "qa": {
+      "1": {
+        "Q": "After mixing the egg and soup powder with noodles, what is the next step?",
+        "A1": "Form noodle buns",
+        "A2": "Next, form the noodles into buns",
+        "A3": "The following step is to shape the noodle mixture into buns",
+        "type": "fact_retrieval"
+      },
+      "2": {
+        "Q": "Leo is preparing to make ramen burgers for his food blog and wants to capture every detail of the process. After boiling the noodles, what critical step should he document next to ensure the noodles are ready for the subsequent stages?",
+        "A1": "Leo should document the cooling of the noodles, which is critical before mixing them with egg and soup powder.",
+        "A2": "He needs to capture the straining and cooling process of the noodles before proceeding to mix them with other ingredients.",
+        "A3": "The next step Leo should show is the cooling of the noodles post-boiling to prepare them for mixing with the egg and soup powder.",
+        "type": "applied_scenario"
+      },
+      "3": {
+        "Q": "If I'm currently at the step where I need to refrigerate noodle buns, what was the immediate previous step and what is the next step?",
+        "A1": "The immediate previous step was forming noodle buns, and the next step is to pan-fry the noodle buns.",
+        "A2": "Before refrigerating the noodle buns, you would have formed the noodle buns, and afterwards, you will need to pan-fry them.",
+        "A3": "You would have just formed the noodle buns, and after refrigeration, the noodle buns are to be pan-fried.",
+        "type": "flow_referential"
+      },
+      "4": {
+        "Q": "How many nodes exist in the given flowchart?",
+        "A1": "13",
+        "type": "topological",
+        "A2": "There are thirteen nodes in the flowchart provided.",
+        "A3": "Thirteen Nodes"
+      },
+      "5": {
+        "Q": "How many edges exist in the given flowchart?",
+        "A1": "15",
+        "type": "topological",
+        "A2": "There are fifteen edges in the flowchart.",
+        "A3": "Fifteen Edges"
+      },
+      "6": {
+        "Q": "Is the node \"\"Ramen burger satisfactory?\"\" direct successor of the node \"\"Refrigerate noodle buns\"\"?",
+        "A1": "No",
+        "type": "topological",
+        "A2": "No, the node 'Ramen burger satisfactory?' is not a direct successor of 'Refrigerate noodle buns'.",
+        "A3": "No direct successor relationship exists"
+      },
+      "7": {
+        "Q": "How many edges exist in the shortest path between \"\"Assemble ramen burger\"\" and \"\"End\"\"?",
+        "A1": "3",
+        "type": "topological",
+        "A2": "There are three edges in the shortest path between 'Assemble ramen burger' and 'End'.",
+        "A3": "Three edges exist in the shortest path from 'Assemble ramen burger' to 'End'."
+      },
+      "8": {
+        "Q": "Is the node \"\"Ramen burger satisfactory?\"\" direct successor of the node \"\"Ramen burger ready\"\"?",
+        "A1": "Yes",
+        "type": "topological",
+        "A2": "Yes, the node 'Ramen burger satisfactory?' is a direct successor of the node 'Ramen burger ready'.",
+        "A3": "The node 'Ramen burger satisfactory?' is indeed a direct successor of 'Ramen burger ready'."
+      }
+    }
+  },
+  "wiki00409": {
+    "key": "wiki00409",
+    "title": "How to Become a Buddha Amitabha",
+    "text": "The hands rest in your lap or on the legs.; , Move your feet like going. Feel your feet and the earth. Think in the feet the mantra A-Mi-Ta-Bha. Activate your feet chakra and awaken the strength in you. , Look to the left and right. Focus on your body and think several times the mantra \"A-Mi-Ta Bha\". Fill your body with energy, strength and happiness. , Om inner wisdom. Please guide and help me on my way.\" Imagine that you are connected with Buddha Amitabha and that his energy flows into you with the mantra. , May all people be happy. May the world be happy.\" , What is positive in your life? What is the abundance in your life? \"The fullness in my life is ...\" , Put your hands together in front of the belly. Visualize yourself as the Buddha Amitabha and speak, \"I am a Buddha of light. I live in the light. I go the way of light.\" Rest in a state of calm. , Optimism. Amitabha Buddha will lead you through your inner voice of wisdom and love to a life in the light. You will get inner happiness. Say ten times the mantra \"Amitabha.\" Feel that Buddha Amitabha's energy flows into you with the mantra.",
+    "category1": "Philosophy and Religion",
+    "category2": "Health, Personal Care and Style",
+    "tags": "['Meditation', 'Spirituality', 'Buddhism', 'Self-improvement', 'Mindfulness', 'Wellness', 'Mantra', 'Inner peace', 'Enlightenment', 'Positive thinking']",
+    "summary": "```markdown\n# Structured Summary of Amitabha Meditation Blog Post\n\n## START:\n- Begin the Amitabha meditation process.\n\n## PROCESS: Positioning for Meditation\n- INPUT: Find a comfortable seated position.\n- PROCESS: Place hands in the lap or on the legs.\n\n## PROCESS: Grounding with the Earth\n- PROCESS: Simulate a walking motion with the feet.\n- OUTPUT: Awareness of feet and grounding with the earth.\n\n## PROCESS: Activating Foot Chakra\n- INPUT: Think the mantra \"A-Mi-Ta-Bha\" focused in the feet.\n- OUTPUT: Activation of the feet chakra and awakening of internal strength.\n\n## PROCESS: Energizing the Body\n- PROCESS: Look to the left and right.\n- INPUT: Focus on the body and repeat the mantra \"A-Mi-Ta-Bha\" several times.\n- OUTPUT: Body filled with energy, strength, and happiness.\n\n## PROCESS: Seeking Guidance\n- INPUT: Say \"Om inner wisdom. Please guide and help me on my way.\"\n- DECISION [IF]: Is the connection with Buddha Amitabha imagined?\n  - Yes: Proceed with the visualization.\n  - No: Return to seeking guidance.\n- OUTPUT: Sense of being guided and helped.\n\n## PROCESS: Sending Positive Intentions\n- INPUT: Express the wish for happiness for all people and the world.\n- OUTPUT: Positive intentions sent out to the universe.\n\n## PROCESS: Identifying Positives in Life\n- INPUT: Reflect on what is positive and abundant in life.\n- OUTPUT: Recognition of life's fullness.\n\n## PROCESS: Embodying Buddha Amitabha\n- PROCESS: Put hands together in front of the belly.\n- INPUT: Visualize oneself as Buddha Amitabha and speak affirmations.\n- OUTPUT: Embodiment of Buddha Amitabha's qualities.\n\n## PROCESS: Resting in Calmness\n- PROCESS: Remain in a state of calm and rest.\n\n## PROCESS: Cultivating Optimism\n- INPUT: Affirm that Amitabha Buddha will lead through wisdom and love.\n- OUTPUT: Expectation of guidance towards a life in light and inner happiness.\n\n## PROCESS: Chanting Mantra for Inner Happiness\n- INPUT: Say the mantra \"Amitabha\" ten times.\n- DECISION [IF]: Is the feeling of Buddha Amitabha's energy flowing sensed?\n  - Yes: Acknowledge the energy flow.\n  - No: Continue chanting.\n- OUTPUT: Inner happiness through Buddha Amitabha's energy.\n\n## END:\n- The Amitabha meditation process is complete.\n```",
+    "mermaid": "flowchart TD\n    A([\"Start Amitabha Meditation\"]) --> B[\"Find a comfortable seated position\"]\n    B --> C[\"Place hands in the lap or on the legs\"]\n    C --> D[\"Simulate walking motion with feet\"]\n    D --> E[/\"Awareness of grounding with the earth\"/]\n    E --> F[\"Think 'A-Mi-Ta-Bha' mantra focused in the feet\"]\n    F --> G[/\"Activation of feet chakra\"/]\n    G --> H[\"Look to the left and right\"]\n    H --> I[\"Focus on body and repeat 'A-Mi-Ta-Bha'\"]\n    I --> J[/\"Body filled with energy, strength, and happiness\"/]\n    J --> K[\"Say 'Om inner wisdom, guide me'\"]\n    K --> L{\"Imagined connection with Buddha Amitabha?\"}\n    L -->|\"Yes\"| M[\"Proceed with visualization\"]\n    L -->|\"No\"| K\n    M --> N[/\"Sense of guidance and help\"/]\n    N --> O[\"Express wish for happiness for all\"]\n    O --> P[/\"Positive intentions sent to universe\"/]\n    P --> Q[\"Reflect on positives in life\"]\n    Q --> R[/\"Recognition of life's fullness\"/]\n    R --> S[\"Put hands together in front of belly\"]\n    S --> T[\"Visualize as Buddha Amitabha and speak affirmations\"]\n    T --> U[/\"Embodiment of Buddha Amitabha's qualities\"/]\n    U --> V[\"Remain in a state of calm and rest\"]\n    V --> W[\"Affirm Buddha Amitabha leads through wisdom and love\"]\n    W --> X[/\"Expectation of guidance towards life in light\"/]\n    X --> Y[\"Say 'Amitabha' mantra ten times\"]\n    Y --> Z{\"Sensed energy flow of Buddha Amitabha?\"}\n    Z -->|\"Yes\"| AA[/\"Acknowledge energy flow\"/]\n    Z -->|\"No\"| Y\n    AA --> AB([\"End Amitabha Meditation\"])",
+    "qa": {
+      "1": {
+        "Q": "What should be said to invoke inner wisdom during the meditation?",
+        "A1": "Om inner wisdom, guide me",
+        "A2": "Say 'Om inner wisdom, guide me'",
+        "A3": "The phrase to invoke inner wisdom is 'Om inner wisdom, guide me'",
+        "type": "fact_retrieval"
+      },
+      "2": {
+        "Q": "How many times should the 'Amitabha' mantra be repeated at the end of the meditation?",
+        "A1": "Ten times",
+        "A2": "Repeat the 'Amitabha' mantra ten times",
+        "A3": "The 'Amitabha' mantra should be said ten times",
+        "type": "fact_retrieval"
+      },
+      "3": {
+        "Q": "Marcus has been practicing Amitabha meditation for some time. However, during a recent session, he found himself unable to visualize a connection with Buddha Amitabha, which is an essential part of his practice. According to his meditation routine, what should Marcus do next when he cannot establish this connection?",
+        "A1": "Return to seeking guidance by repeating the request for inner wisdom.",
+        "A2": "Go back to asking for guidance and help with the phrase 'Om inner wisdom. Please guide and help me on my way.'",
+        "A3": "Repeat the guidance-seeking phrase until he can imagine the connection with Buddha Amitabha.",
+        "type": "applied_scenario"
+      },
+      "4": {
+        "Q": "After a long day of work, Naomi engages in Amitabha meditation to replenish her energy. She knows that a particular part of the practice involves repeating a mantra while focusing on her body. What should Naomi do to fill her body with energy, strength, and happiness?",
+        "A1": "Look to the left and right, then focus on her body and repeat the mantra 'A-Mi-Ta-Bha' several times.",
+        "A2": "Turn her head left and right and chant 'A-Mi-Ta-Bha' while concentrating on her body.",
+        "A3": "Shift her gaze leftward and rightward, then recite 'A-Mi-Ta-Bha' focusing on energizing her body.",
+        "type": "applied_scenario"
+      },
+      "5": {
+        "Q": "Currently, the mantra 'Amitabha' has been said ten times; if no energy flow of Buddha Amitabha is sensed, what is the next immediate action and how many times does this action loop back to a previous step before reaching the end of the meditation?",
+        "A1": "If no energy flow is sensed, you repeat the mantra 'Amitabha' ten times again; this action may loop indefinitely until a 'Yes' response at the 'Sensed energy flow of Buddha Amitabha?' decision point, only then will the meditation end.",
+        "A2": "The immediate action is to say 'Amitabha' ten times once more, and this can loop back repeatedly until an energy flow is acknowledged, culminating the meditation process.",
+        "A3": "You go back to repeating the 'Amitabha' mantra ten times, and this loop continues until the energy flow is felt, which then leads to the conclusion of the meditation.",
+        "type": "flow_referential"
+      },
+      "6": {
+        "Q": "Starting from the 'Find a comfortable seated position' step, what is the description of the fourth step encountered and which mantra is focused on at this particular step?",
+        "A1": "The fourth step is 'Awareness of grounding with the earth', and the mantra focused on at this step is 'A-Mi-Ta-Bha'.",
+        "A2": "At the fourth step, you become aware of your grounding with the earth, while concentrating on the 'A-Mi-Ta-Bha' mantra.",
+        "A3": "The description for the fourth step is grounding awareness with the earth, with a focus on the 'A-Mi-Ta-Bha' mantra.",
+        "type": "flow_referential"
+      },
+      "7": {
+        "Q": "How many nodes exist in the given flowchart?",
+        "A1": "28",
+        "type": "topological",
+        "A2": "The flowchart contains twenty-eight nodes.",
+        "A3": "Twenty-eight Nodes"
+      },
+      "8": {
+        "Q": "How many edges exist in the given flowchart?",
+        "A1": "29",
+        "type": "topological",
+        "A2": "There are twenty-nine edges in the flowchart.",
+        "A3": "Twenty-nine Edges"
+      },
+      "9": {
+        "Q": "Is the node \"\"Activation of feet chakra\"\" direct predecessor of the node \"\"Look to the left and right\"\"?",
+        "A1": "Yes",
+        "type": "topological",
+        "A2": "Yes, the node 'Activation of feet chakra' directly precedes the node 'Look to the left and right'.",
+        "A3": "Direct predecessor confirmed"
+      },
+      "10": {
+        "Q": "Is the node \"\"Start Amitabha Meditation\"\" direct predecessor of the node \"\"Expectation of guidance towards life in light\"\"?",
+        "A1": "No",
+        "type": "topological",
+        "A2": "No, the node 'Start Amitabha Meditation' does not directly precede the node 'Expectation of guidance towards life in light.'",
+        "A3": "No direct predecessor relationship exists"
+      }
+    }
+  },
+  "code00412": {
+    "key": "code00412",
+    "code": "# Write a python function to count lower case letters in a given string.\ndef lower_ctr(str):\n    lower_ctr = 0\n    for i in range(len(str)):\n        if str[i] >= \"a\" and str[i] <= \"z\":\n            lower_ctr += 1\n    return lower_ctr\n",
+    "summary": "```markdown\n# Pseudocode for counting lowercase letters in a given string\n\n## START:\n1. Start\n\n## INPUT:\n2. Accept a string input and store it in a variable called `input_string`.\n\n## PROCESS:\n3. Initialize a counter variable `lowercase_count` to 0.\n\n4. For each character `current_char` in `input_string`, do the following steps (4.1 to 4.4):\n   - PROCESS [4.1]: Set the index `i` to the current position in the iteration, starting from 0.\n   - DECISION [IF] [4.2]: Check if `current_char` is a lowercase letter (from 'a' to 'z').\n     - Yes: Continue to step 4.3.\n     - No: Go back to step 4 and move to the next character.\n   - PROCESS [4.3]: Increment `lowercase_count` by 1.\n   - PROCESS [4.4]: Move to the next character and repeat steps 4.1 to 4.4 until the end of `input_string`.\n\n## OUTPUT:\n5. Output the value of `lowercase_count`.\n\n## END:\n6. End\n```\n",
+    "mermaid": "flowchart TD\n    A([\"Start\"]) --> B[/\"Accept `input_string`\"/]\n    B --> C[\"Initialize `lowercase_count` to 0\"]\n    C --> D[\"Set index `i` to 0\"]\n    D --> E{\"Is `i` less than the length of `input_string`?\"}\n    E -->|\"Yes\"| F[\"Set `current_char` to character at `input_string[i]`\"]\n    F --> G{\"Is `current_char` a lowercase letter?\"}\n    G -->|\"Yes\"| H[\"Increment `lowercase_count` by 1\"]\n    G -->|\"No\"| I[\"Move to next character\"]\n    H --> I\n    I --> J[\"Increment `i` by 1\"]\n    J --> E\n    E -->|\"No\"| K[/\"Output `lowercase_count`\"/]\n    K --> L([\"End\"])",
+    "qa": {
+      "1": {
+        "Q": "What is the initial value assigned to the counter variable for tracking lowercase letters?",
+        "A1": "0",
+        "A2": "The counter 'lowercase_count' starts at 0",
+        "A3": "'lowercase_count' is initialized to zero",
+        "type": "fact_retrieval"
+      },
+      "2": {
+        "Q": "After receiving a string of text from a user, Jamie needs to determine how many characters are lowercase. She is currently looking at a specific character within the string. If this character is not a lowercase letter, what should Jamie do next?",
+        "A1": "Move to the next character in the string.",
+        "A2": "Proceed to the subsequent character for evaluation.",
+        "A3": "Advance to the next character to continue the count.",
+        "type": "applied_scenario"
+      },
+      "3": {
+        "Q": "In a software module, a function is designed to count lowercase letters in a given string. The function has completed its iteration through the string. What is the next action that the function should perform?",
+        "A1": "Output the count of lowercase letters.",
+        "A2": "Return the total number of lowercase characters found.",
+        "A3": "Display the accumulated count of lowercase letters.",
+        "type": "applied_scenario"
+      },
+      "4": {
+        "Q": "When the index 'i' is found to be equal to the length of 'input_string', what is the immediate next operation performed in the process?",
+        "A1": "The immediate next operation is to output the 'lowercase_count'.",
+        "A2": "Once 'i' equals the length of 'input_string', the process outputs the value of 'lowercase_count'.",
+        "A3": "The process proceeds to output the 'lowercase_count' after 'i' reaches the length of 'input_string'.",
+        "type": "flow_referential"
+      },
+      "5": {
+        "Q": "If 'current_char' is determined not to be a lowercase letter, what is the next operation, and how many operations are performed before the algorithm checks the condition again at the 'Is `i` less than the length of `input_string`?' node?",
+        "A1": "The next operation is to move to the next character, and two operations are performed before re-evaluating the condition at the 'Is `i` less than the length of `input_string`?' node.",
+        "A2": "The algorithm moves to the next character, and then increments 'i' by 1, making it two operations before it revisits the 'Is `i` less than the length of `input_string`?' decision node.",
+        "A3": "Next, the algorithm proceeds to the next character; after incrementing 'i', it performs a total of two operations before checking the length condition again.",
+        "type": "flow_referential"
+      }
+    }
+  },
+  "wiki00552": {
+    "key": "wiki00552",
+    "title": "How to Get Rid of Brown Spots Using Home Remedies2",
+    "text": "Enzymes are the workforce of the biochemical world. Enzymes change various substances without getting used up themselves, like nature's catalytic converters. The enzymes may help break down melanin into colorless smaller parts.The different foods described here contain different enzymes, but all classified as enzymes which break up proteinsthe proteases or proteolytic enzymes. These proteases include papain (in papaya), potato aspartic protease, and bromelain (in pineapple). , Take one medium sized potato (any kind of white potato will work) and grate it into a bowl. Add enough honey to make a paste. Apply the mixture to the brown spots. Leave the mixture on for about 15 minutes, and then rinse it off with cool water. , Scoop all of the pulp out of a papaya and mash it in a bowl until it is an even consistency. You may want to use a hand mixer to thoroughly mash the fruit. Use a cotton swab or make-up brush to apply a mask to your face and any other area that has brown spots. Leave the mask on until it dries and rinse off with cool water. , Pour some pineapple juice into a bowl (ensure that it is 100% pineapple juice with no added sugar or juice your own pineapple). Using a cotton swab, apply the pineapple juice to any brown spot and leave it on until dry. Rinse off with cool water. As an alternative, mash up some pineapple slices and apply as a mask to your face and any other area that has brown spots. Leave the mask on until dry, and then rinse off with cool water. , Cook cup of chickpeas (also known as garbanzo beans) by measuring out cup of peas and boiling them in of water. Boil until the peas are soft (15 minutes for canned beans or about an hour for dried beans), then remove from heat and cool. When cooled, mash the cooked chick peas to make a paste. Rub the paste onto the spots and let it dry. Rinse it off with cool water.",
+    "category1": "Health",
+    "category2": "Personal Care and Style",
+    "tags": "['Skin Care', 'Natural Remedies', 'Enzymes', 'Home Remedies', 'Beauty Tips', 'Brown Spots', 'Papaya Mask', 'Pineapple Juice', 'Potato Honey Paste', 'Proteolytic Enzymes']",
+    "summary": "```markdown\n# Enzyme-Based Natural Remedies for Brown Spots\n\n## System Overview\nThe system is designed to create natural remedies for brown spots using enzymes found in various foods. These enzymes are proteases, which help break down melanin into colorless smaller parts. The system comprises the following steps: preparation of the food-based enzyme paste, application to the skin, and rinsing. The primary inputs are raw food ingredients, and the output is the application of a natural remedy paste to brown spots.\n\n## System Steps\n\n### START:\n- Begin the process to create and apply natural enzyme remedies for brown spots.\n\n### INPUT: Raw Ingredients for Different Enzyme Remedies\n- Potato (white type)\n- Honey\n- Papaya\n- Pineapple juice (100% with no added sugar) or fresh pineapple slices\n- Chickpeas (garbanzo beans)\n- Water for boiling chickpeas\n\n### PROCESS: Preparation of Potato-Honey Paste\n- INPUT: Grate one medium-sized potato into a bowl.\n- INPUT: Add enough honey to the grated potato to make a paste.\n- STORE: Potato-Honey paste.\n\n### PROCESS: Application of Potato-Honey Paste\n- Apply the Potato-Honey paste to the brown spots.\n- Leave the mixture on for about 15 minutes.\n\n### OUTPUT: Rinsing off Potato-Honey Paste\n- Rinse off the Potato-Honey paste with cool water.\n- END: Potato-Honey remedy application complete.\n\n### PROCESS: Preparation of Papaya Mask\n- INPUT: Scoop all pulp out of a papaya.\n- Mash the papaya pulp in a bowl until it reaches an even consistency.\n- STORE: Papaya mask.\n\n### PROCESS: Application of Papaya Mask\n- Apply the Papaya mask to the face and any other area with brown spots using a cotton swab or make-up brush.\n- Leave the mask on until it dries.\n\n### OUTPUT: Rinsing off Papaya Mask\n- Rinse off the Papaya mask with cool water.\n- END: Papaya mask application complete.\n\n### PROCESS: Preparation of Pineapple Remedy\n- INPUT: Pour pineapple juice into a bowl or mash up pineapple slices into a paste.\n- STORE: Pineapple remedy.\n\n### PROCESS: Application of Pineapple Remedy\n- Apply the Pineapple remedy to the brown spots and leave it on until dry.\n\n### OUTPUT: Rinsing off Pineapple Remedy\n- Rinse off the Pineapple remedy with cool water.\n- END: Pineapple remedy application complete.\n\n### PROCESS: Preparation of Chickpea Paste\n- INPUT: Measure 1/2 cup of chickpeas.\n- INPUT: Boil chickpeas in 2 cups of water until soft (15 minutes for canned or about an hour for dried).\n- Remove chickpeas from heat and allow to cool.\n- Mash the cooled chickpeas to make a paste.\n- STORE: Chickpea paste.\n\n### PROCESS: Application of Chickpea Paste\n- Rub the Chickpea paste onto the spots and let it dry.\n\n### OUTPUT: Rinsing off Chickpea Paste\n- Rinse off the Chickpea paste with cool water.\n- END: Chickpea paste application complete.\n\n### DECISION [IF]: Is there another remedy to prepare and apply?\n- IF Yes: Return to the respective PROCESS step for the next remedy.\n- IF No: END: All remedies have been applied and the process is complete.\n```",
+    "mermaid": "flowchart TD\n    A([\"Start\"]) --> B[/\"Input: Raw Ingredients\"/]\n    B --> C[\"Prepare Potato-Honey Paste\"]\n    C --> D[\"Apply Potato-Honey Paste\"]\n    D --> E{\"Wait 15 mins?\"}\n    E -->|\"Yes\"| F[\"Rinse off with cool water\"]\n    F --> G([\"Potato-Honey Application Complete\"])\n    G --> H[\"Prepare Papaya Mask\"]\n    H --> I[\"Apply Papaya Mask\"]\n    I --> J{\"Dry?\"}\n    J -->|\"Yes\"| K[\"Rinse off with cool water\"]\n    K --> L([\"Papaya Mask Application Complete\"])\n    L --> M[\"Prepare Pineapple Remedy\"]\n    M --> N[\"Apply Pineapple Remedy\"]\n    N --> O{\"Dry?\"}\n    O -->|\"Yes\"| P[\"Rinse off with cool water\"]\n    P --> Q([\"Pineapple Remedy Application Complete\"])\n    Q --> R[\"Prepare Chickpea Paste\"]\n    R --> S[\"Apply Chickpea Paste\"]\n    S --> T{\"Dry?\"}\n    T -->|\"Yes\"| U[\"Rinse off with cool water\"]\n    U --> V([\"Chickpea Paste Application Complete\"])\n    V --> W{\"Another Remedy?\"}\n    W -->|\"Yes\"| B\n    W -->|\"No\"| X([\"End\"])",
+    "qa": {
+      "1": {
+        "Q": "What should be applied after preparing the Potato-Honey paste?",
+        "A1": "Apply the Potato-Honey paste",
+        "A2": "The Potato-Honey paste should be applied",
+        "A3": "Application of the Potato-Honey paste",
+        "type": "fact_retrieval"
+      },
+      "2": {
+        "Q": "What is the final step after applying each remedy?",
+        "A1": "Rinse off with cool water",
+        "A2": "Rinsing off with cool water",
+        "A3": "Cool water rinse",
+        "type": "fact_retrieval"
+      },
+      "3": {
+        "Q": "Liam has been using the Chickpea paste remedy for his brown spots and is about to complete his first application. He knows he must wait for the paste to dry but is unsure what to do next. What is Liam's next step once the Chickpea paste has dried?",
+        "A1": "Once the Chickpea paste is dry, Liam should rinse it off with cool water.",
+        "A2": "Liam needs to wash off the dried Chickpea paste with cool water.",
+        "A3": "After the Chickpea paste dries, Liam should rinse his skin with cool water.",
+        "type": "applied_scenario"
+      },
+      "4": {
+        "Q": "Sophia, wanting to tackle her brown spots, opts for a Potato-Honey paste. She has just mixed the ingredients and is about to apply the paste. How long should Sophia leave the Potato-Honey paste on her brown spots before rinsing?",
+        "A1": "Sophia should leave the Potato-Honey paste on for about 15 minutes before rinsing.",
+        "A2": "The Potato-Honey paste should remain on Sophia's skin for roughly 15 minutes.",
+        "A3": "She needs to wait approximately 15 minutes with the Potato-Honey paste on before rinsing.",
+        "type": "applied_scenario"
+      },
+      "5": {
+        "Q": "Oliver decided to make use of a Papaya mask to lighten the brown spots on his arms. After applying the mask, he got distracted by a phone call. How can Oliver tell when it's time to rinse off the Papaya mask?",
+        "A1": "Oliver can rinse off the Papaya mask once it has dried on his skin.",
+        "A2": "When the Papaya mask dries, it's time for Oliver to wash it off.",
+        "A3": "Oliver should wait for the mask to dry before rinsing off the Papaya mask.",
+        "type": "applied_scenario"
+      },
+      "6": {
+        "Q": "If I'm currently at the step where I have just finished applying the Papaya Mask, what is the next decision I will encounter and what are the possible next steps following that decision?",
+        "A1": "The next decision is 'Dry?', and the possible next steps are either to rinse off with cool water if 'Yes' or to continue waiting if 'No'.",
+        "A2": "You will encounter the 'Dry?' decision node, and if the answer is 'Yes', you'll proceed to rinse off with cool water; otherwise, you will keep the mask on.",
+        "A3": "The subsequent decision point is whether the Papaya Mask is 'Dry?', leading to rinsing with cool water if affirmative, or continued application if negative.",
+        "type": "flow_referential"
+      },
+      "7": {
+        "Q": "Assuming the decision at the 'Another Remedy?' node is 'No', what was the last paste that was applied, and how many steps ago was it completed?",
+        "A1": "The last paste applied was Chickpea Paste, and it was completed one step before the 'Another Remedy?' decision.",
+        "A2": "Chickpea Paste was the final application, and the completion of its application occurred just one step prior to the 'Another Remedy?' node.",
+        "A3": "Chickpea Paste is the last applied remedy, and its application was finalized exactly one step before reaching the 'Another Remedy?' decision.",
+        "type": "flow_referential"
+      },
+      "8": {
+        "Q": "How many nodes exist in the given flowchart?",
+        "A1": "24",
+        "type": "topological",
+        "A2": "There are twenty-four nodes in the flowchart.",
+        "A3": "Twenty-four Nodes"
+      },
+      "9": {
+        "Q": "How many edges exist in the given flowchart?",
+        "A1": "24",
+        "type": "topological",
+        "A2": "There are twenty-four edges in the flowchart.",
+        "A3": "Twenty-four Edges"
+      },
+      "10": {
+        "Q": "How many edges exist in the shortest path between \"\"Wait 15 mins?\"\" and \"\"Input: Raw Ingredients\"\"?",
+        "A1": "19",
+        "type": "topological",
+        "A2": "There are nineteen edges in the shortest path from 'Wait 15 mins?' to 'Input: Raw Ingredients'.",
+        "A3": "Nineteen edges exist in the shortest path between 'Wait 15 mins?' and 'Input: Raw Ingredients'."
+      },
+      "11": {
+        "Q": "Is the node \"\"Chickpea Paste Application Complete\"\" direct predecessor of the node \"\"Another Remedy?\"\"?",
+        "A1": "Yes",
+        "type": "topological",
+        "A2": "Yes, the node 'Chickpea Paste Application Complete' directly precedes the node 'Another Remedy'.",
+        "A3": "Direct predecessor relationship confirmed"
+      }
+    }
+  },
+  "instruct00300": {
+    "key": "instruct00300",
+    "title": "Fishing Rods Carrying Tube",
+    "text": "Ever get tired of carrying your poles so carefully through the brush, tall grass, or woods because they get caught on everything intheir way? Want to just keep your hands freewhen ona nice long trek to that hidden fishing hole? Well that's exactly what I thought, so I created this VERY easy carrying tube to collapse my poles and place them in the tube, and hit the trails! I use a carry bag for my tackle box, so I just remove the reels from the rods and place them in the bag with the tackle, and reassemble when ready to fish. This Instructable is so very easy, all the supplies/tools you need are: 1 - 3\" PVC Cap 1 - 3'ft PVC (thin wall) piece of pipe Hacksaw Drill (drill bits to match bolt sizes) Misc. bolts/nuts/washers The rest are items found around home, such as the strap from a duffle/shoulder type bag, and I chose to use some camo Duct tape and wrap around the pipe. 1 - Strap 1 - Duct tape (if you choose) First you will need to start with the obvious, purchasing the items shown and listed. I decided to go with 3\" thin wall PVC pipe. Purchased from local hardware store, sold by the foot. I included a cap for the bottom of the tube, and got some misc. sized bolts/washers/nuts. If you have to get a larger size piece, that's where the hacksaw will come in handy. 3'ft works best for my frame and height, and standard fishing rod lengths. Self-explanatory, the cap will be fitted onto the bottom end of the PVC tube. \"IF\" you choose to wrap the pipe in Duct tape, it may be a little tight of a fit to slide the cap over the tape. As you can see, I have mounted 2 bolts at the top of the tube. Originally this was to be a way to place a quick removable cap over the reels and the open end of the tube. At this time, (the first item I planned on using (a small foam can koozie)), ripped on me and I have not acquired an alternate yet. But the idea was the koozie would have 2 holes, and I would slide the koozie over the pipe, and stretch over the 2 bolts to hold it in place. You could also use a PVC cap as well, I have just not had a chance to purchase one or devise an alternate plan for a cap. On the left side of picture, you can also see the strap I chose to use, and I screwed it under the bolt with large washer to help hold in place. And the final product. I attached the strap (from duffel bag) on to the top and towards the bottom of the tube. After tightening the bolts at the bottom, I replaced the cap onto the tube. I felt like taking it the extra step and wrapped the tube in camo Duct tape, just for fun! (just don't lay it down in tall grass when fishing and walk away and not be able to find it!)Have used twice now. Works really well, just throw onto your back, get to your stopping place, remount the reels onto the fishing rod and you are ready to fish again!",
+    "category1": "Outside",
+    "category2": "Fishing",
+    "url": "https://www.instructables.com/Fishing-Rods-Carrying-Tube",
+    "summary": "```markdown\n# Fishing Pole Carrying Tube System\n\n## Summary Representation\n\n### START:\n- Begin the process of creating a fishing pole carrying tube.\n\n### INPUT: Gather Materials and Tools\n- 1 - 3\" PVC Cap\n- 1 - 3'ft PVC (thin wall) piece of pipe\n- Hacksaw\n- Drill (with various drill bits)\n- Miscellaneous bolts/nuts/washers\n- 1 - Strap (from a duffle/shoulder type bag)\n- 1 - Duct tape (optional for decoration)\n\n### PROCESS: Purchase Materials\n- Acquire all necessary materials from a local hardware store.\n\n### DECISION [IF]: Is the PVC pipe longer than 3 feet?\n- [YES]: Use the hacksaw to cut the PVC pipe to a 3-foot length.\n- [NO]: Proceed to the next step.\n\n### PROCESS: Prepare PVC Pipe\n- Fit the PVC cap onto one end of the PVC pipe.\n\n### DECISION [IF]: Will you be wrapping the PVC pipe in Duct tape?\n- [YES]: Wrap the PVC pipe in Duct tape before fitting the cap.\n- [NO]: Proceed without wrapping.\n\n### DECISION [IF]: Is the cap fitting too tight over the tape?\n- [YES]: Adjust the tape or force the cap on to ensure a snug fit.\n- [NO]: Proceed to the next step.\n\n### PROCESS: Drill Holes and Attach Bolts\n- Drill holes at the top of the PVC pipe to mount bolts.\n- Insert bolts through the drilled holes and secure them with nuts and washers.\n\n### DECISION [IF]: Is there an alternate cap for the top?\n- [YES]: Prepare the alternate cap with holes and attach it over the bolts.\n- [NO]: Continue using the tube without an alternate cap for now.\n\n### PROCESS: Attach the Strap\n- Screw the strap under the bolts with large washers to hold it in place at the top and bottom of the tube.\n\n### OUTPUT: Final Product\n- A fishing pole carrying tube with a cap at the bottom, equipped with a strap for easy carrying.\n\n### PROCESS: Usage Instructions\n- Remove reels from fishing rods and store them separately.\n- Collapse fishing poles and place them inside the tube.\n- Carry the tube to the fishing location.\n\n### DECISION [IF]: Have you reached the fishing spot?\n- [YES]: Remount the reels onto the fishing rods.\n- [NO]: Continue carrying the tube to the destination.\n\n### OUTPUT: Ready for Fishing\n- The fishing rods are reassembled and ready for use.\n\n### END:\n- The process of creating and using the fishing pole carrying tube is complete.\n```\n",
+    "mermaid": "flowchart TD\n    A([\"Start\"]) --> B[/\"Gather Materials and Tools\"/]\n    B --> C[\"Purchase Materials\"]\n    C --> D{\"PVC pipe longer than 3 feet?\"}\n    D -->|\"Yes\"| E[\"Cut PVC pipe to 3-foot length\"]\n    E --> F[\"Prepare PVC Pipe\"]\n    D -->|\"No\"| F\n    F --> G{\"Wrap PVC in Duct tape?\"}\n    G -->|\"Yes\"| H[\"Wrap PVC pipe in Duct tape\"]\n    H --> I{\"Cap fitting too tight?\"}\n    I -->|\"Yes\"| J[\"Adjust tape or force cap on\"]\n    J --> K[\"Drill Holes and Attach Bolts\"]\n    I -->|\"No\"| K\n    G -->|\"No\"| K\n    K --> L{\"Alternate cap for top?\"}\n    L -->|\"Yes\"| M[\"Prepare and attach alternate cap\"]\n    M --> N[\"Attach the Strap\"]\n    L -->|\"No\"| N\n    N --> O[/\"Final Product: Fishing Pole Carrying Tube\"/]\n    O --> P[\"Usage Instructions\"]\n    P --> Q{\"Reached the fishing spot?\"}\n    Q -->|\"Yes\"| R[\"Remount reels onto fishing rods\"]\n    R --> S[/\"Ready for Fishing\"/]\n    Q -->|\"No\"| P\n    S --> T([\"End\"])",
+    "qa": {
+      "1": {
+        "Q": "What is the final product of the process described in the flowchart?",
+        "A1": "Fishing Pole Carrying Tube",
+        "A2": "A tube for carrying fishing poles",
+        "A3": "A transport tube designed for fishing rods",
+        "type": "fact_retrieval"
+      },
+      "2": {
+        "Q": "Jeremiah is putting together his own fishing pole carrying tube and has decided to add a personal touch by wrapping it in his favorite team's duct tape. However, he's concerned that the cap might not fit over the tape. What should Jeremiah do if the cap is too tight to fit over the duct tape wrapped PVC pipe?",
+        "A1": "Adjust the tape or force the cap on to ensure a snug fit.",
+        "A2": "Either modify the tape wrapping or press the cap on more firmly.",
+        "A3": "Realign the duct tape or apply more pressure to attach the cap.",
+        "type": "applied_scenario"
+      },
+      "3": {
+        "Q": "Ben has arrived at his favorite fishing spot with his newly made fishing pole carrying tube. Before he can start fishing, what does he need to do with his fishing rods that were stored in the tube?",
+        "A1": "Remount the reels onto the fishing rods.",
+        "A2": "Attach the reels back onto the fishing poles.",
+        "A3": "Reassemble the fishing rods by mounting the reels.",
+        "type": "applied_scenario"
+      },
+      "4": {
+        "Q": "After cutting the PVC pipe to a 3-foot length, what is the next step and what would be the next decision point encountered?",
+        "A1": "The next step is to prepare the PVC pipe and the next decision point is whether to wrap the PVC in duct tape.",
+        "A2": "Following the cutting of the PVC pipe, one should proceed to prepare it, subsequently reaching a decision on whether to wrap it in duct tape.",
+        "A3": "Post-cutting, the PVC pipe must be prepared, after which one decides on the necessity of wrapping it with duct tape.",
+        "type": "flow_referential"
+      },
+      "5": {
+        "Q": "If the current task is to drill holes and attach bolts, which decision could have directly led to this step without any intermediate actions?",
+        "A1": "The decision that could have led directly to drilling holes and attaching bolts is choosing not to wrap the PVC in duct tape.",
+        "A2": "Opting against wrapping the PVC pipe in duct tape would result in the immediate task of drilling holes and attaching bolts.",
+        "A3": "Bypassing the duct tape wrapping step would directly precede the drilling and attaching of bolts.",
+        "type": "flow_referential"
+      },
+      "6": {
+        "Q": "Starting from 'Gather Materials and Tools', what is the minimum number of steps required to reach 'Usage Instructions' without encountering any 'No' decisions?",
+        "A1": "The minimum number of steps to reach 'Usage Instructions' without any 'No' decisions is ten.",
+        "A2": "From gathering materials to usage instructions, ten steps are required if all decisions are 'Yes'.",
+        "A3": "Without encountering 'No' decisions from the start, it takes ten steps to arrive at 'Usage Instructions'.",
+        "type": "flow_referential"
+      },
+      "7": {
+        "Q": "How many nodes exist in the given flowchart?",
+        "A1": "20",
+        "type": "topological",
+        "A2": "There are twenty nodes in the flowchart provided.",
+        "A3": "Twenty Nodes"
+      },
+      "8": {
+        "Q": "How many edges exist in the given flowchart?",
+        "A1": "24",
+        "type": "topological",
+        "A2": "There are twenty four edges in the flowchart.",
+        "A3": "Twenty four Edges"
+      },
+      "9": {
+        "Q": "Is the node \"\"Gather Materials and Tools\"\" direct successor of the node \"\"Start\"\"?",
+        "A1": "Yes",
+        "type": "topological",
+        "A2": "Yes, the node 'Gather Materials and Tools' is a direct successor of the node 'Start'.",
+        "A3": "The node 'Gather Materials and Tools' directly follows the node 'Start'."
+      },
+      "10": {
+        "Q": "How many edges exist in the shortest path between \"\"Cap fitting too tight?\"\" and \"\"End\"\"?",
+        "A1": "9",
+        "type": "topological",
+        "A2": "The shortest path between 'Cap fitting too tight?' and 'End' contains nine edges.",
+        "A3": "Nine edges in the shortest path between 'Cap fitting too tight?' and 'End'."
+      },
+      "11": {
+        "Q": "An indegree of is the number of incoming edges for a node in a flowchart. What is the maximum indegree for the flowchart?",
+        "A1": "3",
+        "type": "topological",
+        "A2": "The maximum indegree for the flowchart is 3.",
+        "A3": "Three is the maximum indegree for the flowchart."
+      }
+    }
+  },
+  "instruct00286": {
+    "key": "instruct00286",
+    "title": "How to Gather Fabric",
+    "text": "Gathering fabric is really simple on a sewing machine! Much easier than doing it by hand with a running stitch, and also easier to control. I guarantee you'll know how to gather fabric in no time! :D a sewing machine a piece of fabric a ruler (if you're wanting to gather it to a certain size) You can do this on any sewing machine because all you need is a straight stitch! I am using my slightly terrible Brother than I have worked nearly to death. You will notice the tension is not quite right in the photos. At the beginning of this year it decided it didn't want to do much of anything right, especially when it involves sewing through a single sheet of fabric. ;) Set your machine to a long stitch length - anywhere from 3 to 4. Make sure you have long tails on the thread in the machine. Sew one straight line 1/8 inch from the edge of the fabric. Don't backstitch at the beginning or end and make sure to stop sewing right at the edge of the fabric so you don't get any knots. Then sew another line another 1/8 inch in from the line you just finished. Leaving long lengths (3-4 inches at least!) of thread at both ends of the fabric is vital to your success here, as well! You will want to do this from both ends - do it from only one and you'll end up pulling the strings out! You'll be using the top strings - grab both of them with your right hand and pull the fabric towards you with your left hand. You'll see it start to gather up. Do this on the other side now, and keep going until you reach the length you want. Don't worry too much about the gathers and how they're laid out, we'll fix that in a moment! Once your piece of fabric is the right size (or gathered enough!) tie both sides of it. You'll want to tie all four strings together. This will keep the gathers from coming out while you adjust it. :) After it's tied securely, feel free to cut off the ends. Now you can move the gathers around to create the look you want. Once it's all gathered properly, you'll want to sew back over the 1/4 inch stitches with a normal stitch length to secure everything. Take it slow and guide the fabric so it's straight and the gathers don't catch on the presser foot. :) This technique can be used in so many ways! Depending on how you'll be using a gathered piece, you might want to remove the initial gathering stitches or sew the securing stitches closer to the edge of the fabric - it all depends on your project. :)",
+    "category1": "Craft",
+    "category2": "Sewing",
+    "url": "https://www.instructables.com/how-to-gather-fabric",
+    "summary": "```markdown\n# Comprehensive Structured Summary of Fabric Gathering Process\n\n## Steps to Gather Fabric Using a Sewing Machine\n\n### START:\n\n#### INPUT:\n- A sewing machine\n- A piece of fabric\n- A ruler (optional, if gathering to a specific size)\n\n### PROCESS: Set Up the Sewing Machine\n- Set the sewing machine to a long stitch length (3-4).\n\n### PROCESS: Prepare for Sewing\n- Ensure there are long tails on the thread in the machine (3-4 inches at least).\n\n### PROCESS: Sew the First Gathering Line\n- Sew one straight line 1/8 inch from the edge of the fabric.\n- Do not backstitch at the beginning or end.\n- Stop sewing right at the edge of the fabric to avoid knots.\n\n### PROCESS: Sew the Second Gathering Line\n- Sew another line 1/8 inch in from the line you just finished, parallel to the first.\n- Ensure long thread tails are left at both ends of the fabric.\n\n### DECISION [IF]: Are both ends of the fabric prepared with long thread tails?\n- Yes: Proceed to the next step.\n- No: Return to PROCESS: Prepare for Sewing to adjust thread tails.\n\n### PROCESS: Start Gathering the Fabric\n- Pull the top two threads on one side with the right hand.\n- Simultaneously, pull the fabric towards you with the left hand to create gathers.\n\n### PROCESS: Gather from the Other End\n- Repeat the gathering process on the other side of the fabric.\n\n### DECISION [IF]: Has the fabric reached the desired length or amount of gather?\n- Yes: Proceed to the next step.\n- No: Continue PROCESS: Start Gathering the Fabric until the desired length or gather is achieved.\n\n### PROCESS: Secure the Gathers\n- Tie all four thread tails together at both ends of the fabric to prevent unraveling.\n\n### OUTPUT:\n- The fabric is now gathered to the desired length or fullness.\n\n### PROCESS: Trim Excess Thread\n- Cut off the excess thread tails after securing the gathers.\n\n### PROCESS: Adjust the Gathers\n- Distribute the gathers evenly to create the desired look.\n\n### PROCESS: Sew Over the Gathers\n- Sew back over the gathers with a normal stitch length (1/4 inch) to secure them in place.\n- Guide the fabric slowly to ensure it stays straight and the gathers do not catch on the presser foot.\n\n### OUTPUT:\n- The fabric is now fully gathered and secured.\n\n### DECISION [IF]: Is the gathering technique complete based on the project requirements?\n- Yes: Proceed to END.\n- No: Modify the securing stitches or remove initial gathering stitches based on project needs.\n\n### END:\n- The fabric gathering process using a sewing machine is complete.\n```",
+    "mermaid": "flowchart TD\n    A([\"Start\"]) --> B[/\"Sewing machine, fabric, ruler (optional)\"/]\n    B --> C[\"Set sewing machine to long stitch length (3-4)\"]\n    C --> D[\"Ensure long thread tails (3-4 inches)\"]\n    D --> E[\"Sew first line 1/8 inch from edge\"]\n    E --> F[\"Sew second line 1/8 inch from first\"]\n    F --> G{\"Both ends prepared with long thread tails?\"}\n    G -->|Yes| H[\"Pull top threads and gather fabric\"]\n    G -->|No| D\n    H --> I[\"Gather from the other end\"]\n    I --> J{\"Reached desired length or gather?\"}\n    J -->|Yes| K[\"Tie thread tails together\"]\n    J -->|No| H\n    K --> L[/\"Fabric gathered to desired length or fullness\"/]\n    L --> M[\"Trim excess thread tails\"]\n    M --> N[\"Distribute gathers evenly\"]\n    N --> O[\"Sew over gathers with normal stitch length\"]\n    O --> P[/\"Fabric fully gathered and secured\"/]\n    P --> Q{\"Gathering technique complete?\"}\n    Q -->|Yes| R([\"End\"])\n    Q -->|No| S[\"Modify securing stitches or remove initial gathering stitches\"]\n    S --> R",
+    "qa": {
+      "1": {
+        "Q": "What stitch length should be set on the sewing machine for gathering fabric?",
+        "A1": "A long stitch length of 3-4",
+        "A2": "Set the machine to a stitch length between 3 and 4",
+        "A3": "Adjust the stitch length to between 3 and 4 for gathering",
+        "type": "fact_retrieval"
+      },
+      "2": {
+        "Q": "How far from the edge should the first line of stitching be when gathering fabric?",
+        "A1": "1/8 inch from the edge",
+        "A2": "Sew the first line of stitching 1/8 inch away from the fabric edge",
+        "A3": "The initial stitching line should be 1/8 inch from the edge of the fabric",
+        "type": "fact_retrieval"
+      },
+      "3": {
+        "Q": "What is the final step to secure the gathers in the fabric?",
+        "A1": "Sew over the gathers with a normal stitch length",
+        "A2": "Secure the gathers by sewing over them using a standard stitch length",
+        "A3": "Finish by sewing across the gathers with the sewing machine set to a normal stitch length",
+        "type": "fact_retrieval"
+      },
+      "4": {
+        "Q": "Liam has gathered his fabric to the correct fullness and has secured the gathers by tying the thread tails. However, he's unsure if he should cut off the excess thread right away. What is the next step he should take according to the instructions?",
+        "A1": "Liam should trim the excess thread tails after securing the gathers.",
+        "A2": "He should proceed to cut off the excess thread tails now that the gathers are secured.",
+        "A3": "The next step for Liam is to remove the excess thread tails following the securing of the gathers.",
+        "type": "applied_scenario"
+      },
+      "5": {
+        "Q": "If I am currently at the step where I am pulling the top threads to gather the fabric, but find that the gathers are not to the desired length, what will my next two steps be?",
+        "A1": "You would gather from the other end, then check if you've reached the desired length or gather.",
+        "A2": "Next, you would proceed to gather from the opposite end and subsequently evaluate if the desired length or fullness has been achieved.",
+        "A3": "The subsequent steps involve gathering from the opposite side and then assessing if the desired gather length has been met.",
+        "type": "flow_referential"
+      },
+      "6": {
+        "Q": "Assuming I have just finished sewing over the gathers with a normal stitch length, but the gathering technique is not yet complete, what is my immediate next action?",
+        "A1": "You would modify securing stitches or remove initial gathering stitches.",
+        "A2": "The immediate action is to adjust the securing stitches or undo the initial gathering stitches.",
+        "A3": "Next, you would either revise the stitches that secure the gathers or take out the stitches from the initial gathering.",
+        "type": "flow_referential"
+      },
+      "7": {
+        "Q": "How many nodes exist in the given flowchart?",
+        "A1": "19",
+        "type": "topological",
+        "A2": "There are nineteen nodes in the flowchart.",
+        "A3": "Nineteen Nodes"
+      },
+      "8": {
+        "Q": "How many edges exist in the given flowchart?",
+        "A1": "21",
+        "type": "topological",
+        "A2": "There are twenty-one edges in the flowchart.",
+        "A3": "Twenty-one Edges"
+      },
+      "9": {
+        "Q": "How many edges exist in the shortest path between \"\"Tie thread tails together\"\" and \"\"Fabric gathered to desired length or fullness\"\"?",
+        "A1": "1",
+        "type": "topological",
+        "A2": "There is only one edge in the shortest path between 'Tie thread tails together' and 'Fabric gathered to desired length or fullness'.",
+        "A3": "One edge in the shortest path between 'Tie thread tails together' and 'Fabric gathered to desired length or fullness'."
+      },
+      "10": {
+        "Q": "Is the node \"\"End\"\" direct successor of the node \"\"Modify securing stitches or remove initial gathering stitches\"\"?",
+        "A1": "Yes",
+        "type": "topological",
+        "A2": "Yes, the node 'End' is a direct successor of the node 'Modify securing stitches or remove initial gathering stitches.'",
+        "A3": "The node 'End' directly follows the node 'Modify securing stitches or remove initial gathering stitches.'"
+      }
+    }
+  },
+  "wiki00347": {
+    "key": "wiki00347",
+    "title": "How to Get a Birthday Card from the President2",
+    "text": "You'll be sending your letter to the Greetings Office at the White House. Remember to include your name and return address in case the letter needs to be sent back. Address your letter to: The White House Attn: Greetings Office 1600 Pennsylvania Avenue NW Washington, D.C. 20500 , Gender, for example, is important to specify with names that can be both masculine and feminine. Although this may feel like you're being painfully specific, keep in mind that the honoree likely has no personal relationship to the president. Include: The address of the honoree The age of the honoree (at least 70 for veterans and 80 for US citizens) The veteran status of the honoree The date of birth of the honoree (month, day, and year) The requestor (your) name and phone number, Sign the letter at its end. Fold it and insert it into the addressed envelope. Affix the proper amount of postage, or take the letter to the post office and pay for postage there. Letters should be sent 6 to 8 weeks before the person's birthday. The earlier you send in your request, the more likely it'll reach the honoree in time.",
+    "category1": "Holidays and Traditions",
+    "category2": "Government and Politics",
+    "tags": "['Birthday Card', 'President', 'White House', 'Greetings Office', 'Etiquette', 'Traditions', 'Mail', 'Birthday Request', 'Formal Communication', 'Government Protocol']",
+    "summary": "```markdown\n# Structured Summary of Sending a Letter to the White House Greetings Office\n\n## System Overview:\nThe system described is a process for sending a letter to the White House Greetings Office in order to request a greeting for an honoree. The system inputs include the letter content and necessary honoree information, and the output is the correctly formatted and posted letter to the White House.\n\n### Step-by-Step Representation:\n\nSTART:\n- Begin the process of drafting a letter to the White House Greetings Office.\n\nPROCESS: Draft the letter\n- INPUT: Include the following information in the letter:\n  - Your name and return address for potential return mailing.\n  - Address the letter to the White House Greetings Office with the correct address:\n    - The White House\n    - Attn: Greetings Office\n    - 1600 Pennsylvania Avenue NW\n    - Washington, D.C. 20500\n  - Specify the gender of the honoree if the name is unisex.\n  - Include comprehensive details about the honoree:\n    - Honoree's address\n    - Honoree's age (minimum 70 for veterans and 80 for US citizens)\n    - Veteran status of the honoree\n    - Honoree's date of birth (month, day, and year)\n  - Provide the requestor's (your) name and phone number.\n  - Sign the letter at the end.\n\nPROCESS: Prepare the letter for mailing\n- Fold the completed letter.\n- Insert the letter into an envelope.\n- Address the envelope to the White House Greetings Office with the specified address.\n\nPROCESS: Affix postage\n- DECISION [IF]: Do you know the correct amount of postage?\n  - Yes: OUTPUT: Affix the proper amount of postage to the envelope.\n  - No:\n    - PROCESS: Take the letter to the post office.\n    - OUTPUT: Pay for postage at the post office.\n\nPROCESS: Send the letter\n- DECISION [IF]: Is it between 6 to 8 weeks before the honoree's birthday?\n  - Yes: OUTPUT: Mail the letter.\n  - No: \n    - DECISION [IF]: Is it more than 8 weeks before the honoree's birthday?\n      - Yes: STORE the letter and wait until the 6 to 8-week window.\n      - No: OUTPUT: It may be too late to reach the honoree in time, but mail the letter anyway.\n\nEND:\n- The process of sending a letter to the White House Greetings Office is complete.\n```",
+    "mermaid": "flowchart TD\n    A([\"Start Drafting Letter\"]) --> B[\"Draft Letter Content\"]\n    B --> C[\"Include Name and Return Address\"]\n    C --> D[\"Address Letter to White House Greetings Office\"]\n    D --> E[\"Specify Honoree's Gender if Unisex\"]\n    E --> F[\"Include Honoree's Details\"]\n    F --> G[\"Provide Requestor's Name and Phone\"]\n    G --> H[\"Sign the Letter\"]\n    H --> I[\"Fold and Insert Letter into Envelope\"]\n    I --> J[\"Address Envelope to White House Greetings Office\"]\n    J --> K{\"Know Correct Postage?\"}\n    K -->|Yes| L[\"Affix Proper Postage\"]\n    K -->|No| M[\"Take Letter to Post Office\"]\n    M --> N[\"Pay for Postage\"]\n    N --> O{\"6 to 8 Weeks Before Birthday?\"}\n    L --> O\n    O -->|Yes| P[\"Mail the Letter\"]\n    O -->|No| Q{\"More than 8 Weeks to Birthday?\"}\n    Q -->|Yes| R[\"Store Letter\"]\n    R --> O\n    Q -->|No| S[\"Mail Letter Anyway\"]\n    P --> T([\"End Process\"])\n    S --> T",
+    "qa": {
+      "1": {
+        "Q": "What additional information should be included if the honoree's name is unisex?",
+        "A1": "The honoree's gender",
+        "A2": "Specify the honoree's gender",
+        "A3": "Include the gender of the honoree if the name is unisex",
+        "type": "fact_retrieval"
+      },
+      "2": {
+        "Q": "How far in advance should the letter be mailed for a birthday?",
+        "A1": "6 to 8 weeks before the birthday",
+        "A2": "Mail the letter 6 to 8 weeks in advance of the birthday",
+        "A3": "The letter should be sent 6 to 8 weeks prior to the birthday",
+        "type": "fact_retrieval"
+      },
+      "3": {
+        "Q": "After completing the letter to the White House Greetings Office for her uncle's 80th birthday, Rachel is unsure about the postage required to mail it. She does not want to risk the letter being returned for insufficient postage. What should Rachel do to correctly send her letter?",
+        "A1": "Rachel should take the letter to the post office to pay for the correct amount of postage.",
+        "A2": "She needs to visit the post office and pay for the proper postage there.",
+        "A3": "To ensure correct postage, Rachel must go to the post office and purchase the necessary postage for her letter.",
+        "type": "applied_scenario"
+      },
+      "4": {
+        "Q": "Thomas is preparing to send a letter to the White House Greetings Office for his sister's 100th birthday celebration. Unfortunately, he has missed the preferred 6 to 8-week window before her birthday. What can Thomas do with the letter at this point?",
+        "A1": "Although it may be too late, Thomas should mail the letter anyway.",
+        "A2": "Thomas should still send the letter, despite potentially missing the birthday timeframe.",
+        "A3": "He may mail the letter regardless, understanding it might not arrive in time for his sister's birthday.",
+        "type": "applied_scenario"
+      },
+      "5": {
+        "Q": "If I need to store the letter because it is more than 8 weeks to the birthday, what will be the next step after storing, and what should I have determined right before deciding to store the letter?",
+        "A1": "After storing, the next step is to wait until it is 6 to 8 weeks before the birthday, and I should have determined that it was indeed more than 8 weeks to the birthday.",
+        "A2": "Once the letter is stored, the subsequent action is to check the 6 to 8 week timeframe again, and I must have ascertained that the birthday is more than 8 weeks away prior to storing.",
+        "A3": "The next step after storing is to monitor the time until it's 6 to 8 weeks before the event, having confirmed beforehand that the birthday is over 8 weeks away.",
+        "type": "flow_referential"
+      },
+      "6": {
+        "Q": "How many nodes exist in the given flowchart?",
+        "A1": "20",
+        "type": "topological",
+        "A2": "The flowchart contains twenty nodes.",
+        "A3": "Twenty Nodes"
+      },
+      "7": {
+        "Q": "How many edges exist in the given flowchart?",
+        "A1": "22",
+        "type": "topological",
+        "A2": "There are twenty-two edges in the flowchart.",
+        "A3": "Twenty-two Edges"
+      },
+      "8": {
+        "Q": "Is the node \"\"Specify Honoree's Gender if Unisex\"\" direct predecessor of the node \"\"Know Correct Postage?\"\"?",
+        "A1": "No",
+        "type": "topological",
+        "A2": "No, the node 'Specify Honoree's Gender if Unisex' does not directly precede the node 'Know Correct Postage'.",
+        "A3": "No direct predecessor relationship exists"
+      },
+      "9": {
+        "Q": "An indegree of is the number of incoming edges for a node in a flowchart. What is the maximum indegree for the flowchart?",
+        "A1": "3",
+        "type": "topological",
+        "A2": "The maximum indegree for the flowchart is 3.",
+        "A3": "Three is the maximum indegree for the flowchart."
+      }
+    }
+  },
+  "wiki00416": {
+    "key": "wiki00416",
+    "title": "How to Treat Canine Kidney Disease3",
+    "text": "Kidney disease leads to a vicious circle whereby there is less functional tissue doing more work, placing it under greater strain, which hastens its deterioration. Drugs called ACE inhibitors, such as benazepril (Benefortin), reduce the blood pressure gradient across the kidney, which reduces one of the risk factors for deterioration. The dose is generally 0.25 to 0.5mg/kg once daily by mouth., ACE inhibitors are long term treatments with long term benefits. In severe kidney failure, the fail in local blood pressure can lead to a failure of filtration and a worsening of your dog's condition. Thus use of ACE inhibitors is reserved for dogs in the earlier stages. , This medication was developed for cats and is not licensed for this function in dogs. However, some veterinarians will still prescribe it.",
+    "category1": "Pets and Animals",
+    "category2": "Health",
+    "tags": "['Canine Health', 'Veterinary Medicine', 'Kidney Disease Treatment', 'ACE Inhibitors', 'Pet Medication', 'Pet Healthcare', 'Animal Care', 'Dog Health', 'Chronic Illness Management', 'Pet Wellness']",
+    "summary": "```markdown\n# Structured Summary of Kidney Disease Treatment with ACE Inhibitors\n\n## Start of the Process\nSTART: Begin the treatment process for a dog with kidney disease.\n\n## Identification of Kidney Disease and Assessment\nPROCESS: Identify kidney disease in a dog, which leads to a reduction in functional tissue.\nPROCESS: Understand that reduced functional tissue increases strain on the kidneys, accelerating deterioration.\n\n## Medication Decision-Making\nDECISION [IF]: Is the dog in the early stages of kidney disease?\n    OUTPUT [YES]: Proceed with ACE inhibitor treatment.\n    OUTPUT [NO]: Consider alternative treatments due to the risk of filtration failure in severe kidney failure.\n\n## ACE Inhibitor Treatment\nINPUT: Introduce ACE inhibitors, such as benazepril (Benefortin), to reduce blood pressure across the kidney.\nPROCESS: Calculate the dose of ACE inhibitors, generally 0.25 to 0.5mg/kg once daily by mouth.\nPROCESS: Administer ACE inhibitors as a long-term treatment to achieve long-term benefits.\n\n## Monitoring and Adjustments\nPROCESS: Monitor the dog's condition to ensure the treatment is not worsening the kidney failure.\n\n## Consideration of Medication Licensing\nDECISION [IF]: Is the ACE inhibitor benazepril (Benefortin) licensed for use in dogs?\n    OUTPUT [NO]: Acknowledge that the medication was developed for cats and is not officially licensed for dogs.\n    DECISION [IF]: Will a veterinarian still prescribe the unlicensed medication for a dog?\n        OUTPUT [YES]: Proceed with the veterinarian's guidance for off-label use.\n        OUTPUT [NO]: Seek alternative medications that are licensed for dogs.\n\n## End of the Process\nEND: The treatment process for a dog with kidney disease using ACE inhibitors concludes.\n```\n",
+    "mermaid": "flowchart TD\n    A([\"Start\"]) --> B[\"Identify kidney disease in a dog\"]\n    B --> C[\"Understand strain on kidneys\"]\n    C --> D{\"Dog in early stages of kidney disease?\"}\n    D -->|Yes| E[\"Proceed with ACE inhibitor treatment\"]\n    D -->|No| F[\"Consider alternative treatments\"]\n    E --> G[\"Introduce ACE inhibitors\"]\n    G --> H[\"Calculate dose of ACE inhibitors\"]\n    H --> I[\"Administer ACE inhibitors long-term\"]\n    I --> J[\"Monitor the dog's condition\"]\n    J --> K{\"Is benazepril licensed for use in dogs?\"}\n    K -->|No| L[\"Acknowledge medication developed for cats\"]\n    L --> M{\"Veterinarian prescribes off-label?\"}\n    M -->|Yes| N[\"Proceed with veterinarian's guidance\"]\n    M -->|No| O[\"Seek alternative medications for dogs\"]\n    K -->|Yes| N\n    N --> P([\"End\"])\n    O --> P\n    F --> P",
+    "qa": {
+      "1": {
+        "Q": "What should be done if a dog with kidney disease is not in the early stages?",
+        "A1": "Consider alternative treatments",
+        "A2": "Look for other treatment options",
+        "A3": "Seek different treatments",
+        "type": "fact_retrieval"
+      },
+      "2": {
+        "Q": "What should be done if a veterinarian prescribes benazepril off-label for a dog?",
+        "A1": "Proceed with the veterinarian's guidance",
+        "A2": "Follow the vet's off-label prescription advice",
+        "A3": "Use the medication as per the veterinarian's off-label prescription",
+        "type": "fact_retrieval"
+      },
+      "3": {
+        "Q": "Craig's dog, Whiskers, has been on ACE inhibitors for a few weeks to treat kidney disease. However, Craig has noticed no improvement in Whiskers' condition and is concerned about the potential worsening of kidney failure. What should be Craig's next step according to the treatment process?",
+        "A1": "Craig should monitor Whiskers' condition to ensure the treatment with ACE inhibitors is not worsening the kidney failure.",
+        "A2": "He should continue to keep an eye on Whiskers' health to determine if the ACE inhibitors are having a negative impact on the kidney disease.",
+        "A3": "Craig's next step is to closely observe Whiskers to confirm that the ACE inhibitor treatment isn't exacerbating the kidney failure.",
+        "type": "applied_scenario"
+      },
+      "4": {
+        "Q": "When Samantha's veterinarian suggested the use of benazepril to treat her dog's kidney disease, she was concerned because she knew that benazepril was originally developed for cats. What should Samantha take into consideration before deciding to use benazepril as a treatment for her dog?",
+        "A1": "Samantha should consider that benazepril is not officially licensed for use in dogs, and decide whether to proceed with off-label use under a veterinarian's guidance.",
+        "A2": "She should acknowledge that benazepril is developed for cats and not licensed for dogs, and she needs to decide on using it off-label as advised by her veterinarian.",
+        "A3": "Before using benazepril, Samantha must consider that it's an off-label medication for dogs, and she should follow her veterinarian's guidance if choosing to proceed.",
+        "type": "applied_scenario"
+      },
+      "5": {
+        "Q": "If a dog is currently being treated with ACE inhibitors for kidney disease, what was the decision made at the first decision point, and what is the immediate next step after administration?",
+        "A1": "The decision was 'Yes' at the 'Dog in early stages of kidney disease?' node, and the immediate next step is 'Monitor the dog's condition'.",
+        "A2": "At the 'Dog in early stages of kidney disease?' decision node, affirmative action was taken, leading to the subsequent step of monitoring the dog's condition.",
+        "A3": "The initial decision indicated the dog is in the early stages of kidney disease, followed by the monitoring of the dog's condition after administering ACE inhibitors.",
+        "type": "flow_referential"
+      },
+      "6": {
+        "Q": "How many nodes exist in the given flowchart?",
+        "A1": "16",
+        "type": "topological",
+        "A2": "There are sixteen nodes in the flowchart.",
+        "A3": "Sixteen Nodes"
+      },
+      "7": {
+        "Q": "How many edges exist in the given flowchart?",
+        "A1": "18",
+        "type": "topological",
+        "A2": "There are eighteen edges in the flowchart.",
+        "A3": "Eighteen Edges"
+      },
+      "8": {
+        "Q": "Is the node \"\"End\"\" direct predecessor of the node \"\"Identify kidney disease in a dog\"\"?",
+        "A1": "No",
+        "type": "topological",
+        "A2": "No, the node 'End' is not a direct predecessor of 'Identify kidney disease in a dog'.",
+        "A3": "No direct predecessor relationship exists."
+      },
+      "9": {
+        "Q": "How many edges exist in the shortest path between \"\"Proceed with ACE inhibitor treatment\"\" and \"\"Acknowledge medication developed for cats\"\"?",
+        "A1": "6",
+        "type": "topological",
+        "A2": "There are six edges in the shortest path between 'Proceed with ACE inhibitor treatment' and 'Acknowledge medication developed for cats'.",
+        "A3": "Six edges in the shortest path between the nodes 'Proceed with ACE inhibitor treatment' and 'Acknowledge medication developed for cats'."
+      },
+      "10": {
+        "Q": "An indegree of is the number of incoming edges for a node in a flowchart. What is the maximum indegree for the flowchart?",
+        "A1": "3",
+        "type": "topological",
+        "A2": "The maximum indegree for the flowchart is 3.",
+        "A3": "Three is the maximum indegree for the flowchart."
+      }
+    }
+  },
+  "instruct00811": {
+    "key": "instruct00811",
+    "title": "How to Dismantle a Pallet",
+    "text": "It was Gerrit Reitvild who first deconstructed a transport crate to reassemble it into furniture that was both affordable and could be easily constructed from the individual pieces. In that sprit this booklet is made to reveal a method to dismantle this wooden beast of burden, the pallet. Like a donkey it has to be broken-in and for the task you will needa lump mallet,a claw hammer,and a prybar. You will also need a scrap piece of wood, MDF or ply to use as a cushion to avoided damaging the wood when knocking pieces apart.Bare in mind that pallets come in various sizes, shapes and conditions, so you may find this manual to be more of a rough guideline then accurate instructions when applying them to your pallet. 1) Begin by turning the pallet upside down and knocking the chocks (wooden supporting blocks) out. 2) The technique here is to distribute your blows with the lump mallet between the three blocks (a, b and c) and gradually knock the sections apart. 3) Once you have done this to all three supporting sections place these pieces underneath the main body of the pallet. 4) Using the claw hammer knock the revealed nails through their holes. Try to get all nails out of the wood otherwise you risk damaging your tools when using the pieces for your next project. Knocking nails out of wood is a skill. A skill albeit that you most likely will never write on your CV but one that nonetheless require you to be patient and accurate. If nails bend use the lump mallet like an anvil and knock them against back it into shape with the claw hammer. If a nail becomes to malleable cut it in half using pliers or a hacksaw and try knocking it out again. 5) Once those nails are out use the prybar to remove as many strips of wood as you can. Depending on the number of strips the pallet has you may decide to remove all even number pieces using the odd strips as leverage, or Vice Versa. If this is proving difficult you may find it easier to turn the pallet upside down, again resting it on the chocks and hitting along each strip, distributing your blows (a, b, c and d) to loosen them. 6) To get the remaining chocks of their strip of wood, while standing the piece vertically use the lump mallet to knock pieces e and f off. Turn the piece around and repeat to chock g. Be careful when knocking the chokes of their strips to avoid squashing your fingers. Also take care to avoid kneeling or standing on the nails as they are ribbed and not for your pleasure. They also have shards of metal attached to them from however they were arranged in a nail gun. Try not to run your fingers along them otherwise you will receive metal splinters along with wooden ones if you decide not to wear work gloves. http://www.youtube.com/watch?v=ZtPmUZ-k3aI&feature=channel_page",
+    "category1": "Workshop",
+    "category2": "Pallets",
+    "url": "https://www.instructables.com/How-To-Dismantle-A-Pallet",
+    "summary": "```markdown\n# Pallet Dismantling Process Summary\n\n## START:\n- Begin the process of dismantling a wooden pallet.\n\n## PROCESS: Preparation\n- INPUT: Gather tools including a lump mallet, a claw hammer, a prybar, and a scrap piece of wood (MDF or ply).\n\n## PROCESS: Assess Pallet Condition\n- INPUT: Examine the pallet to identify its size, shape, and condition.\n- STORE: Keep in mind that the dismantling technique may vary based on the pallet's characteristics.\n\n## PROCESS: Position Pallet\n- Turn the pallet upside down to access the chocks (wooden supporting blocks).\n\n## PROCESS: Remove Chocks\n- PROCESS: Distribute blows with the lump mallet between the three blocks (a, b, and c).\n- DECISION [IF]: Are all three supporting sections detached?\n  - Yes: Go to PROCESS: Use Chocks for Support\n  - No: Continue distributing blows until all sections are detached.\n\n## PROCESS: Use Chocks for Support\n- Place the detached chocks underneath the main body of the pallet for support.\n\n## PROCESS: Remove Nails\n- Use the claw hammer to knock the revealed nails through their holes.\n- DECISION [IF]: Are all nails removed without bending?\n  - Yes: Go to PROCESS: Use Prybar\n  - No: Go to PROCESS: Straighten or Cut Nails\n\n## PROCESS: Straighten or Cut Nails\n- IF nails bend, use the lump mallet as an anvil and the claw hammer to straighten them.\n- DECISION [IF]: Is the nail too malleable?\n  - Yes: Use pliers or a hacksaw to cut the nail in half and try removing again.\n  - No: Continue straightening until the nail can be removed.\n\n## PROCESS: Use Prybar\n- Use the prybar to remove as many strips of wood as possible.\n- DECISION [IF]: Are strips difficult to remove?\n  - Yes: Go to PROCESS: Alternate Strips Removal Technique\n  - No: Continue until all accessible strips are removed.\n\n## PROCESS: Alternate Strips Removal Technique\n- Turn the pallet upside down, resting it on the chocks.\n- Hit along each strip, distributing your blows (a, b, c, and d) to loosen them.\n\n## PROCESS: Remove Remaining Chocks\n- Stand the strip of wood vertically.\n- Use the lump mallet to knock pieces e and f off.\n- Turn the piece around and repeat for chock g.\n\n## OUTPUT: Dismantled Pallet\n- End result should be individual pieces of wood free from nails and chocks.\n\n## END:\n- The dismantling process is complete.\n\n## SAFETY NOTES:\n- Be cautious to avoid squashing fingers when removing chocks.\n- Do not kneel or stand on nails as they may cause injury.\n- Avoid running fingers along nails to prevent metal splinters.\n- Wear work gloves to protect hands from splinters and injuries.\n- Refer to the YouTube video for visual guidance: [Pallet Dismantling Video](http://www.youtube.com/watch?v=ZtPmUZ-k3aI&feature=channel_page)\n```",
+    "mermaid": "flowchart TD\n    A([\"Start\"]) --> B[/\"Gather Tools (lump mallet, claw hammer, prybar, scrap wood)\"/]\n    B --> C[/\"Examine Pallet (size, shape, condition)\"/]\n    C --> D[\"Turn Pallet Upside Down\"]\n    D --> E{\"All Chocks Detached?\"}\n    E -->|\"Yes\"| F[\"Place Detached Chocks Under Pallet\"]\n    E -->|\"No\"| G[\"Distribute Blows With Lump Mallet\"]\n    G --> E\n    F --> H{\"All Nails Removed Without Bending?\"}\n    H -->|\"Yes\"| I[\"Use Prybar to Remove Wooden Strips\"]\n    H -->|\"No\"| J[\"Straighten or Cut Nails\"]\n    J --> K{\"Is Nail Too Malleable?\"}\n    K -->|\"Yes\"| L[/\"Cut Nail and Try Removing Again\"/]\n    K -->|\"No\"| M[/\"Continue Straightening Nails\"/]\n    M --> J\n    L --> H\n    I --> N{\"Strips Difficult to Remove?\"}\n    N -->|\"Yes\"| O[\"Alternate Strips Removal Technique\"]\n    N -->|\"No\"| P[\"Continue Removing Strips\"]\n    P --> I\n    O --> Q[\"Turn Pallet and Distribute Blows\"]\n    Q --> R[\"Stand Wood Vertically, Remove Chocks\"]\n    R --> S[/\"Dismantled Pallet\"/]\n    S --> T([\"End\"])\n    T --> U[\"Safety Notes: Be cautious, wear gloves, etc.\"]\n    U --> V[\"Refer to YouTube Video for Guidance\"]",
+    "qa": {
+      "1": {
+        "Q": "What tools are needed to begin dismantling a pallet?",
+        "A1": "Lump mallet, claw hammer, prybar, and scrap wood",
+        "A2": "A lump mallet, a claw hammer, a prybar, and some scrap wood",
+        "A3": "Tools required include a lump mallet, claw hammer, prybar, and scrap wood",
+        "type": "fact_retrieval"
+      },
+      "2": {
+        "Q": "What is the next step if nails are removed without bending?",
+        "A1": "Use a prybar to remove wooden strips",
+        "A2": "Remove the wooden strips with the help of a prybar",
+        "A3": "Pry the wooden strips away using a prybar",
+        "type": "fact_retrieval"
+      },
+      "3": {
+        "Q": "Ben is in the middle of removing the wooden strips from a pallet using a prybar, but he's finding it difficult as the strips are not coming off easily. He recalls there's a technique to address this issue. What should Ben do now?",
+        "A1": "Ben should turn the pallet upside down, rest it on the chocks, and hit along each strip to loosen them.",
+        "A2": "He should use the alternate strips removal technique by turning the pallet upside down and hitting along each strip.",
+        "A3": "Ben needs to apply the alternate technique, which involves turning the pallet upside down and distributing blows along the strips.",
+        "type": "applied_scenario"
+      },
+      "4": {
+        "Q": "Emma is preparing to dismantle an old wooden pallet and she's at the stage where she needs to assess its condition. What aspects of the pallet should she examine before proceeding with the dismantling process?",
+        "A1": "Emma should examine the pallet's size, shape, and condition.",
+        "A2": "She needs to check the size, shape, and overall condition of the pallet.",
+        "A3": "Emma must identify the pallet's size, shape, and its current state.",
+        "type": "applied_scenario"
+      },
+      "5": {
+        "Q": "If I have just finished distributing blows with the lump mallet, what is the immediate next step and what condition must be re-evaluated following this action?",
+        "A1": "The immediate next step is to check if all chocks are detached, which must be re-evaluated.",
+        "A2": "After distributing blows, the next step is to reassess whether all chocks have been detached.",
+        "A3": "Once blows are distributed, the subsequent action is to verify the detachment of all chocks.",
+        "type": "flow_referential"
+      },
+      "6": {
+        "Q": "Assuming I am currently at the step where I am using the prybar to remove wooden strips, what would be my next course of action if I encounter difficulty with the strips' removal?",
+        "A1": "If difficulty is encountered, the next step would be to alternate the strips removal technique.",
+        "A2": "Upon facing difficulty, the subsequent action is to employ an alternative technique for removing the strips.",
+        "A3": "Should removal of strips become difficult, the following step is to switch to an alternate removal method.",
+        "type": "flow_referential"
+      },
+      "7": {
+        "Q": "How many nodes exist in the given flowchart?",
+        "A1": "22",
+        "type": "topological",
+        "A2": "There are twenty-two nodes in the flowchart.",
+        "A3": "Twenty-two Nodes"
+      },
+      "8": {
+        "Q": "How many edges exist in the given flowchart?",
+        "A1": "25",
+        "type": "topological",
+        "A2": "There are twenty-five edges in the flowchart.",
+        "A3": "Twenty-five Edges"
+      },
+      "9": {
+        "Q": "How many edges exist in the shortest path between \"\"Use Prybar to Remove Wooden Strips\"\" and \"\"Alternate Strips Removal Technique\"\"?",
+        "A1": "2",
+        "type": "topological",
+        "A2": "There are two edges in the shortest path between 'Use Prybar to Remove Wooden Strips' and 'Alternate Strips Removal Technique'.",
+        "A3": "Two edges in shortest path: 'Use Prybar to Remove Wooden Strips' to 'Alternate Strips Removal Technique'."
+      },
+      "10": {
+        "Q": "Is the node \"\"All Nails Removed Without Bending?\"\" direct successor of the node \"\"Refer to YouTube Video for Guidance\"\"?",
+        "A1": "No",
+        "type": "topological",
+        "A2": "No, the node 'All Nails Removed Without Bending?' is not a direct successor of 'Refer to YouTube Video for Guidance'.",
+        "A3": "No direct successor relationship exists"
+      }
+    }
+  }
+}
