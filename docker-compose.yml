@@ -41,7 +41,6 @@ services:
       - ./GenFlowchart/src:/home/zhengxin.chai/GenFlowchart/src
       - ./output:/home/zhengxin.chai/GenFlowchart/output
       - ~/.cache:/home/zhengxin.chai/.cache
-    command: ["python", "-m", "genflowchart"]
     runtime: nvidia
     environment:
       - NVIDIA_VISIBLE_DEVICES=all
@@ -57,4 +56,3 @@ services:
       - ./GenFlowchart/src:/home/zhengxin.chai/GenFlowchart/src
       - ./output:/home/zhengxin.chai/GenFlowchart/output
       - ~/.cache:/home/zhengxin.chai/.cache
-    command: ["python", "-m", "genflowchart"]
