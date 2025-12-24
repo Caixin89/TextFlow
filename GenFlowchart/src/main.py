@@ -36,6 +36,9 @@ openai_client = None
 
 
 def load_SAM_mask_generator(device: str = "cpu"):
+    """
+    Load SAM and set the global mask_generator.
+    """
     global mask_generator
     sam_model_path = "weights/sam_vit_h_4b8939.pth"
     logger.info("Loading SAM mask generator model ... device=%s model_path=%s", device, sam_model_path)
@@ -44,14 +47,35 @@ def load_SAM_mask_generator(device: str = "cpu"):
 
 
 def load_openAI_client():
+    """
+    Load OpenAI client, set global.
+    """
     global openai_client
     logger.info("Loading LLM client ...")
     openai_client = OpenAI(base_url="https://openrouter.ai/api/v1", api_key=os.environ.get("OPENROUTER_API_KEY"))
 
 
+def find_image_for_key(image_dir: Optional[str], key: str) -> Optional[str]:
+    """
+    Locate an image file for a given dataset key in image_dir.
+    Returns a path string or None if not found.
+    """
+    if not image_dir:
+        return None
+    p = Path(image_dir)
+    if not p.exists():
+        logger.debug("image-dir %s does not exist", image_dir)
+        return None
+    for ext in (".png", ".jpg", ".jpeg", ".webp", ".bmp"):
+        candidate = p / f"{key}{ext}"
+        if candidate.exists():
+            return str(candidate)
+    return None
+
+
 # Extracting text from the image data
 def _text_extract(image):
-    #custom_config = r'--oem 3 --psm 11'
+    # custom_config = r'--oem 3 --psm 11'
     text_regions = pytesseract.image_to_boxes(image)
     return text_regions
 
@@ -128,16 +152,27 @@ def _get_word_from_SAM_bounding_box(image_obj, box):
 
 
 def extract_bounding_boxes_and_text(image_file):
+    """
+    Extract SAM boxes and OCR text from an image.
+    Accepts either a path string or an image ndarray.
+    """
     global mask_generator
 
     if isinstance(image_file, str):
-        image_path = os.path.join("Patent Images", image_file)
-        raw_image = cv2.imread(image_path)
+        raw_image = cv2.imread(image_file)
+        if raw_image is None:
+            logger.warning("Failed to read image at %s", image_file)
+            return [], []
     else:
         raw_image = image_file
     preprocessed_image = _preprocess(raw_image)
     text_stripped_image = _text_remove(preprocessed_image, _text_extract(preprocessed_image))
     fully_processed_image = cv2.cvtColor(text_stripped_image, cv2.COLOR_GRAY2RGB)
+
+    if mask_generator is None:
+        logger.error("SAM mask generator not loaded")
+        return [], []
+
     sam_output = mask_generator.generate(fully_processed_image)
 
     # store the bounding box data obtained from SAM model and sort it according to the point coordinates
@@ -182,82 +217,99 @@ def generate_messages(box, word):
     else:
         # Zero-shot prompt template
         return [
-            {"role": "system", "content": f"Give a detailed and descriptive interpretation of the flowchart in the form of steps using following details pytesseract text recognition data:{word}bounding box info obtained from sam(segment anything model):{box}"},
-        ],
+            {"role": "system", "content": f"Give a detailed and descriptive interpretation of the flowchart in the form of steps using following details pytesseract text recognition data:{word}bounding box info obtained from sam(segment anything model):{box}"}
+        ]
 
 
-# Keep run_inference as a small stub returning structured dict
-def run_inference(image, question: str) -> Dict[str, Any]:
+def run_inference(image, question: str) -> str:
     global openai_client, mask_generator
 
     logger.info("Running inference for image %s with question: %s", image, question)
     box, word = extract_bounding_boxes_and_text(image)
     messages = generate_messages(box, word)
-    model_id = get_model_id(os.environ.get("GENFLOWCHART_LLM"))
-    prompt_mode = os.environ.get("GENFLOWCHART_PROMPT_MODE", "zero-shot")
-    max_new_tokens = 500 if prompt_mode == "zero-shot" else 1000
 
-    completion = openai_client.chat.completions.create(
-        model=model_id,
-        max_tokens=max_new_tokens,
-        # temperature=temperature,
-        messages=messages,
-    )
-    response = completion.choices[0].message.content
-    return response
+    if openai_client is None:
+        logger.error("LLM client not loaded; cannot run inference")
+        return ""
+
+    try:
+        model_id = get_model_id(os.environ.get("GENFLOWCHART_LLM"))
+        prompt_mode = os.environ.get("GENFLOWCHART_PROMPT_MODE", "zero-shot")
+        max_new_tokens = 500 if prompt_mode == "zero-shot" else 1000
+
+        completion = openai_client.chat.completions.create(
+            model=model_id,
+            max_tokens=max_new_tokens,
+            # temperature=temperature,
+            messages=messages,
+        )
+        response = completion.choices[0].message.content
+        return response
+    except Exception as e:
+        logger.exception("LLM call failed: %s", e)
+        return f"LLM_ERROR: {e}"
 
 
 def save_output(output: Dict[str, Any], output_path: str):
     p = Path(output_path)
     p.parent.mkdir(parents=True, exist_ok=True)
     with p.open("w", encoding="utf-8") as f:
-        json.dump(output, f, indent=2)
+        json.dump(output, f, indent=2, ensure_ascii=False)
     logger.info("Saved output to %s", output_path)
 
 
-def infer_model_response(mask_generator: Optional[Any], llm_client: Optional[Any], image_path: Optional[str], question: str) -> str:
+def infer_model_response(image_path: Optional[str], question: str) -> str:
     """
     Placeholder wrapper for the actual image+question -> answer pipeline.
     Replace the body with your real SAM+LLM or pipeline code.
     """
+    global mask_generator, openai_client
     logger.debug("infer_model_response called image=%s question=%s", image_path, question)
     try:
-        if mask_generator is not None and image_path is not None:
-            # If you want to use extracted boxes/words, call extract_bounding_boxes_and_text
-            try:
-                boxes, words = extract_bounding_boxes_and_text(mask_generator, image_path)
-                logger.debug("Extracted %d boxes and %d text regions", len(boxes), len(words))
-            except Exception as e:
-                logger.debug("SAM extraction failed: %s", e)
-                boxes, words = [], []
-            # Call the model/LLM-based inference here; for now call run_inference stub
-            res = run_inference(mask_generator, image_path, question)
-            return str(res.get("answer", ""))
-        # Fallback single-image-less path: call run_inference stub
-        res = run_inference(None, image_path, question)
-        return str(res.get("answer", ""))
+        # If you want to use extracted boxes/words, call extract_bounding_boxes_and_text
+        try:
+            boxes, words = extract_bounding_boxes_and_text(image_path)
+            logger.debug("Extracted %d boxes and %d text regions", len(boxes), len(words))
+        except Exception as e:
+            logger.debug("SAM extraction failed: %s", e)
+            boxes, words = [], []
+        # Call the model/LLM-based inference here; for now call run_inference stub
+        res = run_inference(image_path, question)
+        return res
     except Exception as e:
         logger.exception("infer_model_response failed: %s", e)
-        return "MODEL_PLACEHOLDER_ERROR"
 
 
-def infer_batch(input_json: str, image_dir: str, output_path: str, device: str = "cpu") -> None:
+def infer_batch(input_json: str, image_dir: str, output_path: str, device: str = "cpu", max_items: int = 0) -> None:
     """
-    Iterate dataset keys (all keys by default if `keys` is None) and produce output JSON with:
+    Iterate dataset keys (all keys by default) and produce output JSON with:
       { "0": {"key": "...", "question_id": "...", "question": "...", "response": "..."}, ... }
+
+    If max_items > 0, only process up to max_items (smoke-test).
     """
     logger.info("Loading input JSON: %s", input_json)
     with open(input_json, "r", encoding="utf-8") as f:
         data = json.load(f)
 
-    # Load optional models/clients only if requested
-    mask_generator = load_SAM_mask_generator(device)
-    llm_client = load_openAI_client()
+    # Load models/clients; keep globals in sync
+    try:
+        load_openAI_client()
+    except Exception as e:
+        logger.debug("Failed to load LLM client: %s", e)
+    try:
+        load_SAM_mask_generator(device)
+    except Exception as e:
+        logger.debug("Failed to load SAM: %s", e)
 
     results: Dict[str, Dict[str, Any]] = {}
     idx = 0
+    processed = 0
 
     for doc_key in tqdm(data.keys(), total=len(data), desc="Processing flowchart VQA items"):
+        if max_items and processed >= max_items:
+            logger.info("Reached max_items=%d; stopping (smoke test)", max_items)
+            break
+
         doc = data.get(doc_key)
         if not doc:
             logger.warning("Key %s not found, skipping", doc_key)
@@ -268,11 +320,14 @@ def infer_batch(input_json: str, image_dir: str, output_path: str, device: str =
             logger.debug("No QA for key %s, skipping", doc_key)
             continue
 
-        image_path = Path(image_dir) / f"{doc_key}.png" 
+        image_path = find_image_for_key(image_dir, doc_key)
+        if image_path is None:
+            logger.error("Image for key %s not found in %s; aborting (image required)", doc_key, image_dir)
+            raise FileNotFoundError(f"Missing image for key {doc_key} in {image_dir}")
 
         for qid, qobj in qa.items():
             question_text = (qobj.get("Q") or "").strip()
-            response_text = infer_model_response(mask_generator, llm_client, image_path, question_text)
+            response_text = infer_model_response(image_path, question_text)
             results[str(idx)] = {
                 "key": doc_key,
                 "question_id": str(qid),
@@ -280,6 +335,7 @@ def infer_batch(input_json: str, image_dir: str, output_path: str, device: str =
                 "response": response_text,
             }
             idx += 1
+        processed += 1
 
     outp = Path(output_path)
     outp.parent.mkdir(parents=True, exist_ok=True)
@@ -290,10 +346,11 @@ def infer_batch(input_json: str, image_dir: str, output_path: str, device: str =
 
 def parse_args():
     p = argparse.ArgumentParser(description="GenFlowchart CLI (minimal)")
-    p.add_argument("input-json", help="Path to FlowVQA JSON for batch inference (e.g., data/flowvqa/dev.json)")
+    p.add_argument("input_json", help="Path to FlowVQA JSON for batch inference (e.g., data/flowvqa/dev.json)")
     p.add_argument("--image-dir", help="Directory with images named by dataset key (used in batch mode)", default=".")
     p.add_argument("--output", default="output/genflowchart_inference.json", help="Output JSON path")
     p.add_argument("--device", default="cpu", choices=["cpu", "cuda"], help="Compute device")
+    p.add_argument("--max-items", type=int, default=0, help="If >0 run a smoke-test on only N documents")
     p.add_argument("--verbose", action="store_true", help="Enable debug logging")
     return p.parse_args()
 
@@ -303,10 +360,18 @@ def main():
     if args.verbose:
         logger.setLevel(logging.DEBUG)
 
-    load_openAI_client()
-    load_SAM_mask_generator(device=args.device)
-    infer_batch(args.input_json, args.image_dir, args.output, device=args.device)
-    return
+    # Load optional clients/models (load functions set globals)
+    try:
+        load_openAI_client()
+    except Exception:
+        logger.debug("OpenAI client not loaded; continuing in degraded mode")
+    try:
+        load_SAM_mask_generator(device=args.device)
+    except Exception:
+        logger.debug("SAM not loaded; continuing in degraded mode")
+
+    infer_batch(args.input_json, args.image_dir, args.output, device=args.device, max_items=args.max_items)
+
 
 if __name__ == "__main__":
     main()
