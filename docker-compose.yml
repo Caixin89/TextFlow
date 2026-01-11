@@ -10,7 +10,9 @@ services:
       - ./data:/app/data
       - ./logs:/app/logs
       - ./output:/app/output
-    runtime: nvidia
+      - ./notebook:/app/notebook
+    ports:
+      - "8888:8888"  
     environment:
       - NVIDIA_VISIBLE_DEVICES=all
 
@@ -26,6 +28,9 @@ services:
       - ./data:/app/data
       - ./logs:/app/logs
       - ./output:/app/output
+      - ./notebook:/app/notebook
+    ports:
+      - "8888:8888"
     environment:
       # disable flash-attention at runtime for CPU container
       - ENABLE_FLASH_ATTENTION=0

@@ -230,7 +230,7 @@ def generate_api_evaluation_response(model_name, client, messages, seed, max_ret
             completion = client.chat.completions.create(
                 model=model_id,
                 max_tokens=max_new_tokens,
-                temperature=0,
+                temperature=temperature,
                 messages=messages,
                 seed=seed,
                 extra_body={"provider": {"only": ["openai", "mistral", "anthropic"]}},

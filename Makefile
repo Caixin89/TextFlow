@@ -2,12 +2,15 @@
 DEVICE ?= gpu
 
 ifeq ($(DEVICE),cpu)
-COMPOSE_CMD := docker compose run --rm flowchart_vqa_cpu bash -lc
+COMPOSE_CMD := docker compose run --rm --service-ports flowchart_vqa_cpu bash -lc
 else
-COMPOSE_CMD := docker compose run --rm flowchart_vqa bash -lc
+COMPOSE_CMD := docker compose run --rm --service-ports flowchart_vqa bash -lc
 endif
 
-.PHONY: eval_textflow eval_textflow_tool_use eval_end_to_end run_reasoner run_reasoner_tool_use run_textualizer run_end_to_end
+.PHONY: eval_textflow eval_textflow_tool_use eval_end_to_end run_reasoner run_reasoner_tool_use run_textualizer run_end_to_end build
+
+build:
+	docker compose build
 
 eval_textflow:
 	$(COMPOSE_CMD) 'python src/evaluation.py --model_names "$${JUDGE_MODELS}" --data_path "output/$${DATASET}/textflow/$${FLOWCHART_CODE_FORMAT}_reasoner_$${REASONER_MODEL##*/}_textualizer_$${TEXTUALIZER_MODEL##*/}.json"'
@@ -30,3 +33,6 @@ run_textualizer:
 
 run_end_to_end:
 	$(COMPOSE_CMD) 'python src/vqa.py --dataset "$${DATASET}" --model_name "$${END_TO_END_MODEL}"'
+
+run_notebooks:
+	$(COMPOSE_CMD) 'jupyter notebook --notebook-dir="/app/notebook" --ip=0.0.0.0 --NotebookApp.token="" --port=8888 --allow-root --no-browser'

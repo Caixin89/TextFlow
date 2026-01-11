@@ -30,6 +30,9 @@ RUN pip install --no-cache-dir --prefer-binary --extra-index-url https://downloa
 # Copy and install the rest of the CPU-only requirements
 COPY requirements.cpu.txt .
 RUN pip install --no-cache-dir -r requirements.cpu.txt
+RUN pip install --no-cache-dir notebook
+# Ensure ipykernel is registered for the environment used by the Jupyter server
+RUN python -m ipykernel install --sys-prefix --name python3 --display-name "Python 3 (ipykernel)"
 
 # Copy source
 # COPY src/ ./src

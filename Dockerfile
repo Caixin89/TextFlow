@@ -27,6 +27,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 # Copy the requirements file and install Python dependencies
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir notebook
+# Ensure ipykernel is registered for the environment used by the Jupyter server
+RUN python -m ipykernel install --sys-prefix --name python3 --display-name "Python 3 (ipykernel)"
 
 # Copy source code
 # COPY src/ ./src
