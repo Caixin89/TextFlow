@@ -1,5 +1,5 @@
-# Device selection: 'gpu' or 'cpu' (override via `make DEVICE=cpu ...`)
-DEVICE ?= gpu
+# Device selection: 'gpu' or 'cpu' (override via `make DEVICE=gpu ...`)
+DEVICE ?= cpu
 
 ifeq ($(DEVICE),cpu)
 COMPOSE_CMD := docker compose run --rm --service-ports flowchart_vqa_cpu bash -lc
