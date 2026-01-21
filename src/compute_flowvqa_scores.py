@@ -71,8 +71,7 @@ def compute_wiki_subset_accuracy(eval_data: Any, dataset_data: Any) -> float:
     return sum(v["final_decision"].lower()=="correct" for v in rows) / len(rows)
 
 
-def compute_T1_accuracy(eval_data: Any, dataset_data: Any) -> float:
-    """Compute accuracy for T1 category."""
+def compute_fact_retrieval_accuracy(eval_data: Any, dataset_data: Any) -> float:
     rows = []
     for v in eval_data.values():
         question_id = v["question_id"]
@@ -82,8 +81,7 @@ def compute_T1_accuracy(eval_data: Any, dataset_data: Any) -> float:
     return sum(v["final_decision"].lower()=="correct" for v in rows) / len(rows)
 
 
-def compute_T2_accuracy(eval_data: Any, dataset_data: Any) -> float:
-    """Compute accuracy for T2 category."""
+def compute_applied_scenario_accuracy(eval_data: Any, dataset_data: Any) -> float:
     rows = []
     for v in eval_data.values():
         question_id = v["question_id"]
@@ -93,8 +91,7 @@ def compute_T2_accuracy(eval_data: Any, dataset_data: Any) -> float:
     return sum(v["final_decision"].lower()=="correct" for v in rows) / len(rows)
 
 
-def compute_T3_accuracy(eval_data: Any, dataset_data: Any) -> float:
-    """Compute accuracy for T3 category."""
+def compute_flow_referential_accuracy(eval_data: Any, dataset_data: Any) -> float:
     rows = []
     for v in eval_data.values():
         question_id = v["question_id"]
@@ -104,8 +101,7 @@ def compute_T3_accuracy(eval_data: Any, dataset_data: Any) -> float:
     return sum(v["final_decision"].lower()=="correct" for v in rows) / len(rows)
 
 
-def compute_T4_accuracy(eval_data: Any, dataset_data: Any) -> float:
-    """Compute accuracy for T4 category."""
+def compute_topological_accuracy(eval_data: Any, dataset_data: Any) -> float:
     rows = []
     for v in eval_data.values():
         question_id = v["question_id"]
@@ -127,7 +123,7 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
             "Outputs 8 scores (rounded to 2 decimals):\n"
             "  - overall\n"
             "  - code / instruct / wiki subsets\n"
-            "  - T1 / T2 / T3 / T4 categories"
+            "  - fact retrieval / applied scenarios / flow referential / topological categories"
         ),
         formatter_class=argparse.RawTextHelpFormatter,
     )
@@ -172,10 +168,10 @@ def main(argv: list[str]) -> int:
             "accuracy_code_subset": compute_code_subset_accuracy(eval_data, dataset_data),
             "accuracy_instruct_subset": compute_instruct_subset_accuracy(eval_data, dataset_data),
             "accuracy_wiki_subset": compute_wiki_subset_accuracy(eval_data, dataset_data),
-            "accuracy_T1": compute_T1_accuracy(eval_data, dataset_data),
-            "accuracy_T2": compute_T2_accuracy(eval_data, dataset_data),
-            "accuracy_T3": compute_T3_accuracy(eval_data, dataset_data),
-            "accuracy_T4": compute_T4_accuracy(eval_data, dataset_data),
+            "accuracy_fact_retrieval": compute_fact_retrieval_accuracy(eval_data, dataset_data),
+            "accuracy_applied_scenario": compute_applied_scenario_accuracy(eval_data, dataset_data),
+            "accuracy_flow_referential": compute_flow_referential_accuracy(eval_data, dataset_data),
+            "accuracy_topological": compute_topological_accuracy(eval_data, dataset_data),
         }
     except NotImplementedError:
         print("ERROR: One or more score computation functions are not implemented.", file=sys.stderr)
@@ -184,19 +180,8 @@ def main(argv: list[str]) -> int:
     if args.as_percent:
         scores = {k: v * 100.0 for k, v in scores.items()}
 
-    order = [
-        "overall_accuracy",
-        "accuracy_code_subset",
-        "accuracy_instruct_subset",
-        "accuracy_wiki_subset",
-        "accuracy_T1",
-        "accuracy_T2",
-        "accuracy_T3",
-        "accuracy_T4",
-    ]
-
-    for key in order:
-        print(f"{key}: {fmt(scores[key])}")
+    for key,val in scores.items():
+        print(f"{key}: {fmt(val)}")
 
     return 0
 
