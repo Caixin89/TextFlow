@@ -44,7 +44,7 @@ def main():
 
     model = ModelWrapper(model_name)
 
-    data_path = os.path.join(config["file_paths"][dataset], "new_dev.json")
+    data_path = os.path.join(config["file_paths"][dataset], "dev.json")
     with open(data_path, "r") as file:
         data = json.load(file)
     keys = list(data.keys())
@@ -60,7 +60,7 @@ def main():
         question_ids = list(sample["qa"].keys())
         for question_id in question_ids:
             question = sample["qa"][question_id]["Q"]
-            answer = sample["qa"][question_id]["A1"]
+            answers = [sample["qa"][question_id]["A1"], sample["qa"][question_id]["A2"], sample["qa"][question_id]["A3"]]
             prompt = load_vqa_prompt(question)
             response = model.generate_response(prompt, image_path=image_path)
             results[sample_id] = {
@@ -68,7 +68,7 @@ def main():
                 "question_id": question_id,
                 "question": question,
                 "response": response,
-                "answer": answer,
+                "answers": answers,
             }
             sample_id += 1
 

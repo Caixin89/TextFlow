@@ -97,7 +97,7 @@ def main():
         question_ids = list(sample["qa"].keys())
         for question_id in question_ids:
             question = sample["qa"][question_id]["Q"]
-            answer = sample["qa"][question_id]["A1"]
+            answers = [sample["qa"][question_id]["A1"], sample["qa"][question_id]["A2"], sample["qa"][question_id]["A3"]]
             prompt = load_reasoner_prompt(question, representation)
 
             if tool_use:
@@ -112,7 +112,7 @@ def main():
                 "question_id": question_id,
                 "question": question,
                 "response": response,
-                "answer": answer,
+                "answers": answers,
             }
             sample_id += 1
 

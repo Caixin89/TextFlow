@@ -78,25 +78,31 @@ def load_reasoner_prompt(question, represenation):
     return f"{represenation}\n\nQuestion: {question}\nAnswer:"
 
 
-def load_evaluation_prompt(question, response, label):
+def load_evaluation_prompt(question, response, answers):
+    answers_in_bullets = "\n".join([f"- {a}" for a in answers])
     prompt = f'''You are acting as a strict evaluation judge for a Flowchart VQA task.
 
 You are given:
 1. A QUESTION about the behavior or outcome implied by a flowchart.
-2. A GROUND TRUTH ANSWER written by a human.
+2. A list of GROUND TRUTH ANSWERS written by a human.
 3. A MODEL ANSWER produced by a system under evaluation.
 
-Your task is to determine whether the MODEL ANSWER is SEMANTICALLY EQUIVALENT to the GROUND TRUTH ANSWER with respect to the QUESTION.
+Your task is to determine whether the MODEL ANSWER is SEMANTICALLY EQUIVALENT to at least ONE of the GROUND TRUTH ANSWERS with respect to the QUESTION.
 
 Evaluation Rules:
-- Judge only based on the QUESTION and the two ANSWERS. You do NOT reconstruct or imagine the flowchart.
-- Paraphrasing is allowed. If the MODEL ANSWER expresses the same meaning, count it as Correct.
+- Judge only based on the QUESTION, the list of GROUND TRUTH ANSWERS and the MODEL ANSWER. You do NOT reconstruct or imagine the flowchart.
+- Compare the MODEL ANSWER with each ground truth answer individually.
+- If the MODEL ANSWER is semantically equivalent to at least ONE ground truth answer, mark it as Correct.
+- Paraphrasing is allowed.
+
+Two answers are semantically equivalent if they imply the same final decision, action, or outcome required by the question, even if phrased differently.
+
+Additional rules:
 - If there is any meaningful difference in condition, branching, requirement, or outcome, mark it as Incorrect.
 - Ignore minor stylistic or wording differences that do not change meaning.
 - If the model answer omits an essential condition present in the ground truth, it is Incorrect.
 - If the model answer adds an unsupported condition or extra incorrect logic, it is Incorrect.
-- When uncertain, choose the stricter option (prefer “Incorrect”).
-- Follow the output format exactly.
+- When uncertain, prefer "Incorrect" unless the semantic equivalence is reasonably clear.
 
 You must respond with a single JSON object and nothing else:
 
@@ -110,8 +116,8 @@ Now judge the following:
 QUESTION:
 {question}
 
-GROUND TRUTH ANSWER:
-{label}
+GROUND TRUTH ANSWERS:
+{answers_in_bullets}
 
 MODEL ANSWER:
 {response}'''

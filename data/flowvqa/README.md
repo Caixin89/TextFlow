@@ -8,7 +8,7 @@ We randomly selected 200 flowcharts from the FlowVQA test set and tested the cor
 Further split the dataset described above into dev and test sets, ensuring no flowcharts overlap across the split.
 
 #### Dev set 
-116 questions over 16 flowcharts
+116 questions over 13 flowcharts
 
 | Task category | Number of questions |
 |:--------------:|:------------------:|

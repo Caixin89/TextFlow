@@ -81,7 +81,7 @@ def main():
 
     for (key, sample) in tqdm(data.items(), total=len(data)):
         prompt = load_evaluation_prompt(
-            sample["question"], sample["response"], sample["answer"]
+            sample["question"], sample["response"], sample["answers"]
         )
         judgements = [m.generate_evaluation_response(prompt, seed) for m in models]
         final_decision = majority_vote([j["verdict"] for j in judgements])
